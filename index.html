@@ -1,1 +1,47 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GRIPORA</title><style>*{box-sizing:border-box}html,body{margin:0;background:#000}body{overflow-x:hidden}.page{position:relative;width:100%;margin:0;background:#000;min-height:100vh}.page>img{display:block;width:100vw;height:auto;max-width:none;image-rendering:auto;filter:url(#sharpen)}.hot{position:absolute;display:block;z-index:3;background:transparent;cursor:pointer}.anchor{position:absolute;width:1px;height:1px;pointer-events:none}.loading{color:#fff;font:14px Arial,sans-serif;text-align:center;padding:40px}@media(max-width:700px){.page>img{width:100%;filter:none}}</style></head><body><svg width="0" height="0" aria-hidden="true" style="position:absolute"><filter id="sharpen" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB"><feConvolveMatrix order="3" kernelMatrix="0 -0.18 0 -0.18 1.72 -0.18 0 -0.18 0" divisor="1" bias="0" preserveAlpha="true"/></filter></svg><div class="page" id="page"><div class="loading" id="loading">Loading GRIPORA…</div><img id="reference" alt="GRIPORA homepage" style="display:none"><a class="hot" href="index.html" aria-label="Home" style="left:41.5%;top:.8%;width:7%;height:2.7%"></a><a class="hot" href="#products" aria-label="Products" style="left:48.5%;top:.8%;width:11%;height:2.7%"></a><a class="hot" href="#about" aria-label="About Us" style="left:61%;top:.8%;width:10%;height:2.7%"></a><a class="hot" href="#contact" aria-label="Contact Us" style="left:72.5%;top:.8%;width:10.5%;height:2.7%"></a><a class="hot" href="#products" aria-label="Explore Collection" style="left:5%;top:27.2%;width:19.5%;height:3%"></a><a class="hot" href="cycling-demo.html" aria-label="Cycling Gloves" style="left:2.5%;top:42.7%;width:30%;height:24%"></a><span id="products" class="anchor" style="top:37%;left:0"></span><span id="about" class="anchor" style="top:0;left:0"></span><span id="contact" class="anchor" style="top:95%;left:0"></span></div><script>(async()=>{try{const paths=Array.from({length:8},(_,i)=>`assets/home-ref-${String(i+1).padStart(2,'0')}.txt`);const parts=await Promise.all(paths.map(p=>fetch(p,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(p+' '+r.status);return r.text()})));const img=document.getElementById('reference');img.src='data:image/webp;base64,'+parts.join('');img.onload=()=>{document.getElementById('loading').remove();img.style.display='block'}}catch(e){document.getElementById('loading').textContent='Unable to load page image. Please refresh.';console.error(e)}})();</script></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GRIPORA | Grip. Protect. Perform.</title><meta name="description" content="GRIPORA performance gloves for cycling, winter, fitness and players.">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="assets/gripora-logo.png" alt="GRIPORA"></a>
+  <button class="nav-toggle" aria-label="Open menu">☰</button>
+  <nav class="main-nav"><a class="active" href="index.html">Home</a><a href="#about">About Us</a><a href="categories.html">Category</a><a href="#contact">Contact Us</a></nav>
+  <div class="header-mark">GRIP. <span>PROTECT.</span> PERFORM.</div>
+</header>
+<main>
+<section class="hero-home" id="home">
+  <div class="hero-panel" style="background-image:url('https://gwbicycles.com/cdn/shop/products/63070-3_1000x.jpg?v=1682010807')"></div>
+  <div class="hero-panel" style="background-image:url('https://content.dare2b.com/DWG365_800/500/DWG365_800_01_bynder_defined_type_product_011763938008.jpg')"></div>
+  <div class="hero-panel" style="background-image:url('assets/fitness-model-1.webp')"></div>
+  <div class="hero-panel" style="background-image:url('https://i5.walmartimages.com/asr/b43e6bc3-a067-46d0-9b6e-dc266ef7bc93.09deaa3fb8c470d6d7e5f321ed5ea907.png?odnBg=FFFFFF&odnHeight=768&odnWidth=768')"></div>
+  <div class="hero-center"><img src="assets/gripora-logo.png" alt="GRIPORA">
+    <p class="eyebrow">PERFORMANCE GLOVE COLLECTION</p>
+    <h1>Made for Every Grip.</h1>
+    <p class="lead">Cycling. Winter. Fitness. Player gloves. Four specialist categories built around control, comfort and protection.</p>
+    <div class="hero-actions"><a class="primary-btn" href="categories.html">Explore Categories <span>→</span></a><a class="secondary-btn" href="#contact">Contact Us</a></div>
+  </div>
+</section>
+<section class="section" id="categories">
+  <div class="section-heading"><div><p class="eyebrow">OUR CATEGORIES</p><h2>Four ways to perform.</h2></div><p>Each category includes four distinct models, and every model is presented with four color options.</p></div>
+  <div class="home-cat-grid">
+    <a class="home-cat-card" href="cycling.html" style="background-image:url('https://contents.mediadecathlon.com/p2982353/k%24ab254c1b03cac7306787e45d0bd437a4/road-cycling-gloves-rcr-black-van-rysel-8901073.jpg')"><div class="cat-content"><small>01 · GRIPORA</small><h3>Cycling Gloves</h3><span>Explore 4 models →</span></div></a>
+    <a class="home-cat-card" href="winter.html" style="background-image:url('https://content.dare2b.com/DWG365_800/500/DWG365_800_01_bynder_defined_type_product_011763938008.jpg')"><div class="cat-content"><small>02 · GRIPORA</small><h3>Winter Gloves</h3><span>Explore 4 models →</span></div></a>
+    <a class="home-cat-card" href="fitness.html" style="background-image:url('assets/fitness-model-1.webp')"><div class="cat-content"><small>03 · GRIPORA</small><h3>Fitness Gloves</h3><span>Explore 4 models →</span></div></a>
+    <a class="home-cat-card" href="player.html" style="background-image:url('https://img.kwcdn.com/product/fancy/6e67b181-17c5-4397-b706-4dd8ab15164d.jpg?odnBg=FFFFFF&odnHeight=768&odnWidth=768')"><div class="cat-content"><small>04 · GRIPORA</small><h3>Player Gloves</h3><span>Explore 4 models →</span></div></a>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="about-grid"><div class="about-copy"><p class="eyebrow">ABOUT GRIPORA</p><h2>Grip. Protect. Perform.</h2><p>GRIPORA is built around one clear idea: the right glove should improve confidence without getting in the way. Our collection combines practical protection, dependable grip and clean performance styling across cycling, winter, fitness and player use.</p><p>The website follows a dark performance-led visual system with GRIPORA green used consistently across navigation, product selection and calls to action.</p></div>
+  <div class="pillars"><div class="pillar"><b>Enhanced Grip</b><span>Purpose-built palm textures for better control.</span></div><div class="pillar"><b>Protection</b><span>Padding and coverage where your hands need it.</span></div><div class="pillar"><b>Breathable Comfort</b><span>Flexible construction designed for movement.</span></div><div class="pillar"><b>Secure Fit</b><span>Supportive cuffs and closures for confident wear.</span></div></div></div>
+</section>
+<section class="section contact-section" id="contact">
+  <div class="contact-copy"><p class="eyebrow">CONTACT US</p><h2>Interested in a GRIPORA model?</h2><p>Send your requirement and select the category you are interested in. This enquiry form is ready for your preferred email or backend connection.</p></div>
+  <form class="contact-form" onsubmit="event.preventDefault();document.getElementById('form-status').textContent='Thank you. Your enquiry details are ready to send.'">
+    <input required placeholder="Your name"><input required type="email" placeholder="Email address">
+    <select><option>Cycling Gloves</option><option>Winter Gloves</option><option>Fitness Gloves</option><option>Player Gloves</option></select><input placeholder="Company / Country">
+    <textarea placeholder="Tell us what you are interested in"></textarea><button class="primary-btn" type="submit">Send Enquiry →</button><div class="form-note" id="form-status">No payment or checkout is required.</div>
+  </form>
+</section>
+</main>
+<footer class="site-footer"><div><img src="assets/gripora-logo.png" alt="GRIPORA" class="footer-logo"><p>Performance gloves for cycling, winter, fitness and field players.</p></div><div><strong>Quick Links</strong><a href="index.html">Home</a><a href="categories.html">Categories</a><a href="#about">About Us</a><a href="#contact">Contact Us</a></div><div><strong>Categories</strong><a href="cycling.html">Cycling Gloves</a><a href="winter.html">Winter Gloves</a><a href="fitness.html">Fitness Gloves</a><a href="player.html">Player Gloves</a></div><div><strong>GRIPORA</strong><p>Grip. Protect. Perform.</p><p>Built for performance, comfort and durability.</p></div><div class="copyright">© 2026 GRIPORA. All Rights Reserved.</div></footer>
+<script src="app.js"></script></body></html>
