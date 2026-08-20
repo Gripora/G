@@ -166,7 +166,7 @@ async function loadClearCategoryImages(){
     const [cycling,fitness,winter]=await Promise.all([
       base64Image('assets/home-cycling.webp','image/webp'),
       base64Image('assets/home-fitness.b64','image/webp'),
-      base64Image('assets/home-winter.b64','image/webp')
+      base64Image('assets/winter-glove-final.b64?v=f023d37','image/jpeg')
     ]);
     const apply=(selector,url,position='center')=>document.querySelectorAll(selector).forEach(el=>{
       el.style.backgroundImage=`url("${url}")`;
@@ -177,6 +177,7 @@ async function loadClearCategoryImages(){
     apply('.ref-panel.cycling, .cycling-img',cycling,'center');
     apply('.ref-panel.fitness, .fitness-img',fitness,'center');
     apply('.ref-panel.winter, .winter-img, .cat-hero.sprite-winter, .selectcard.sprite-winter',winter,'center');
+    document.querySelectorAll('.winter-direct').forEach(img=>{ img.src=winter; });
     apply('.ref-panel.player, .player-img, .cat-hero.sprite-player, .selectcard.sprite-player',winter,'center');
   }catch(e){
     console.warn('Using fallback GRIPORA imagery.',e);
