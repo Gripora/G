@@ -178,7 +178,6 @@ async function loadClearCategoryImages(){
     apply('.ref-panel.fitness, .fitness-img',fitness,'center');
     apply('.ref-panel.winter, .winter-img, .cat-hero.sprite-winter, .selectcard.sprite-winter',winter,'center');
     document.querySelectorAll('.winter-direct').forEach(img=>{ img.src=winter; });
-    apply('.ref-panel.player, .player-img, .cat-hero.sprite-player, .selectcard.sprite-player',winter,'center');
   }catch(e){
     console.warn('Using fallback GRIPORA imagery.',e);
   }
