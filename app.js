@@ -166,7 +166,7 @@ async function loadClearCategoryImages(){
     const [cycling,fitness,winter]=await Promise.all([
       base64Image('assets/home-cycling.webp','image/webp'),
       base64Image('assets/home-fitness.b64','image/webp'),
-      base64Image('assets/home-winter.b64','image/jpeg')
+      base64Image('assets/home-winter.b64','image/webp')
     ]);
     const apply=(selector,url,position='center')=>document.querySelectorAll(selector).forEach(el=>{
       el.style.backgroundImage=`url("${url}")`;
