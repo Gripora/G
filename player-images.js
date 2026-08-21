@@ -26,19 +26,33 @@
     ]
   ];
 
-  const VERSION='20260821-player-1';
+  const VERSION='20260821-player-direct-1';
   const imageUrl=file=>`${file}?v=${VERSION}`;
 
-  function applyImage(el,file,mode='contain'){
+  function directImage(el,file,fit='contain'){
     if(!el) return;
-    el.classList.remove('tone-black','tone-blue','tone-red','tone-green');
-    el.style.setProperty('background-image',`url("${imageUrl(file)}")`,'important');
-    el.style.setProperty('background-size',mode,'important');
-    el.style.setProperty('background-position','center','important');
-    el.style.setProperty('background-repeat','no-repeat','important');
-    el.style.setProperty('background-color','#fff','important');
-    el.style.setProperty('filter','none','important');
-    el.style.setProperty('transform','none','important');
+    el.style.position='relative';
+    el.style.backgroundColor='#fff';
+    el.style.filter='none';
+    el.style.transform='none';
+    let img=el.querySelector(':scope > img.player-real-image');
+    if(!img){
+      img=document.createElement('img');
+      img.className='player-real-image';
+      img.alt='GRIPORA Player Gloves';
+      img.style.position='absolute';
+      img.style.inset='0';
+      img.style.width='100%';
+      img.style.height='100%';
+      img.style.objectPosition='center';
+      img.style.display='block';
+      img.style.background='#fff';
+      img.style.zIndex='1';
+      img.style.pointerEvents='none';
+      el.appendChild(img);
+    }
+    img.style.objectFit=fit;
+    img.src=imageUrl(file);
   }
 
   function makeSwatches(container,colors,onPick){
@@ -62,9 +76,9 @@
       const colors=MODELS[i];
       if(!colors) return;
       const visual=card.querySelector('.tone-image');
-      applyImage(visual,colors[0][3],'contain');
+      directImage(visual,colors[0][3],'contain');
       const swatchBox=card.querySelector('.swatches');
-      makeSwatches(swatchBox,colors,c=>applyImage(visual,c[3],'contain'));
+      makeSwatches(swatchBox,colors,c=>directImage(visual,c[3],'contain'));
     });
     return true;
   }
@@ -77,19 +91,19 @@
     const i=Math.min(3,Math.max(0,Number(q.get('model'))||0));
     const colors=MODELS[i];
     const main=root.querySelector('.mainphoto .tone-image');
-    applyImage(main,colors[0][3],'contain');
+    directImage(main,colors[0][3],'contain');
 
     const thumbs=root.querySelector('.thumbs');
     if(thumbs){
-      thumbs.innerHTML=colors.map(c=>`<button type="button" aria-label="${c[0]} color"><div class="product-visual" style="background-image:url('${imageUrl(c[3])}');background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff;filter:none"></div></button>`).join('');
-      thumbs.querySelectorAll('button').forEach((b,idx)=>b.onclick=()=>applyImage(main,colors[idx][3],'contain'));
+      thumbs.innerHTML=colors.map(c=>`<button type="button" aria-label="${c[0]} color"><img src="${imageUrl(c[3])}" alt="${c[0]} GRIPORA Player Gloves" style="width:100%;height:100%;object-fit:contain;object-position:center;background:#fff;display:block"></button>`).join('');
+      thumbs.querySelectorAll('button').forEach((b,idx)=>b.onclick=()=>directImage(main,colors[idx][3],'contain'));
     }
 
     const option=root.querySelector('.option .swatches');
     const label=root.querySelector('[data-color]');
     if(label) label.textContent=colors[0][0];
     makeSwatches(option,colors,c=>{
-      applyImage(main,c[3],'contain');
+      directImage(main,c[3],'contain');
       if(label) label.textContent=c[0];
     });
     return true;
