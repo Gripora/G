@@ -5,6 +5,26 @@
 
   function value(el){ return (el?.value||'').trim(); }
 
+  function setStatus(status,text,type='normal'){
+    if(!status) return;
+    status.textContent=text;
+    status.style.marginTop='10px';
+    status.style.lineHeight='1.5';
+    if(type==='success'){
+      status.style.fontSize='20px';
+      status.style.fontWeight='800';
+      status.style.color='#9bdc3d';
+    }else if(type==='error'){
+      status.style.fontSize='16px';
+      status.style.fontWeight='700';
+      status.style.color='#ffb4b4';
+    }else{
+      status.style.fontSize='14px';
+      status.style.fontWeight='600';
+      status.style.color='#aeb7c0';
+    }
+  }
+
   function fields(form){
     return {
       name:value(form.querySelector('input[placeholder="Your name"]')),
@@ -37,7 +57,7 @@
       button.disabled=true;
       button.textContent='Sending...';
     }
-    if(status) status.textContent='Sending your enquiry...';
+    setStatus(status,'Sending your enquiry...');
 
     try{
       const response=await fetch(EMAIL_ENDPOINT,{
@@ -63,14 +83,14 @@
         throw new Error(data.message||'Unable to send enquiry');
       }
 
-      if(status) status.textContent='Thank you. Your enquiry has been sent successfully.';
+      setStatus(status,'✓ Thank you. Your enquiry has been sent successfully.','success');
       form.reset();
       const method=form.querySelector('#contact-method');
       if(method) method.value='email';
       if(button) button.textContent='Send Enquiry →';
     }catch(err){
       console.warn('GRIPORA email submission failed',err);
-      if(status) status.textContent='We could not send your enquiry right now. Please try again.';
+      setStatus(status,'We could not send your enquiry right now. Please try again.','error');
       if(button) button.textContent=oldText;
     }finally{
       if(button) button.disabled=false;
@@ -99,6 +119,7 @@
     const syncButton=()=>{
       if(!button) return;
       button.textContent=method.value==='whatsapp'?'Send via WhatsApp →':'Send Enquiry →';
+      if(status && status.textContent!=='Product enquiry only.') setStatus(status,'Product enquiry only.');
     };
     method.addEventListener('change',syncButton);
     syncButton();
@@ -109,7 +130,7 @@
 
       if(method.value==='whatsapp'){
         const text=buildMessage(form);
-        if(status) status.textContent='Opening WhatsApp with your enquiry...';
+        setStatus(status,'Opening WhatsApp with your enquiry...');
         window.open(`https://wa.me/${DEST_WHATSAPP}?text=${encodeURIComponent(text)}`,'_blank','noopener');
       }else{
         await sendEmail(form,button,status);
