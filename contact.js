@@ -119,7 +119,7 @@
     const syncButton=()=>{
       if(!button) return;
       button.textContent=method.value==='whatsapp'?'Send via WhatsApp →':'Send Enquiry →';
-      if(status && status.textContent!=='Product enquiry only.') setStatus(status,'Product enquiry only.');
+      if(status && status.textContent!=='B2B product and export enquiries.') setStatus(status,'B2B product and export enquiries.');
     };
     method.addEventListener('change',syncButton);
     syncButton();
