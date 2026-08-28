@@ -92,11 +92,14 @@ nav a.active{color:var(--green2)}
 .sprite-winter{--sprite-x:56%}
 .sprite-fitness{--sprite-x:78%}
 .sprite-player{--sprite-x:100%}
+.sprite-fullfinger{--sprite-x:34%}
 .cat-hero.sprite-cycling,.selectcard.sprite-cycling{background-position:34% 10%}
 .cat-hero.sprite-winter,.selectcard.sprite-winter{background-position:56% 10%}
 .cat-hero.sprite-fitness,.selectcard.sprite-fitness{background-position:78% 10%}
 .cat-hero.sprite-player,.selectcard.sprite-player{background-position:100% 10%}
+.cat-hero.sprite-fullfinger,.selectcard.sprite-fullfinger{background-position:34% 10%}
 .back{display:inline-block;padding:9px 13px;border:1px solid #53606d;border-radius:7px;margin-bottom:25px;background:#060b10b8}
+.concept-status{display:inline-block;margin:10px 0 0;padding:8px 11px;border:1px solid #8dbd2c;border-radius:5px;background:#071006d9;color:#dff7b2;font-size:12px;font-weight:800;letter-spacing:.02em}
 
 .cat-main{padding:48px 2vw 80px}
 .sectitle{text-align:center;font-size:32px;font-weight:900;text-transform:uppercase;margin-bottom:28px}
@@ -113,6 +116,8 @@ nav a.active{color:var(--green2)}
 .copy .kind{color:var(--green2);font-size:11px;font-weight:900}
 .copy h3{font-size:22px;margin:5px 0 8px}
 .copy p{color:#c3ccd4;margin:0 0 16px}
+.concept-card-note{margin:0 0 14px;padding:10px 11px;border-left:3px solid var(--green);background:#0a1218;color:#d4dde4;font-size:12px;line-height:1.45}
+.concept-card-note b,.concept-card-note span{display:block}
 .colors{display:flex;gap:9px;align-items:center;margin-top:auto}
 .swatches{display:flex;gap:8px}
 .swatch{width:23px;height:23px;border-radius:50%;border:2px solid #ddd;background:var(--sw);cursor:pointer}
@@ -139,6 +144,8 @@ nav a.active{color:var(--green2)}
 .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
 .thumbs button{height:110px;padding:0;border:1px solid #3a4753;background:#eee;border-radius:7px;overflow:hidden;cursor:pointer}
 .thumbs .product-visual{height:100%}
+.concept-thumbs{grid-template-columns:1fr}
+.concept-thumbs button{width:150px}
 .info h1{font-size:56px;margin:8px 0}
 .info .desc{color:#c7d0d8;font-size:18px}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-block:1px solid var(--line);padding:18px 0;margin:22px 0}

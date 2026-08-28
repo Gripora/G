@@ -39,6 +39,16 @@ const DATA = {
       ['GRIPORA Field Control','Lightweight player glove designed for movement and ball control.'],
       ['GRIPORA Pro Catch','Performance glove focused on dependable handling and protection.']
     ]
+  },
+  fullfinger: {
+    title: 'Full-Finger MTB & Cycling Gloves', n: '05', concept: true,
+    tag: 'Custom printed or sublimated backhands, performance construction and private-label development.',
+    models: [
+      ['GRIPORA CORE','Clean everyday MTB glove concept built on the lightweight Trail LT platform in black and charcoal.'],
+      ['GRIPORA CONTOUR','Graphic-led Trail LT glove concept with an original navy and cyan contour-line backhand.'],
+      ['GRIPORA AIR','Ventilated summer MTB glove concept with visible mesh panels and a perforated thin palm.'],
+      ['GRIPORA APEX','Premium technical glove concept with engineered panel construction and a low-profile adjustable cuff.']
+    ]
   }
 };
 
@@ -63,9 +73,9 @@ function header(active='') {
 }
 
 function foot() {
-  return `<footer class="foot"><div>${logo()}<p>Performance gloves for cycling, winter, fitness and field players.</p></div>
+  return `<footer class="foot"><div>${logo()}<p>Performance gloves for cycling, MTB, winter, fitness and field players.</p></div>
   <div><strong>Quick Links</strong><a href="index.html">Home</a><a href="categories.html">Category</a><a href="index.html#about">About Us</a><a href="index.html#contact">Contact Us</a></div>
-  <div><strong>Categories</strong><a href="cycling.html">Cycling Gloves</a><a href="winter.html">Winter Gloves</a><a href="fitness.html">Fitness Gloves</a><a href="player.html">Player Gloves</a></div>
+  <div><strong>Categories</strong><a href="cycling.html">Cycling Gloves</a><a href="winter.html">Winter Gloves</a><a href="fitness.html">Fitness Gloves</a><a href="player.html">Player Gloves</a><a href="fullfinger.html">Full-Finger MTB & Cycling Gloves</a></div>
   <div><strong>GRIPORA</strong><p>Grip. Protect. Perform.</p><p>Built for performance, comfort and durability.</p></div>
   <div class="copyright">© 2026 GRIPORA. All Rights Reserved.</div></footer>`;
 }
@@ -106,12 +116,13 @@ function category() {
   root.innerHTML=`<section class="cat-hero sprite-${k}"><div class="inner">
     <a class="back" href="categories.html">← Back to Categories</a>
     <p class="eyebrow">GRIPORA PERFORMANCE SERIES</p><h1>${c.title}</h1><p class="lead">${c.tag}</p>
+    ${c.concept?'<p class="concept-status">Concept visual - not a production sample · Sample development available</p>':''}
   </div></section>
   <main class="cat-main"><div class="sectitle"><b>${c.n}</b> ${c.title}</div><div class="grid">
   ${c.models.map((m,i)=>`<article class="card" data-card>
     <a href="product.html?category=${k}&model=${i}"><div class="photo">${visual(k,`model-${i}`)}<span class="stamp">GRIPORA</span></div></a>
     <div class="copy"><span class="kind">${c.title.toUpperCase()}</span><h3>${m[0]}</h3><p>${m[1]}</p>
-      <div class="colors"><b>Colors:</b>${swatches()}</div><div class="sizes"><b>Sizes:</b> S · M · L · XL</div>
+      ${c.concept?'<div class="concept-card-note"><b>Concept visual - not a production sample.</b><span>Sample development available.</span></div><div class="colors"><b>Colorway:</b> Development reference</div><div class="sizes"><b>Sizing:</b> Confirmed during sample development</div>':`<div class="colors"><b>Colors:</b>${swatches()}</div><div class="sizes"><b>Sizes:</b> S · M · L · XL</div>`}
       <a class="btn primary" href="product.html?category=${k}&model=${i}">I'm Interested →</a>
     </div></article>`).join('')}
   </div></main>${foot()}`;
@@ -123,7 +134,7 @@ function categories() {
   if(!root) return;
   document.body.insertAdjacentHTML('afterbegin',header('cat'));
   root.innerHTML=`<section class="catselect"><p class="eyebrow">GRIPORA COLLECTION</p><h1>Choose Your Category</h1>
-  <p class="lead">Four specialist categories. Four different models in each category. Four color options for every model.</p></section>
+  <p class="lead">Five specialist glove categories with focused product and private-label development options.</p></section>
   <section class="selectgrid">${Object.entries(DATA).map(([k,c])=>`<a class="selectcard sprite-${k}" href="${k}.html">
     <div><p class="eyebrow">${c.n} · GRIPORA</p><h2>${c.title}</h2><span>Explore 4 models →</span></div></a>`).join('')}</section>${foot()}`;
   wire();
@@ -141,13 +152,11 @@ function product() {
   root.innerHTML=`<main class="detail" data-card><div class="crumbs"><a href="categories.html">Categories</a> › <a href="${k}.html">${c.title}</a> › ${m[0]}</div>
     <section class="detailgrid"><div>
       <div class="mainphoto">${visual(k,`model-${i}`)}<span class="stamp">GRIPORA</span></div>
-      <div class="thumbs">${COLORS.map(c=>`<button data-tone="${c[1]}" aria-label="${c[0]} color"><div class="product-visual sprite-${k} tone-${c[1]}"></div></button>`).join('')}</div>
+      <div class="thumbs ${c.concept?'concept-thumbs':''}">${c.concept?`<button type="button" aria-label="${m[0]} concept visual"><div class="product-visual sprite-${k} model-${i}"></div></button>`:COLORS.map(c=>`<button data-tone="${c[1]}" aria-label="${c[0]} color"><div class="product-visual sprite-${k} tone-${c[1]}"></div></button>`).join('')}</div>
     </div><div class="info"><p class="eyebrow">${c.title}</p><h1>${m[0]}</h1><p class="desc">${m[1]}</p>
-      <div class="features"><b><span>✓</span> Enhanced Grip</b><b><span>✓</span> Protective Comfort</b><b><span>✓</span> Secure Fit</b></div>
-      <div class="option"><label>Available Colors</label>${swatches()}<p>Select a color: <b data-color>Black</b></p></div>
-      <div class="option"><label>Size Options</label><div class="sizebtns">${['S','M','L','XL'].map((s,j)=>`<button ${j?'':'class="selected"'}>${s}</button>`).join('')}</div></div>
+      ${c.concept?'<p class="concept-status">Concept visual - not a production sample</p><div class="features"><b><span>✓</span> Printed / sublimated options</b><b><span>✓</span> Performance construction development</b><b><span>✓</span> Private-label development</b></div><div class="option"><label>Product Status</label><p>Sample development available.</p></div><div class="option"><label>Development Confirmation</label><p>Exact materials, sizing, artwork, tolerances and packaging are confirmed through the approved sample and production tech pack.</p></div>':`<div class="features"><b><span>✓</span> Enhanced Grip</b><b><span>✓</span> Protective Comfort</b><b><span>✓</span> Secure Fit</b></div><div class="option"><label>Available Colors</label>${swatches()}<p>Select a color: <b data-color>Black</b></p></div><div class="option"><label>Size Options</label><div class="sizebtns">${['S','M','L','XL'].map((s,j)=>`<button ${j?'':'class="selected"'}>${s}</button>`).join('')}</div></div>`}
       <a class="btn primary" href="index.html#contact">I'm Interested →</a>
-      <div class="quality"><span>✓ High quality materials</span><span>✓ Durable & long lasting</span><span>✓ Comfortable all-day wear</span><span>✓ Engineered for performance</span></div>
+      ${c.concept?'<div class="quality"><span>✓ Original GRIPORA development direction</span><span>✓ Official GRIPORA branding</span><span>✓ Custom artwork and colors</span><span>✓ Sample-led specification approval</span></div>':'<div class="quality"><span>✓ High quality materials</span><span>✓ Durable & long lasting</span><span>✓ Comfortable all-day wear</span><span>✓ Engineered for performance</span></div>'}
     </div></section></main>${foot()}`;
   wire();
   root.querySelectorAll('.sizebtns button').forEach(b=>b.onclick=()=>{root.querySelectorAll('.sizebtns button').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});

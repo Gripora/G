@@ -3,10 +3,11 @@
     cycling:'assets/cycling-m1-blue.png',
     winter:'winter-m1-brown.png',
     fitness:'assets/fitness-m1-blue.png',
-    player:'assets/player-m1-black.png'
+    player:'assets/player-m1-black.png',
+    fullfinger:'assets/mtb-core.webp'
   };
 
-  const VERSION='20260821-categories-real-1';
+  const VERSION='20260828-fullfinger-1';
 
   function addImage(card,key,file){
     if(!card || !file) return;
