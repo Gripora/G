@@ -76,7 +76,7 @@ function foot() {
   return `<footer class="foot"><div>${logo()}<p>Performance gloves for cycling, MTB, winter, fitness and field players.</p></div>
   <div><strong>Quick Links</strong><a href="index.html">Home</a><a href="categories.html">Category</a><a href="index.html#about">About Us</a><a href="index.html#contact">Contact Us</a></div>
   <div><strong>Categories</strong><a href="cycling.html">Cycling Gloves</a><a href="winter.html">Winter Gloves</a><a href="fitness.html">Fitness Gloves</a><a href="player.html">Player Gloves</a><a href="fullfinger.html">Full-Finger MTB & Cycling Gloves</a></div>
-  <div><strong>GRIPORA</strong><p>Grip. Protect. Perform.</p><p>Built for performance, comfort and durability.</p></div>
+  <div><strong>GRIPORA</strong><a href="mailto:ibtesam@griporagloves.com">ibtesam@griporagloves.com</a><a href="https://griporagloves.com">griporagloves.com</a><p>Grip. Protect. Perform.</p></div>
   <div class="copyright">© 2026 GRIPORA. All Rights Reserved.</div></footer>`;
 }
 

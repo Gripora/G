@@ -1,5 +1,5 @@
 (()=>{
-  const DEST_EMAIL=atob('Z3JpcG9yYThAZ21haWwuY29t');
+  const DEST_EMAIL='ibtesam@griporagloves.com';
   const DEST_WHATSAPP=atob('OTIzMTI3NDQ0NzY5');
   const EMAIL_ENDPOINT=`https://formsubmit.co/ajax/${DEST_EMAIL}`;
 

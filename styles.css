@@ -75,6 +75,9 @@ nav a.active{color:var(--green2)}
 .pillar b{display:block;margin-bottom:6px}
 .pillar span{color:var(--muted);font-size:14px}
 .contact{background:#091019;border-top:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr;gap:45px}
+.contact-details{display:flex;flex-direction:column;gap:8px;margin-top:24px}
+.contact-details a{width:max-content;color:var(--green2);font-weight:800}
+.contact-details a:hover{text-decoration:underline}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .form input,.form select,.form textarea{background:#05090e;color:white;border:1px solid #34414d;border-radius:6px;padding:14px}
 .form textarea,.form button,.form .note{grid-column:1/-1}
