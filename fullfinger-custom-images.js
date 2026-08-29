@@ -16,9 +16,9 @@
       'assets/fullfinger-air-3.webp?v=20260829-1'
     ],
     3:[
-      'assets/fullfinger-apex-1.webp?v=20260829-3',
-      'assets/fullfinger-apex-2.webp?v=20260829-3',
-      'assets/fullfinger-apex-3.webp?v=20260829-3'
+      'assets/fullfinger-apex-1.webp?v=20260829-4',
+      'assets/fullfinger-apex-2.webp?v=20260829-4',
+      'assets/fullfinger-apex-3.webp?v=20260829-4'
     ]
   };
 
