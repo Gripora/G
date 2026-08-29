@@ -1,38 +1,57 @@
 (()=>{
-  const IMAGES=[
-    'assets/mtb-pdf-core.webp',
-    'assets/mtb-pdf-contour.webp',
-    'assets/mtb-pdf-air.webp',
-    'assets/mtb-pdf-apex.webp'
+  const PARTS=[
+    'assets/mtb12-part-0.txt',
+    'assets/mtb12-part-1.txt',
+    'assets/mtb12-part-2.txt',
+    'assets/mtb12-part-3.txt'
   ];
+  const VERSION='20260829-3';
 
-  function updateCategory(){
+  function isFullFingerPage(){
+    const q=new URLSearchParams(location.search);
+    return q.get('category')==='fullfinger' || location.pathname.endsWith('/fullfinger.html');
+  }
+
+  async function addPdfCollection(){
     const root=document.querySelector('[data-dummy-category]');
-    if(!root) return;
-    const q=new URLSearchParams(location.search);
-    if(q.get('category')!=='fullfinger' && !location.pathname.endsWith('/fullfinger.html')) return;
+    if(!root || !isFullFingerPage() || root.querySelector('.pdf-concept-gallery')) return;
 
-    const hero=root.querySelector('.inner-hero-media img');
-    if(hero) hero.src=IMAGES[0];
+    try{
+      const parts=await Promise.all(PARTS.map(async path=>{
+        const response=await fetch(`${path}?v=${VERSION}`,{cache:'no-store'});
+        if(!response.ok) throw new Error(`Unable to load ${path}`);
+        return (await response.text()).replace(/\s+/g,'');
+      }));
+      const source=`data:image/webp;base64,${parts.join('')}`;
+      const section=document.createElement('section');
+      section.className='pdf-concept-gallery';
+      section.setAttribute('aria-label','Full-Finger MTB and Cycling concept image collection');
+      const grid=document.createElement('div');
+      grid.className='pdf-concept-grid';
 
-    root.querySelectorAll('.model-card .model-media img').forEach((img,index)=>{
-      if(IMAGES[index]) img.src=IMAGES[index];
-    });
+      for(let row=0;row<4;row++){
+        for(let col=0;col<3;col++){
+          const tile=document.createElement('div');
+          tile.className='pdf-concept-tile';
+          tile.setAttribute('role','img');
+          tile.setAttribute('aria-label',`GRIPORA Full-Finger MTB concept ${row*3+col+1}`);
+          tile.style.backgroundImage=`url("${source}")`;
+          tile.style.backgroundPosition=`${col*50}% ${row*(100/3)}%`;
+          grid.appendChild(tile);
+        }
+      }
+
+      section.appendChild(grid);
+      const collection=root.querySelector('.collection');
+      if(collection) collection.insertAdjacentElement('afterend',section);
+    }catch(error){
+      console.error('Full-Finger PDF image collection failed to load',error);
+    }
   }
 
-  function updateProduct(){
-    const root=document.querySelector('[data-dummy-product]');
-    if(!root) return;
-    const q=new URLSearchParams(location.search);
-    if(q.get('category')!=='fullfinger') return;
-
-    const index=Math.max(0,Math.min(IMAGES.length-1,Number(q.get('model'))||0));
-    const src=IMAGES[index];
-    const main=root.querySelector('[data-product-main]');
-    if(main) main.src=src;
-    root.querySelectorAll('.color-thumbs img').forEach(img=>img.src=src);
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',addPdfCollection,{once:true});
+  }else{
+    addPdfCollection();
   }
-
-  updateCategory();
-  updateProduct();
 })();
