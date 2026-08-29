@@ -16,55 +16,64 @@
       'assets/fullfinger-air-3.webp?v=20260829-1'
     ],
     3:[
-      'assets/fullfinger-apex-1.webp?v=20260829-2',
-      'assets/fullfinger-apex-2.webp?v=20260829-2',
-      'assets/fullfinger-apex-3.webp?v=20260829-2'
+      'assets/fullfinger-apex-1.webp?v=20260829-3',
+      'assets/fullfinger-apex-2.webp?v=20260829-3',
+      'assets/fullfinger-apex-3.webp?v=20260829-3'
     ]
+  };
+
+  const setImage=(img,src)=>{
+    if(!img)return;
+    img.removeAttribute('srcset');
+    img.src=src;
   };
 
   function patchCategory(){
     const root=document.querySelector('[data-dummy-category]');
-    if(!root) return;
+    if(!root)return;
     const q=new URLSearchParams(location.search);
-    if(q.get('category')!=='fullfinger' && !location.pathname.endsWith('/fullfinger.html')) return;
+    if(q.get('category')!=='fullfinger'&&!location.pathname.endsWith('/fullfinger.html'))return;
 
     const hero=root.querySelector('.inner-hero-media img');
-    if(hero) hero.src=GROUPS[0][0];
+    setImage(hero,GROUPS[0][0]);
 
     root.querySelectorAll('.model-card .model-media img').forEach((img,i)=>{
-      if(GROUPS[i]) img.src=GROUPS[i][0];
+      if(GROUPS[i])setImage(img,GROUPS[i][0]);
     });
   }
 
   function patchProduct(){
     const root=document.querySelector('[data-dummy-product]');
-    if(!root) return;
+    if(!root)return;
     const q=new URLSearchParams(location.search);
-    if(q.get('category')!=='fullfinger') return;
+    if(q.get('category')!=='fullfinger')return;
 
     const model=Math.max(0,Math.min(3,Number(q.get('model'))||0));
     const images=GROUPS[model];
-    if(!images) return;
+    if(!images)return;
 
     const main=root.querySelector('[data-product-main]');
-    if(main) main.src=images[0];
+    setImage(main,images[0]);
 
     const buttons=[...root.querySelectorAll('.color-thumbs button')];
     buttons.forEach((btn,i)=>{
       if(i<3){
         btn.hidden=false;
         const thumb=btn.querySelector('img');
-        if(thumb) thumb.src=images[i];
-        btn.addEventListener('click',()=>{
-          if(main) main.src=images[i];
+        setImage(thumb,images[i]);
+        btn.onclick=e=>{
+          e.preventDefault();
+          setImage(main,images[i]);
           buttons.forEach((b,j)=>b.classList.toggle('selected',j===i));
-        });
+        };
       }else{
         btn.hidden=true;
       }
     });
   }
 
-  patchCategory();
-  patchProduct();
+  const apply=()=>{patchCategory();patchProduct();};
+  apply();
+  requestAnimationFrame(apply);
+  setTimeout(apply,150);
 })();
