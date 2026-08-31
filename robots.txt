@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Disallow: /dummy.html
+Disallow: /dummy-category.html
+Disallow: /dummy-product.html
+Disallow: /cycling-demo.html
+Disallow: /player.html
+Disallow: /product.html
+
+Sitemap: https://griporagloves.com/sitemap.xml
