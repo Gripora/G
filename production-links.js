@@ -75,8 +75,8 @@
       if(categoryPages[key])a.setAttribute('href',categoryPages[key]);
       return;
     }
-    if(href==='dummy.html')a.setAttribute('href','index.html');
-    else if(href.startsWith('dummy.html#'))a.setAttribute('href',`index.html${href.slice('dummy.html'.length)}`);
+    if(href==='dummy.html')a.setAttribute('href','/');
+    else if(href.startsWith('dummy.html#'))a.setAttribute('href',`/${href.slice('dummy.html'.length)}`);
   });
 
   const path=location.pathname.split('/').pop()||'index.html';
