@@ -101,6 +101,7 @@
       section.className='category-info seo-buyer-info';
       section.innerHTML=`<div class="category-info-grid"><div><p class="eyebrow">PRIVATE LABEL & OEM</p><h2>${info.heading}</h2><p>${info.intro}</p></div><div class="spec-list">${info.items.map(item=>`<div class="spec-item"><b>${item[0]}</b><span>${item[1]}</span></div>`).join('')}</div></div>`;
       anchor.insertAdjacentElement('afterend',section);
+      const services=document.createElement('p');services.className='seo-service-links';services.innerHTML='<a href="private-label-oem.html">Private Label &amp; OEM Glove Manufacturing</a> · <a href="custom-glove-development.html">Custom Glove Development Process</a>';section.querySelector('.category-info-grid > div:first-child')?.appendChild(services);
     }
   }
 
