@@ -44,11 +44,21 @@ body.inner-page{background:var(--paper);color:var(--ink)}
 .development-note{margin-top:18px;padding-top:15px;border-top:1px solid #e2e2de;color:#777d80;font-size:9px;letter-spacing:.08em;text-transform:uppercase;line-height:1.6}
 .product-development{margin:26px 0 5px;padding:20px 0;border-top:1px solid #d0d2cf;border-bottom:1px solid #d0d2cf}
 .product-development b,.product-development span{display:block}.product-development b{font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}.product-development span{font-size:12px;line-height:1.6;color:#62686c}
+.product-features{margin:27px 0 0;padding:21px 0 20px;border-top:1px solid #d0d2cf;border-bottom:1px solid #d0d2cf}
+.product-features b{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:13px}
+.product-features ul{display:grid;grid-template-columns:1fr 1fr;gap:9px 22px;margin:0;padding:0;list-style:none}
+.product-features li{position:relative;padding-left:15px;color:#4f5559;font-size:12px;line-height:1.5}
+.product-features li:before{content:'+';position:absolute;left:0;color:#111;font-weight:700}
 .category-fitness .model-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .category-fitness .model-media{height:auto;aspect-ratio:1/1;background:#f3f3f0}
 .category-fitness .model-copy{padding:23px 22px 26px}
 .category-fitness .model-copy h3{font-size:26px}
 .category-fitness .model-copy p{min-height:66px}
+.category-fullfinger .model-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.category-fullfinger .model-media{height:auto;aspect-ratio:1/1;background:#f3f3f0}
+.category-fullfinger .model-copy{padding:23px 22px 26px}
+.category-fullfinger .model-copy h3{font-size:26px}
+.category-fullfinger .model-copy p{min-height:66px}
 
 /* CAPABILITY BAND */
 .category-info{background:#111;color:#fff;padding:105px 6vw}
@@ -112,6 +122,7 @@ body.inner-page{background:var(--paper);color:var(--ink)}
   .collection-head{grid-template-columns:1fr;gap:22px}
   .model-grid{grid-template-columns:1fr}
   .category-fitness .model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .category-fullfinger .model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .model-media{height:560px}
   .category-info-grid{grid-template-columns:1fr;gap:48px}
   .switch-grid{grid-template-columns:1fr 1fr}
@@ -136,6 +147,9 @@ body.inner-page{background:var(--paper);color:var(--ink)}
   .model-media{height:360px}
   .category-fitness .model-grid{grid-template-columns:1fr}
   .category-fitness .model-copy p{min-height:0}
+  .category-fullfinger .model-grid{grid-template-columns:1fr}
+  .category-fullfinger .model-copy p{min-height:0}
+  .product-features ul{grid-template-columns:1fr}
   .model-copy{padding:23px 20px 25px}
   .model-copy h3{font-size:26px}
   .spec-list{grid-template-columns:1fr}
