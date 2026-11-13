@@ -13,17 +13,17 @@
     'winter.html':'Winter & Outdoor Gloves Manufacturer'
   };
   const seoLeads={
-    'fullfinger.html':'GRIPORA manufactures private-label full-finger MTB and cycling gloves in Sialkot, Pakistan, with custom printed or sublimated backhands, technical palms, silicone grip and sample development for performance brands.',
+    'fullfinger.html':'GRIPORA manufactures private-label MTB and cycling gloves in Sialkot, Pakistan, including full-finger trail styles and short-finger road constructions with custom backhands, technical palms, grip applications and sample development.',
     'cycling.html':'GRIPORA manufactures private-label short-finger cycling gloves in Sialkot, Pakistan, with breathable backhands, padded synthetic palms, custom branding and low-MOQ sample development for cycling brands.',
     'fitness.html':'GRIPORA manufactures private-label fitness and training gloves in Sialkot, Pakistan, with palm protection, breathable materials, wrist-support options, custom branding and sample development for fitness brands.',
     'winter.html':'GRIPORA manufactures private-label winter and outdoor gloves in Sialkot, Pakistan, with insulated constructions, technical fabrics, reinforced palms, custom branding and sample development for outdoor brands.'
   };
   const buyerInfo={
     'fullfinger.html':{
-      heading:'Private-label MTB glove development for brands.',
-      intro:'Designed for cycling brands, MTB labels, distributors and product teams looking for a Sialkot manufacturing partner for custom full-finger gloves.',
+      heading:'Private-label MTB and cycling glove development for brands.',
+      intro:'Designed for cycling brands, MTB labels, distributors and product teams looking for a Sialkot manufacturing partner for custom full-finger and short-finger cycling gloves.',
       items:[
-        ['Custom development','Printed or sublimated backhands, custom colors, logos, labels and packaging can be developed around your brand brief.'],
+        ['Custom development','Full-finger MTB and short-finger cycling constructions can be developed with custom colors, logos, labels and packaging around your brand brief.'],
         ['Palm & grip options','Synthetic suede or microfiber palms, reinforcement zones, silicone grip and touchscreen details can be specified during sampling.'],
         ['Sampling','Sample development is available for evaluation, with an approximate 14-day sample lead time.'],
         ['Commercial starting point','Starting MOQ is 50 pairs per design, subject to material and customization requirements.']
