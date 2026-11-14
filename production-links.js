@@ -1,20 +1,20 @@
 (()=>{
-  const categoryPages={fullfinger:'fullfinger.html',cycling:'cycling.html',fitness:'fitness.html',winter:'winter.html'};
+  const categoryPages={fullfinger:'fullfinger.html',cycling:'golf.html',fitness:'fitness.html',winter:'winter.html'};
   const seoTitles={
     'fullfinger.html':'Full-Finger MTB Gloves Manufacturer | GRIPORA',
-    'cycling.html':'Custom Cycling Gloves Manufacturer | GRIPORA',
+    'golf.html':'Custom Golf Gloves Manufacturer | GRIPORA',
     'fitness.html':'Fitness & Training Gloves Manufacturer | GRIPORA',
     'winter.html':'Winter Gloves Manufacturer | GRIPORA'
   };
   const seoH1={
     'fullfinger.html':'Full-Finger MTB & Cycling Gloves Manufacturer',
-    'cycling.html':'Custom Cycling Gloves Manufacturer',
+    'golf.html':'Custom Golf Gloves Manufacturer',
     'fitness.html':'Fitness & Training Gloves Manufacturer',
     'winter.html':'Winter & Outdoor Gloves Manufacturer'
   };
   const seoLeads={
     'fullfinger.html':'GRIPORA manufactures private-label MTB and cycling gloves in Sialkot, Pakistan, including full-finger trail styles and short-finger road constructions with custom backhands, technical palms, grip applications and sample development.',
-    'cycling.html':'GRIPORA manufactures private-label short-finger cycling gloves in Sialkot, Pakistan, with breathable backhands, padded synthetic palms, custom branding and low-MOQ sample development for cycling brands.',
+    'golf.html':'GRIPORA manufactures private-label golf gloves in Sialkot, Pakistan, with custom artwork, ventilated constructions, reinforced contact zones, adjustable closures and low-MOQ sample development for golf brands.',
     'fitness.html':'GRIPORA manufactures private-label fitness and training gloves in Sialkot, Pakistan, with palm protection, breathable materials, wrist-support options, custom branding and sample development for fitness brands.',
     'winter.html':'GRIPORA manufactures private-label winter and outdoor gloves in Sialkot, Pakistan, with insulated constructions, technical fabrics, reinforced palms, custom branding and sample development for outdoor brands.'
   };
@@ -29,12 +29,12 @@
         ['Commercial starting point','Starting MOQ is 50 pairs per design, subject to material and customization requirements.']
       ]
     },
-    'cycling.html':{
-      heading:'Custom cycling gloves for private-label programs.',
-      intro:'GRIPORA supports cycling brands, clubs, distributors and sportswear companies developing branded short-finger cycling gloves for wholesale and private-label programs.',
+    'golf.html':{
+      heading:'Custom golf gloves for private-label programmes.',
+      intro:'GRIPORA supports golf brands, clubs, distributors and retailers developing branded golf gloves for wholesale and private-label programmes.',
       items:[
-        ['Backhand customization','Breathable mesh and stretch constructions can be combined with custom colors, artwork and brand logos.'],
-        ['Palm development','Synthetic suede or microfiber palms can be developed with padding, reinforcement zones and pull-tab options.'],
+        ['Upper customization','Perforated, synthetic and stretch-panel constructions can be combined with custom colours, artwork and brand logos.'],
+        ['Palm development','Smooth or reinforced palm constructions can be developed around grip, durability and target feel.'],
         ['Sampling','Sample development is available for evaluation, with an approximate 14-day sample lead time.'],
         ['Commercial starting point','Starting MOQ is 50 pairs per design, with bulk production typically around 60 days after approval.']
       ]
@@ -109,7 +109,7 @@
     if(el.textContent.includes('Dummy redesign preview'))el.textContent='*Final MOQ depends on materials and customization.';
   });
 
-  if(['cycling.html','fitness.html','winter.html','fullfinger.html'].includes(path)&&location.search){
+  if(['golf.html','fitness.html','winter.html','fullfinger.html'].includes(path)&&location.search){
     history.replaceState(null,'',path);
   }
 })();

@@ -1,6 +1,6 @@
 (()=>{
   const IMAGES={
-    cycling:'assets/cycling-m1-blue.png',
+    cycling:'assets/golf-ggf-001-rose-aero.webp',
     winter:'winter-m1-brown.png',
     fitness:'assets/fitness-m1-blue.png',
     player:'assets/player-m1-black.png',
