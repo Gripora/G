@@ -1,5 +1,5 @@
 (()=>{
-  const categoryPages={fullfinger:'fullfinger.html',cycling:'golf.html',fitness:'fitness.html',winter:'winter.html'};
+  const categoryPages={fullfinger:'fullfinger.html',golf:'golf.html',fitness:'fitness.html',winter:'winter.html'};
   const seoTitles={
     'fullfinger.html':'Full-Finger MTB Gloves Manufacturer | GRIPORA',
     'golf.html':'Custom Golf Gloves Manufacturer | GRIPORA',
