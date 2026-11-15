@@ -24,7 +24,7 @@ const DUMMY_DATA={
     ],
     specs:[['Backhand development','Printed or sublimated options depending on material, artwork and construction.'],['Palm options','Synthetic suede or microfiber constructions with reinforcement options.'],['Grip details','Silicone palm or finger applications and touchscreen development options.'],['Private label','Custom artwork, logos, colors, labels and packaging.']]
   },
-  cycling:{
+  golf:{
     number:'02',title:'Golf Gloves',short:'GOLF',concept:false,
     tagline:'Private-label golf glove development with performance-oriented fit, ventilated constructions, reinforced contact zones and custom artwork for golf brands and retail programmes.',
     hero:'assets/golf-ggf-001-rose-aero.webp',heroFit:'contain',
@@ -96,7 +96,8 @@ const DUMMY_DATA={
 };
 
 const qs=new URLSearchParams(location.search);
-const categoryKey=DUMMY_DATA[qs.get('category')]?qs.get('category'):'fullfinger';
+const requestedCategory=location.pathname.split('/').pop()==='golf.html'?'golf':qs.get('category');
+const categoryKey=DUMMY_DATA[requestedCategory]?requestedCategory:'fullfinger';
 const cat=DUMMY_DATA[categoryKey];
 const esc=s=>String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 function logo(footer=false){return `<a class="logo ${footer?'footer-logo':''}" href="dummy.html">GRIP<span class="o">O</span>RA<small><b>GRIP. PROTECT.</b> PERFORM.</small></a>`}
@@ -126,8 +127,8 @@ function bindProductGallery(model){
 
 function renderCategory(){
   const root=document.querySelector('[data-dummy-category]');if(!root)return;document.title=`${cat.title} — GRIPORA Dummy`;document.body.classList.add(`category-${categoryKey}`);
-  const selectedRange=categoryKey==='fitness'||categoryKey==='fullfinger'||categoryKey==='winter'||categoryKey==='cycling';
-  const rangeHeading=categoryKey==='fitness'?`${cat.models.length} selected development styles.`:categoryKey==='fullfinger'?`${cat.models.length} selected MTB and cycling styles.`:categoryKey==='winter'?`${cat.models.length} selected winter and outdoor styles.`:categoryKey==='cycling'?`${cat.models.length} selected golf glove styles.`:`${cat.models.length} selected development styles.`;
+  const selectedRange=categoryKey==='fitness'||categoryKey==='fullfinger'||categoryKey==='winter'||categoryKey==='golf';
+  const rangeHeading=categoryKey==='fitness'?`${cat.models.length} selected development styles.`:categoryKey==='fullfinger'?`${cat.models.length} selected MTB and cycling styles.`:categoryKey==='winter'?`${cat.models.length} selected winter and outdoor styles.`:categoryKey==='golf'?`${cat.models.length} selected golf glove styles.`:`${cat.models.length} selected development styles.`;
   const rangeIntro=selectedRange?'Review the selected styles and open any model for its private-label development details. Custom colours, logos and specifications are confirmed during sampling.':'Choose a model, review its available colorways, then open the product page for the full development view.';
   root.innerHTML=`${header()}<main class="inner-shell"><section class="inner-hero"><div class="inner-hero-copy"><a class="inner-back" href="dummy.html#categories">← Back to all categories</a><p class="eyebrow">${cat.number} · GRIPORA PERFORMANCE DEVELOPMENT</p><h1>${cat.title}</h1><p class="lead">${cat.tagline}</p>${cat.concept?'<p class="status-note">Concept visual — not a production sample. Sample-led specification development available.</p>':''}</div><div class="inner-hero-media ${cat.heroFit==='contain'?'contain':''}"><img src="${cat.hero}" alt="GRIPORA ${cat.title}"></div></section>${commercialStrip()}<section class="collection"><div class="collection-head"><div><p class="eyebrow dark">DEVELOPMENT RANGE</p><h2>${rangeHeading}</h2></div><p>${rangeIntro}</p></div><div class="model-grid">${cat.models.length?cat.models.map((m,i)=>`<article class="model-card"><a class="model-media" href="dummy-product.html?category=${categoryKey}&model=${i}"><img ${m.sku?'loading="lazy" ':''}src="${m.colors[0][2]}" alt="${esc(m.name)}${m.sku?` · ${esc(m.sku)}`:''}"></a><div class="model-copy"><div class="model-meta"><span>${m.sku||`${String(i+1).padStart(2,'0')} · ${cat.short}`}</span><span>${m.sku?'PRIVATE LABEL':`${m.colors.length} COLORS`}</span></div><h3><a href="dummy-product.html?category=${categoryKey}&model=${i}">${m.name}</a></h3><p>${m.desc}</p>${m.colors.length>1?`<div class="color-preview"><div><b>Color:</b> <span data-selected-color>${m.colors[0][0]}</span></div>${swatches(m.colors,i,'category')}</div>`:'<div class="development-note">Custom colours · Logos · Materials · Packaging</div>'}<a class="model-link" href="dummy-product.html?category=${categoryKey}&model=${i}">View product →</a>${cat.concept?'<div class="mini-note">Concept visual — color swatches show development directions; final colorway artwork is confirmed during sampling.</div>':''}</div></article>`).join(''):`<div class="empty-collection"><span>CATEGORY REFRESH</span><h3>New glove styles are coming soon.</h3><p>This section is intentionally being prepared for the next image and product update.</p></div>`}</div></section><section class="category-info"><div class="category-info-grid"><div><p class="eyebrow">CATEGORY CAPABILITY</p><h2>Developed around your market.</h2></div><div class="spec-list">${cat.specs.map(s=>`<div class="spec-item"><b>${s[0]}</b><span>${s[1]}</span></div>`).join('')}</div></div></section>${categorySwitch()}${contactCta()}</main>${footer()}`;
   bindCategorySwatches();
