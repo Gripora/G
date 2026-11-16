@@ -192,14 +192,3 @@ body.inner-page{background:var(--paper);color:var(--ink)}
   mix-blend-mode: normal !important;
   image-rendering: auto;
 }
-
-
-/* GRIPORA consistent winter collection layout — 2026-11-16 */
-/* Same square, three-column product-card pattern as Fitness and MTB. */
-.category-winter .model-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.category-winter .model-media{height:auto;aspect-ratio:1/1}
-.category-winter .model-copy{padding:23px 22px 26px}
-.category-winter .model-copy h3{font-size:26px}
-.category-winter .model-copy p{min-height:66px}
-@media(max-width:900px){.category-winter .model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.category-winter .model-grid{grid-template-columns:1fr}.category-winter .model-copy p{min-height:0}}
