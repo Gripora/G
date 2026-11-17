@@ -52,9 +52,8 @@ for dirname,(prefix,category,parent,pattern) in categories.items():
         name=full[len("GRIPORA "):]
         desc=value(h,"description")
         clean=re.sub(r'\bdirection\b','design',desc,flags=re.I).strip().rstrip(".")
-        suffix="Private-label glove manufacturing in Sialkot, Pakistan."
-        maxchars=174-len(prefix)-len(suffix)-4
-        if len(clean)>maxchars:clean=clean[:maxchars].rsplit(" ",1)[0].rstrip(" ,:;.")
+        # Preserve complete technical phrases; do not truncate mid-feature.
+        suffix="OEM manufacturing in Sialkot, Pakistan."
         newdesc=prefix+": "+clean+". "+suffix
         newtitle=name+" "+prefix+" | GRIPORA"
         url=site+"/"+dirname+"/"+file.name
