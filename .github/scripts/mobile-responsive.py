@@ -67,6 +67,12 @@ with sync_playwright() as p:
             started = time.monotonic()
             response = page.goto(BASE + path, wait_until="domcontentloaded", timeout=30000)
             page.wait_for_timeout(350)
+            initial_metrics = page.evaluate("""() => ({
+                vitals: window.__griporaVitals,
+                transferBytes: performance.getEntriesByType('resource')
+                  .reduce((sum, entry) => sum + (entry.transferSize || 0), 0),
+                domContentLoadedMs: Math.round(performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0)
+            })""")
 
             if response is None or response.status != 200:
                 failures.append({"page": path, "viewport": label, "issue": "HTTP", "status": response.status if response else None})
@@ -143,9 +149,10 @@ with sync_playwright() as p:
                 "loadMs": round((time.monotonic() - started) * 1000),
                 "horizontalOverflow": layout["document"] > layout["viewport"] + 1 or layout["body"] > layout["viewport"] + 1,
                 "images": len(page.locator("img").all()),
-                "transferBytes": layout["transferBytes"],
-                "domContentLoadedMs": layout["domContentLoadedMs"],
-                "lcpMs": layout["vitals"]["lcp"],
+                "initialTransferBytes": initial_metrics["transferBytes"],
+                "totalTransferBytes": layout["transferBytes"],
+                "domContentLoadedMs": initial_metrics["domContentLoadedMs"],
+                "lcpMs": initial_metrics["vitals"]["lcp"],
                 "cls": round(layout["vitals"]["cls"], 4),
             })
             context.close()
