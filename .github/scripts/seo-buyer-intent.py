@@ -16,6 +16,13 @@ def update_title(markup, content):
     pat=re.compile(r"<title>.*?</title>",re.I|re.S)
     assert len(pat.findall(markup))==1, "Missing/duplicate title"
     return pat.sub(lambda _:"<title>"+html.escape(content)+"</title>",markup,count=1)
+# Competitor-audit improvement: keyword-relevant visible category H2, leaving locked hero H1 untouched.
+category_headings={
+    "fullfinger.html": ("<h2>MTB GLOVE RANGE.</h2>", "<h2>CUSTOM MTB &amp; CYCLING GLOVES.</h2>", "Full-Finger MTB & Cycling Gloves"),
+    "fitness.html": ("<h2>TRAINING GLOVE RANGE.</h2>", "<h2>CUSTOM GYM GLOVES.</h2>", "Training & Fitness Gloves"),
+    "winter.html": ("<h2>WINTER GLOVE RANGE.</h2>", "<h2>CUSTOM WINTER GLOVES.</h2>", "Winter & Outdoor Gloves"),
+    "golf.html": ("<h2>GOLF GLOVE RANGE.</h2>", "<h2>CUSTOM GOLF GLOVES.</h2>", "Golf Gloves"),
+}
 for path,title,description,old_intro,new_intro,old_more,new_more in specs:
     f=root/path
     assert f.is_file(), "Missing "+path
@@ -34,6 +41,25 @@ for path,title,description,old_intro,new_intro,old_more,new_more in specs:
         else:
             assert markup.count(old)==1, "Ambiguous copy in "+path
             markup=markup.replace(old,html.escape(new,quote=False),1)
+    if path in category_headings:
+        old_h2,new_h2,crumb_name=category_headings[path]
+        if old_h2 in markup:
+            assert markup.count(old_h2)==1, "Duplicate category H2: "+path
+            markup=markup.replace(old_h2,new_h2,1)
+        else:
+            assert new_h2 in markup, "Missing approved category heading: "+path
+        canonical="https://griporagloves.com/"+path
+        assert 'rel="canonical" href="'+canonical+'"' in markup, "Canonical mismatch: "+path
+        # Visible breadcrumb already shows Home > Categories > Category; structured data mirrors it.
+        schema={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://griporagloves.com/"},
+            {"@type":"ListItem","position":2,"name":crumb_name,"item":canonical}]}
+        marker='id="gripora-category-breadcrumb-20261117"'
+        if marker not in markup:
+            assert markup.count("</head>")==1, "Unique head needed: "+path
+            script='<script '+marker+' type="application/ld+json">'+json.dumps(schema,separators=(",",":"))+'</script>'
+            markup=markup.replace("</head>",script+"</head>",1)
+        assert markup.count(marker)==1, "Duplicated breadcrumb schema: "+path
     assert source.count("<h1")==markup.count("<h1"), "Heading count changed: "+path
     assert source.count("<img")==markup.count("<img"), "Image markup changed: "+path
     assert source.count("rel=\"canonical\"")==markup.count("rel=\"canonical\"")
