@@ -35,6 +35,11 @@ jobs:
           curl --fail --location --silent --show-error --retry 3 --max-time 120 "$RELEASE_URL" --output "$RUNNER_TEMP/gripora-v868.zip"
           printf '%s  %s\n' "$RELEASE_SHA256" "$RUNNER_TEMP/gripora-v868.zip" | sha256sum --check --status
           unzip -q "$RUNNER_TEMP/gripora-v868.zip" -d _site
+          # A fixed V8.6.8 release ZIP predates the approved compact gallery carousel.
+          # Preserve the checked-out, reviewed homepage while retaining all release assets.
+          grep -q 'id="factory-carousel-reel"' index.html
+          grep -q 'id="gripora-factory-carousel-20261117"' index.html
+          cp index.html _site/index.html
           printf 'griporagloves.com\n' > _site/CNAME
           touch _site/.nojekyll
           python3 - <<'PY'
@@ -71,12 +76,15 @@ jobs:
           assert "Choose full-finger MTB, golf, fitness or winter gloves" in oem_html
           index_html = (root / "index.html").read_text(encoding="utf-8")
           assert "gripora-v86-badges-preview" not in index_html
+          assert 'id="factory-carousel-reel"' in index_html
+          assert 'id="gripora-factory-carousel-20261117"' in index_html
+          assert 'gripora-factory-compact-carousel-20261117' in index_html
           from html.parser import HTMLParser
           import re
           section_start = index_html.index('<section class="factory-v84"')
           section_end = index_html.index('</section>', section_start)
           gallery = index_html[section_start:section_end]
-          photo_html = re.search(r'<div class="photos">([\s\S]*?)</div>', gallery)
+          photo_html = re.search(r'<div class="photos"[^>]*>([\s\S]*?)</div>', gallery)
           assert photo_html is not None
           photo_markup = photo_html.group(1)
           assert photo_markup.count('<figure>') == 12, "Expected 4 original + 8 new factory cards"
