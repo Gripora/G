@@ -94,13 +94,13 @@ with sync_playwright() as p:
 
             # Scroll through each page to trigger native lazy-loaded product images.
             page_height = page.evaluate("document.documentElement.scrollHeight")
-            for y in range(0, max(page_height, height), 650):
+            for y in range(0, max(page_height, height), 550):
                 page.evaluate("(y) => window.scrollTo(0, y)", y)
-                page.wait_for_timeout(65)
+                page.wait_for_timeout(150)
             try:
                 page.wait_for_function(
                     "Array.from(document.images).filter(img => img.hasAttribute('src')).every(img => img.complete)",
-                    timeout=15000,
+                    timeout=45000,
                 )
             except Exception:
                 pass
