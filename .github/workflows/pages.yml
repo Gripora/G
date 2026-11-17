@@ -27,8 +27,8 @@ jobs:
 
       - name: Download and verify approved GRIPORA V8.6.8 release
         env:
-          RELEASE_URL: "https://gripora-v868-product-preview-z7hr2cpi1-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_READY_SAME_TAB_NAVIGATION.zip"
-          RELEASE_SHA256: "2390d5a9d105d22e0650827d3ef712ae9180ed68014aa82faa0e86324f90a6e6"
+          RELEASE_URL: "https://gripora-v868-product-preview-5lqr70mj3-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_NO_VERCEL_TOOLBAR.zip"
+          RELEASE_SHA256: "91eed456b14359a9f3bf31ab9dd90d18a14f0a9b477ad9b95c905baafbde668a"
         run: |
           set -euo pipefail
           mkdir -p _site
@@ -64,6 +64,7 @@ jobs:
           for page in root.rglob("*.html"):
               markup = page.read_text(encoding="utf-8")
               assert 'target="_blank"' not in markup, f"New-tab link found in {page}"
+              assert "https://vercel.live/_next-live/feedback/feedback.js" not in markup, f"Vercel Toolbar script remains in {page}"
           print("V8.6.8 verified: 62 product pages, 70 sitemap URLs, original certificates, 4 clean category pages")
           PY
 
