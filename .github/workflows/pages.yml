@@ -27,8 +27,8 @@ jobs:
 
       - name: Download and verify approved GRIPORA V8.6.8 release
         env:
-          RELEASE_URL: "https://gripora-v868-product-preview-j3ho0k0hl-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_FACEBOOK_INSTAGRAM_FOOTER.zip"
-          RELEASE_SHA256: "aab9d8ff590818f2f13a26078fcb61dd83834134ef7fa228f1ae8f4136af3795"
+          RELEASE_URL: "https://gripora-v868-product-preview-5xtugk80l-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_OEM_THEME_FIXED.zip"
+          RELEASE_SHA256: "cc96c5babf8e08e5da8cd4cfb93249633ba2be79aae6d39922058a5f758299a7"
         run: |
           set -euo pipefail
           mkdir -p _site
@@ -61,6 +61,12 @@ jobs:
           )
           assert len(models) == 62, f"Expected 62 model pages, found {len(models)}"
           assert (root / "sitemap.xml").read_text().count("<loc>") == 70
+          oem_html = (root / "private-label-oem.html").read_text(encoding="utf-8")
+          assert 'id="gripora-oem-v868-approved-theme"' in oem_html
+          assert 'id="mobile-menu"' in oem_html
+          assert "dummy.css" not in oem_html and "dummy-brand.css" not in oem_html
+          assert 'class="gripora-social-links"' in oem_html
+          assert 'href="https://griporagloves.com/private-label-oem.html"' in oem_html
           for page in root.rglob("*.html"):
               markup = page.read_text(encoding="utf-8")
               assert 'target="_blank"' not in markup, f"New-tab link found in {page}"
