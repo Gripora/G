@@ -41,6 +41,7 @@ jobs:
           grep -q 'id="gripora-factory-carousel-20261117"' index.html
           cp index.html _site/index.html
           python3 .github/scripts/seo-enhance.py _site
+          python3 .github/scripts/seo-buyer-intent.py _site
           printf 'griporagloves.com\n' > _site/CNAME
           touch _site/.nojekyll
           python3 - <<'PY'
@@ -80,7 +81,16 @@ jobs:
           assert 'id="factory-carousel-reel"' in index_html
           assert 'id="gripora-factory-carousel-20261117"' in index_html
           assert 'gripora-factory-compact-carousel-20261117' in index_html
-          assert '<title>Custom Glove Manufacturer in Pakistan | GRIPORA</title>' in index_html
+          assert '<title>Private Label Sports Gloves Manufacturer | GRIPORA</title>' in index_html
+          for landing, phrase in {
+              "fullfinger.html": "Private Label MTB",
+              "fitness.html": "Custom Gym",
+              "winter.html": "OEM Winter",
+              "golf.html": "Private Label Golf",
+              "private-label-oem.html": "OEM &amp; Private Label",
+              "custom-glove-development.html": "Custom Glove Sampling",
+          }.items():
+              assert phrase in (root/landing).read_text(encoding="utf8"), f"B2B SEO missing: {landing}"
           assert all('id="gripora-seo-20261117"' in p.read_text(encoding="utf8") for p in models)
           from html.parser import HTMLParser
           import re
