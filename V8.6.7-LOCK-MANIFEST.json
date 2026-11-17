@@ -1,0 +1,1047 @@
+{
+  "name": "GRIPORA V8.6.7 LOCKED COMPLETE",
+  "sourceDeployment": "dpl_Gp91Kku3zm9uU1Zy34g8XFJFXHzr",
+  "sourceURL": "https://gripora-v86-badges-compact-static-8v7e3y0kl.vercel.app",
+  "status": "FROZEN SNAPSHOT",
+  "archiveProject": "gripora-v867-locked",
+  "counts": {
+    "MTB": 17,
+    "Fitness": 12,
+    "Winter": 22,
+    "Golf": 11
+  },
+  "audit": {
+    "htmlPages": 75,
+    "originalHtmlPages": 74,
+    "productDetailPages": 62,
+    "staticFiles": 218,
+    "localReferencesChecked": 216,
+    "missingAssets": [],
+    "brokenNavigation": [],
+    "factoryImagesVerified": 4,
+    "originalProductImagesVerified": 6,
+    "sourcePagesEdited": false,
+    "addedCompatibilityRedirect": "mtb/development-policy.html"
+  },
+  "integrity": {
+    "sha256": "5c78bd606174a39251ad72add1e361913d99882527f6ae830409d35ac11d80f3",
+    "verifiedOriginals": {
+      "factory/factory-stitching.webp": {
+        "bytes": 77138,
+        "sha256": "b7bf19b7b819a4fc038793563ffa12f5e5f2f277aeae9ca7ac078b56487ee1c0"
+      },
+      "factory/factory-entrance.webp": {
+        "bytes": 66492,
+        "sha256": "23f3c7e4e92aa22ed62c4204b436282670adb76c5faddba50f5ce420e6aaa947"
+      },
+      "factory/factory-printing.webp": {
+        "bytes": 89906,
+        "sha256": "1aff61f30586b943c082dfcbf1a781956da14cab33e07df27264070a2a8353ea"
+      },
+      "factory/factory-cutting.webp": {
+        "bytes": 230078,
+        "sha256": "08f9189394b2032801882fbb5407e5130123eaeed06ac3140771a8d20e64a1d6"
+      },
+      "assets/restored-original/fitness-gft-001-gelguard-pro.webp": {
+        "bytes": 112876,
+        "sha256": "c60e4cf5cfad592ca0f4c9b95527e3cbde18735b3bd0ca7571cce73973f2c806"
+      },
+      "assets/restored-original/fitness-gft-010-microgrip-pro.webp": {
+        "bytes": 159446,
+        "sha256": "b0deaf2a26e6ce7fbb778897426e6a1a52d9e5c84281b81491c064c2b1e05353"
+      },
+      "assets/restored-original/winter-gwo-012-ridgeguard-olive.webp": {
+        "bytes": 147708,
+        "sha256": "fa120c4f3e5d35d925a431bcbad0bf3f423207a8484254a7e2c8348b07a47a28"
+      },
+      "assets/restored-original/winter-gwo-021-blaze-workshield.webp": {
+        "bytes": 133856,
+        "sha256": "a7fd77d938a2e626b3a7839eaaad86c20056227ac87edb2d5717447d940ae9b5"
+      },
+      "assets/restored-original/golf-ggf-006-lime-stroke.webp": {
+        "bytes": 145180,
+        "sha256": "44617c8e92fe03ea92c8c85148f8af7dbccdab6787c21a252593613e78926273"
+      },
+      "assets/restored-original/golf-ggf-010-contrast-grip.webp": {
+        "bytes": 130784,
+        "sha256": "46d813ecb9e62a8b6ba2a25e249e4ae6e2701e8dba5c5e25c3b8da03bb81b352"
+      }
+    }
+  },
+  "files": {
+    "assets/cycling-m1-blue.png": {
+      "sha256": "4d1717df1e6706400b02f59bd88a749008c0ee9d320bb4d41c8d1ef26fc893cb",
+      "bytes": 88680
+    },
+    "assets/cycling-m1-green.png": {
+      "sha256": "c665f4458f21a28d0fa26245a27f1f8b061bd8acd6bcd1cf3abe1faef553744e",
+      "bytes": 82280
+    },
+    "assets/cycling-m1-grey.png": {
+      "sha256": "4f698938ab4e7c829901d8cc937e817d0a1b03783ce0806beb0e889bb699b2bb",
+      "bytes": 82832
+    },
+    "assets/cycling-m1-red.png": {
+      "sha256": "f30489bbf240e5f08c0820a2a172ea2f992cce47e56474e7b2fedd2f1aab3c74",
+      "bytes": 89084
+    },
+    "assets/cycling-m2-blue.png": {
+      "sha256": "8de42ad2ce3bdbabd78e293f15df2ad44ae0cc0e60867ddb07b969d3145cd35d",
+      "bytes": 137034
+    },
+    "assets/cycling-m2-green.png": {
+      "sha256": "91d9cb7cabb15f6ddcc7e33e3cc0ca6e191a061a7618db89c77f4b5506d71cd3",
+      "bytes": 128794
+    },
+    "assets/cycling-m2-orange.png": {
+      "sha256": "e8a082488eed4b6c7d7f6c484ede28f50bf823d13c19b457fc12ca71940c1f16",
+      "bytes": 130122
+    },
+    "assets/cycling-m2-red.png": {
+      "sha256": "6a31f956849ebb755525996877e569b8539bcae0279983ba55b9887c89b4dc1e",
+      "bytes": 128892
+    },
+    "assets/cycling-m3-blue.png": {
+      "sha256": "f1f80c54d8710d30d9f3f72203fb2271ffb0b7c02dcb4308ff9a484179bb4d3e",
+      "bytes": 149422
+    },
+    "assets/cycling-m3-green.png": {
+      "sha256": "303ee88d82494021e57202f57ce46954aade0616068cb7bb4be954f42489a99b",
+      "bytes": 133700
+    },
+    "assets/cycling-m3-red.png": {
+      "sha256": "cde628963e4a582b1b7584b612baa54f2cf714dc52b3b71810463c0139941c0c",
+      "bytes": 139652
+    },
+    "assets/cycling-m3-white.png": {
+      "sha256": "508a7a83ccdff48daab5711831dbe3455c593e661eb37af415c0f116de11679f",
+      "bytes": 128318
+    },
+    "assets/cycling-m4-black.png": {
+      "sha256": "c4b3eff6bd82899b3d800d8bf824106838054769d9062ad37ba3a6060402fc2d",
+      "bytes": 106004
+    },
+    "assets/cycling-m4-blue.png": {
+      "sha256": "e121bedea177d97d9456b6111e2a7ae4da465b16808821d46ae10979de3baad7",
+      "bytes": 127560
+    },
+    "assets/cycling-m4-green.png": {
+      "sha256": "413fd271b99f097f169b58a1aecc9868ef9fda8a30307f175593d03e284b505c",
+      "bytes": 112720
+    },
+    "assets/cycling-m4-grey.png": {
+      "sha256": "0bb9bec5fa89cc99cdff97e27f9f67a3a7208668a594a443c9abd68eac288719",
+      "bytes": 113612
+    },
+    "assets/fitness-gft-002-ironcore-wrap.webp": {
+      "sha256": "cd84fd8b6e0f5a9e7d5ba61d03750433d11e67c34d95fe85b2002e59e0ac3ea5",
+      "bytes": 250534
+    },
+    "assets/fitness-gft-003-powermesh-pro.webp": {
+      "sha256": "8e6a695d059bbb2c3549d36a705eda2ff1e7d39aa91072c61348b85bfa9a68be",
+      "bytes": 179044
+    },
+    "assets/fitness-gft-004-essential-trainer.webp": {
+      "sha256": "99c8efa257b0e53cffe490b15f2fb2f0aa17c54907b02473cde952fe74602095",
+      "bytes": 135280
+    },
+    "assets/fitness-gft-005-hibiscus-flex.webp": {
+      "sha256": "f7221362b142e71608abfce765352261c786a347554ad0bad0d1f15e75f4bb17",
+      "bytes": 125780
+    },
+    "assets/fitness-gft-006-camoforce-grip.webp": {
+      "sha256": "91249dd7447f98a516ae99ed54a8d5c7c49e2a45f6ec86d827e3e93cda852ae6",
+      "bytes": 136948
+    },
+    "assets/fitness-gft-007-powerwrap-x.webp": {
+      "sha256": "e713eccd125073d047213c876a57b913bab90961748437a8324a6a2acba66d8a",
+      "bytes": 152848
+    },
+    "assets/fitness-gft-008-aerolite.webp": {
+      "sha256": "4965dca24f8c73906c8e7e8000506cd4d1558b5b87640690a3664edc24d758c4",
+      "bytes": 47064
+    },
+    "assets/fitness-gft-009-flexguard.webp": {
+      "sha256": "2b879906262a64f7fa40a0f5c4fdf673c3c41c60018b6d647cb28f30f2c61406",
+      "bytes": 94826
+    },
+    "assets/fitness-gft-010-microgrip-pro-source-square.png": {
+      "sha256": "4428c17bf2053383a631af59daf3e3d3b9c795afb2d153658ca3366ebccd703e",
+      "bytes": 1105765
+    },
+    "assets/fitness-gft-012-neogrip.webp": {
+      "sha256": "0492fd7c5d64efe193a4acd9ec09f59147016e204d72214f9eb83298ea93957d",
+      "bytes": 110104
+    },
+    "assets/fitness-gft-013-classic-lift.webp": {
+      "sha256": "f83729dc35bc4ca07e66e9ab7e9813cb564eb7fc9f1694295a89cac4893f986e",
+      "bytes": 219010
+    },
+    "assets/fitness-m1-blue.png": {
+      "sha256": "a4498166845d680211519c7c666764a9c8b8fd4eaa792c2deae3d1e86fb684e4",
+      "bytes": 3211172
+    },
+    "assets/fitness.webp": {
+      "sha256": "cd84fd8b6e0f5a9e7d5ba61d03750433d11e67c34d95fe85b2002e59e0ac3ea5",
+      "bytes": 250534
+    },
+    "assets/golf-ggf-001-rose-aero.webp": {
+      "sha256": "e5532bfddd0a382df7bfd473dabde0d0e05d663253c095c0c82019b835c1d68d",
+      "bytes": 113446
+    },
+    "assets/golf-ggf-002-patriot-fairway.webp": {
+      "sha256": "3e2f90f4bb3bb9560a601a793284b93191fb7a299a17ff7dbdd21eff6d3b3910",
+      "bytes": 210016
+    },
+    "assets/golf-ggf-003-tour-strike.webp": {
+      "sha256": "fcaab0b8bf4345733da0a5b0581c95c31dbd567bb82e5df899b8f6980d8629f0",
+      "bytes": 180934
+    },
+    "assets/golf-ggf-004-splatter-drive.webp": {
+      "sha256": "0638910c88ce6345786fdfd517f9dd439ebece0fc46b0904b310ad83db7283ae",
+      "bytes": 235180
+    },
+    "assets/golf-ggf-005-crimson-classic.webp": {
+      "sha256": "95c49980502ae8f02c028e5b760d26efb792ebc34ff002f0cd1e412337b0c9f5",
+      "bytes": 156794
+    },
+    "assets/golf-ggf-007-neon-links.webp": {
+      "sha256": "d884a3998c47776b94164fba4c78bea5714722b868716fc9e2fe595294994966",
+      "bytes": 113180
+    },
+    "assets/golf-ggf-008-argyle-tour-source-square.png": {
+      "sha256": "eaafe67a0db53730299147d9c96bb9deb18241195e534a3db21c1bc972ab02c7",
+      "bytes": 2189234
+    },
+    "assets/golf-ggf-009-clubhouse-thermal.webp": {
+      "sha256": "f9a21732974ca669fbe90b44de380a55f50fea5fe993b1cdf9ba69cb96b91c12",
+      "bytes": 61440
+    },
+    "assets/golf-ggf-010-contrast-grip-source-square.png": {
+      "sha256": "da006edbb46a26f3d6d049fa53b525656e0794ab8fcc4448fc80e9ce246aa65a",
+      "bytes": 848971
+    },
+    "assets/golf-ggf-011-camo-control.webp": {
+      "sha256": "d1b3d633cc0c32e2a81412ee81bbb9d5d50e3080d4e48ae1dc80d464a9d51a90",
+      "bytes": 142262
+    },
+    "assets/mtb-core.webp": {
+      "sha256": "66d8396e4527cdbf0f157d6315f985d71eec66a2c1b1f9752d88dc384c3809da",
+      "bytes": 90978
+    },
+    "assets/mtb-gmt-001-emberflow.webp": {
+      "sha256": "ffc99668129f60a5866a4b38429feac49bcf00ea41ae9671c0557c9eb3f1aa34",
+      "bytes": 122644
+    },
+    "assets/mtb-gmt-002-aquaflex.webp": {
+      "sha256": "183af415683e76662fa29861f80a13112ff6e29daf9dc4acf87a04fef782c5fc",
+      "bytes": 78578
+    },
+    "assets/mtb-gmt-003-trailguard-pro-source-square.png": {
+      "sha256": "f23858185565c15ba13ab606339243910073f5921ba43b95f68675640bc83580",
+      "bytes": 1491931
+    },
+    "assets/mtb-gmt-004-blazecore.webp": {
+      "sha256": "6dc165d511d6e414ed2213e71bb3115c9ebb4ce4f0e117345e08d8186bbffcaf",
+      "bytes": 128126
+    },
+    "assets/mtb-gmt-005-patriot-ride.webp": {
+      "sha256": "850c6055de1d2b56dba3e7c7bb4ff38026a5dbe863abeff373148490851888a7",
+      "bytes": 112920
+    },
+    "assets/mtb-gmt-006-nightwave-reflect.webp": {
+      "sha256": "cad678a9ad4f891b724f62fc0e0aa71d1542af4eb476d924d1cbdb6849321b04",
+      "bytes": 161742
+    },
+    "assets/mtb-gmt-007-hibiscus-trail.webp": {
+      "sha256": "dcb1ebae3525e133a75aa8bac5ca4b8e508d59ae5e5e899d327199cb2eb2cab6",
+      "bytes": 143368
+    },
+    "assets/mtb-gmt-008-terralite.webp": {
+      "sha256": "735485ffc5d2910c87d118b937b0d27d5530e7441ecc695015fae2145afb7d0f",
+      "bytes": 56234
+    },
+    "assets/mtb-gmt-009-neon-graphite.webp": {
+      "sha256": "99a8de73a4ef003aab8cb94a9d80e50d868c3ce7766d7e9a59cc28dc6fc723de",
+      "bytes": 184874
+    },
+    "assets/mtb-gmt-010-aero-crest.webp": {
+      "sha256": "871bb3e652b04e92ec0538a3a5fb4a8e62e7801429f0bd941e96fb0b13e1b2cf",
+      "bytes": 155038
+    },
+    "assets/mtb-gmt-011-stealthgrip.webp": {
+      "sha256": "730f0de752bd759dd0ea24f58c9ee8ffd80b1fcee16f4958f354baaa11f2c9c8",
+      "bytes": 142572
+    },
+    "assets/mtb-gmt-012-roseline.webp": {
+      "sha256": "3d08d93578d5b2f98c6b7ab7605885c124dded529e4af78499c6249c7c00595b",
+      "bytes": 177448
+    },
+    "assets/mtb-gmt-013-torqueblack.webp": {
+      "sha256": "15e2083fc85c596bd7ec9e9c54fdcea859ec1374b2466810c3782744faad0bc8",
+      "bytes": 107644
+    },
+    "assets/mtb.webp": {
+      "sha256": "c32b09af24ffdc2152461a59c08b45edf67cb270167779c56133e583fd314cd8",
+      "bytes": 202098
+    },
+    "assets/normalized/fitness-gft-002-ironcore-wrap.webp": {
+      "sha256": "8a522111dccae1657b2ea162e1bf5d700b07b091eb3a35bdd888347a851f053b",
+      "bytes": 176760
+    },
+    "assets/normalized/fitness-gft-003-powermesh-pro.webp": {
+      "sha256": "b5a89483268fbf58d56741e9c2f8d748439878260ea8a3ebba450e579fe9a728",
+      "bytes": 146506
+    },
+    "assets/normalized/fitness-gft-004-essential-trainer.webp": {
+      "sha256": "a1dbc50e8a30272770357501051b8591933ff7ba2725dd89a595a77405ef8a5c",
+      "bytes": 85412
+    },
+    "assets/normalized/fitness-gft-005-hibiscus-flex.webp": {
+      "sha256": "40b0e596b734db126dc8831b86031c828be0040ba722557e85fbd9ef36359f6d",
+      "bytes": 89592
+    },
+    "assets/normalized/fitness-gft-006-camoforce-grip.webp": {
+      "sha256": "c5367da4ca1d5db3392949a08ebee557ac7523a575a2c06d7e05d44d6cf57857",
+      "bytes": 102790
+    },
+    "assets/normalized/fitness-gft-007-powerwrap-x.webp": {
+      "sha256": "cbb0eb54c2a829903be0abf61a589bde17e93dd50d223f77054ef63032947df6",
+      "bytes": 113362
+    },
+    "assets/normalized/fitness-gft-008-aerolite.webp": {
+      "sha256": "51d10c717fb78cf3767366c9aee9768c631a7a42383f0e2cb739f4271629fe9a",
+      "bytes": 43880
+    },
+    "assets/normalized/fitness-gft-009-flexguard.webp": {
+      "sha256": "7e88b909dbb54ef7be142060284d324c4f14a39abc0f44cce5fec3625d01e6dd",
+      "bytes": 70876
+    },
+    "assets/normalized/fitness-gft-012-neogrip.webp": {
+      "sha256": "69f27f8977f9fa97ae5a9ec20fecf55f6b879fb70a2e5ebb63bb336065a2a01f",
+      "bytes": 68370
+    },
+    "assets/normalized/fitness-gft-013-classic-lift.webp": {
+      "sha256": "265a1cc8f5e1283363dce0e9eb4a8eb58a321931c3261e0d29914cda001e7acf",
+      "bytes": 126698
+    },
+    "assets/normalized/golf-ggf-001-rose-aero.webp": {
+      "sha256": "2454d27aacc70e51984aeefc09f07dfa1416c928c7a0d7b056ae174af0575dc7",
+      "bytes": 84088
+    },
+    "assets/normalized/golf-ggf-002-patriot-fairway.webp": {
+      "sha256": "07d29727bc4a895a362ca1e1dfa8b0fbfd29cbfbe9ac8d7cbc3319aefa3fea6c",
+      "bytes": 91530
+    },
+    "assets/normalized/golf-ggf-003-tour-strike.webp": {
+      "sha256": "3be18ab381bd8afb4ed13d2e2f7816d3fdf9fc16f2adb26c171ac1e8fdfda01a",
+      "bytes": 94208
+    },
+    "assets/normalized/golf-ggf-004-splatter-drive.webp": {
+      "sha256": "fc8d40dae77d7f42f3ae49088a2afedf6c396092146bd3a3bdcd7fe7bb58db69",
+      "bytes": 189526
+    },
+    "assets/normalized/golf-ggf-005-crimson-classic.webp": {
+      "sha256": "caf7fdf1093a136ccc8ff03f0c52da31eca67b315d1606d883f68dd3ef5ee120",
+      "bytes": 94748
+    },
+    "assets/normalized/golf-ggf-007-neon-links.webp": {
+      "sha256": "61225845e04bd1dbad8f25e7f89ea0cdc206dff279d07cf015980b9a70eb985c",
+      "bytes": 72130
+    },
+    "assets/normalized/golf-ggf-008-argyle-tour.webp": {
+      "sha256": "5ade8fd5894cfb493cc76bdbf729dff70b66305f18f1ddce96a4e90fb1bf34cf",
+      "bytes": 60390
+    },
+    "assets/normalized/golf-ggf-009-clubhouse-thermal.webp": {
+      "sha256": "bbb7beaf154e8d71116576221a73cdc32643421a3ce325e21d18284ed93463ae",
+      "bytes": 49264
+    },
+    "assets/normalized/golf-ggf-011-camo-control.webp": {
+      "sha256": "c742ae90071ac7f315fe96955136a0c18f0ceb7bec8382c1152a7f15208e3d4c",
+      "bytes": 69548
+    },
+    "assets/normalized/winter-gwo-005-graphite-matrix-mitt.webp": {
+      "sha256": "96976a31d464284480df7770127908005ced8a5d95c40150a5b62d79c20bbf9e",
+      "bytes": 108302
+    },
+    "assets/normalized/winter-gwo-006-arctic-puffer-mitt.webp": {
+      "sha256": "b9a3db362d1eed6ba181cce937bc475ff6eefcf181defb377355c58b86ea0a72",
+      "bytes": 61574
+    },
+    "assets/normalized/winter-gwo-007-stormshield-red.webp": {
+      "sha256": "073351d280710c6a2464506c1b887b9d3fc36cff7c5efebc98cd070290d35fdc",
+      "bytes": 108800
+    },
+    "assets/normalized/winter-gwo-008-stealthgrip-liner.webp": {
+      "sha256": "b6a3697a6e18f17523fedf98cc35bfc6181fc7e46d0f4be7143ccc35470b5016",
+      "bytes": 54022
+    },
+    "assets/normalized/winter-gwo-009-heritage-herringbone.webp": {
+      "sha256": "83ff007effb9391e25be8f696af6f62cfcb6b7ff1becdde3986b932a23b2b945",
+      "bytes": 145088
+    },
+    "assets/normalized/winter-gwo-010-hi-vis-gel.webp": {
+      "sha256": "354560eb506bfc7e3ec2165cef9f9a74d98f9d010575d5f4560a8d1a29ce54ac",
+      "bytes": 109596
+    },
+    "assets/normalized/winter-gwo-011-olive-matrix.webp": {
+      "sha256": "3acf2734368639c35543993faa28482657f2e07fffbbda096258474fefef5844",
+      "bytes": 122112
+    },
+    "assets/normalized/winter-gwo-013-blaze-alpine.webp": {
+      "sha256": "e1702b5cad9d8c142d4fd2ad64ec2b1876b3e5fab0d5b475ae736ad5c2c026eb",
+      "bytes": 95722
+    },
+    "assets/normalized/winter-gwo-014-heritage-suede-mitt.webp": {
+      "sha256": "cfbb912c385f10c04487b9c1581c099ef74a388f8e747f2f49858f8555220802",
+      "bytes": 79534
+    },
+    "assets/normalized/winter-gwo-015-player-thermal.webp": {
+      "sha256": "35f3f99a04029e4f5f97822ce61c28f3f1caa1ca8d878118cfd9418d274c77b7",
+      "bytes": 81148
+    },
+    "assets/normalized/winter-gwo-016-navy-alpine-mitt.webp": {
+      "sha256": "27c1b66e6581dd5b109e9f7e7aca2fb76afaf3bdc4f78febfd27a54aebd64a75",
+      "bytes": 109490
+    },
+    "assets/normalized/winter-gwo-017-stargrip-thermal.webp": {
+      "sha256": "c21d50668308e27f8e1f5de354dc5520d732ea28662ddf22850fe71142b48c9d",
+      "bytes": 122340
+    },
+    "assets/normalized/winter-gwo-018-expedition-heat.webp": {
+      "sha256": "487a7794e973c32d5cc659091d157de823d546ed8801fbe01c7cf4d44459297d",
+      "bytes": 129428
+    },
+    "assets/normalized/winter-gwo-019-modular-summit.webp": {
+      "sha256": "cb9e3865503a8f3ec5dab5f9b94afcf973f99cfeb930223ac0894d8618de9298",
+      "bytes": 115508
+    },
+    "assets/normalized/winter-gwo-020-stealth-alpine.webp": {
+      "sha256": "2fd448f5fb2aa667e74d3bc0d1c7336115fef015516fe90ffdaa067474f31563",
+      "bytes": 73196
+    },
+    "assets/normalized/winter-gwo-022-goldguard-workshield.webp": {
+      "sha256": "33f9e86e239321d030cce9757815c4a7a7d8e4fedeae296d0cf09d0197a8ac99",
+      "bytes": 85304
+    },
+    "assets/normalized/winter-m1-black.webp": {
+      "sha256": "9ba2ddccfc3dacadfd2739909c00dc78108c2430b75f9987174ef0a4f1d69413",
+      "bytes": 92800
+    },
+    "assets/normalized/winter-m1-brown.webp": {
+      "sha256": "6894c4ef06badebd2c044c17dd33f1f31f1df705a6f96970468b4f4180b50b7d",
+      "bytes": 137714
+    },
+    "assets/normalized/winter-m1-olive-green.webp": {
+      "sha256": "8309c40db6a75c623d00e5166b2d9a7c1d8c8c5179fbf77421816f451c9d448f",
+      "bytes": 95714
+    },
+    "assets/normalized/winter-m1-tan.webp": {
+      "sha256": "396eaaed17cbce87c76d5307d906f8257ce40972fb9bfa955def1a5c24e53714",
+      "bytes": 103584
+    },
+    "assets/normalized/winter-m2-black.webp": {
+      "sha256": "764ef5d62e1e63ad798cfdcf6044929ab52b2a8728a086861e4cfd9b60caece3",
+      "bytes": 168234
+    },
+    "assets/normalized/winter-m2-navy-blue.webp": {
+      "sha256": "0edabe9536482a9db0620d70e869dc069ab66eb78edc1198eb84bfe4cf82ca71",
+      "bytes": 204960
+    },
+    "assets/normalized/winter-m2-olive-green.webp": {
+      "sha256": "d5a248625977083c68d067a3cc7d17bf28170f50a3ec545459020a201ac4ccee",
+      "bytes": 174668
+    },
+    "assets/normalized/winter-m2-tan.webp": {
+      "sha256": "948ed8bdb82e085f7f5464052c5971d9fb22e26ad2066adbc08c9278a0880cb7",
+      "bytes": 207296
+    },
+    "assets/normalized/winter-m3-black.webp": {
+      "sha256": "8fa46c94bbeae922cb9bde57b2fb20d5bc2615fbfb44e42570930c5b4a8d7cce",
+      "bytes": 101390
+    },
+    "assets/normalized/winter-m3-navy-blue.webp": {
+      "sha256": "0d899b69c24b6131a04e76502416265321b363ac8b9196c463cd9bbb14de7e6f",
+      "bytes": 76334
+    },
+    "assets/normalized/winter-m3-olive-green.webp": {
+      "sha256": "7104adebd279657e9566f1bc5c80c55714d03436d46d8b8a7cc405baa6ffef90",
+      "bytes": 87922
+    },
+    "assets/normalized/winter-m3-tan.webp": {
+      "sha256": "3690700700f73e42c99a10c49ebe06584138d6e5ac855a11535b94dc26b46afd",
+      "bytes": 90094
+    },
+    "assets/normalized/winter-m4-black.webp": {
+      "sha256": "4d949bd144f35094d2cab6b6e5d017b041b16bc1eb99b22aabca54fafcaf0add",
+      "bytes": 58544
+    },
+    "assets/normalized/winter-m4-grey.webp": {
+      "sha256": "ccdfcb4e2e6df9c42866e35dd47d4a3506147afcc5416b4ea783706e2db6ffa7",
+      "bytes": 95910
+    },
+    "assets/normalized/winter-m4-navy-blue.webp": {
+      "sha256": "e2a3d7d0de7c322bbba2d0278857b740270fdae7fe74c38b436007b6ba8206f2",
+      "bytes": 68612
+    },
+    "assets/normalized/winter-m4-olive-green.webp": {
+      "sha256": "dfdf2f35637d988066f5311803b9523bea9dc74a958c62ab9a50cc6e180c7744",
+      "bytes": 112284
+    },
+    "assets/restored-original/fitness-gft-001-gelguard-pro.webp": {
+      "sha256": "c60e4cf5cfad592ca0f4c9b95527e3cbde18735b3bd0ca7571cce73973f2c806",
+      "bytes": 112876
+    },
+    "assets/restored-original/fitness-gft-010-microgrip-pro.webp": {
+      "sha256": "b0deaf2a26e6ce7fbb778897426e6a1a52d9e5c84281b81491c064c2b1e05353",
+      "bytes": 159446
+    },
+    "assets/restored-original/golf-ggf-006-lime-stroke.webp": {
+      "sha256": "44617c8e92fe03ea92c8c85148f8af7dbccdab6787c21a252593613e78926273",
+      "bytes": 145180
+    },
+    "assets/restored-original/golf-ggf-010-contrast-grip.webp": {
+      "sha256": "46d813ecb9e62a8b6ba2a25e249e4ae6e2701e8dba5c5e25c3b8da03bb81b352",
+      "bytes": 130784
+    },
+    "assets/restored-original/winter-gwo-012-ridgeguard-olive.webp": {
+      "sha256": "fa120c4f3e5d35d925a431bcbad0bf3f423207a8484254a7e2c8348b07a47a28",
+      "bytes": 147708
+    },
+    "assets/restored-original/winter-gwo-021-blaze-workshield.webp": {
+      "sha256": "a7fd77d938a2e626b3a7839eaaad86c20056227ac87edb2d5717447d940ae9b5",
+      "bytes": 133856
+    },
+    "assets/winter-glove-fixed.jpg": {
+      "sha256": "c0c25419a8540c9cdce807f80d288308e9dae92902ec89d4f28a3f3fdc2cd7a0",
+      "bytes": 14997
+    },
+    "assets/winter-gwo-005-graphite-matrix-mitt.webp": {
+      "sha256": "959d64a673eff7602c50edf8abdfa584dac53da41f8714057092783e6c8aecdc",
+      "bytes": 176656
+    },
+    "assets/winter-gwo-006-arctic-puffer-mitt.webp": {
+      "sha256": "00807af6f7efba67423411167b5800f4e2aafb7dac6808e9bf2f92606da78ff6",
+      "bytes": 78260
+    },
+    "assets/winter-gwo-007-stormshield-red.webp": {
+      "sha256": "4a07e9eb81aa43b6510f64fff95684503f918b739cff64aaf13b96645b5fdd7c",
+      "bytes": 190604
+    },
+    "assets/winter-gwo-008-stealthgrip-liner.webp": {
+      "sha256": "3e44e8b756ab4d98fc0d44cec6291d34c195fde551b0718dff6067c0a9dfc8ed",
+      "bytes": 90890
+    },
+    "assets/winter-gwo-009-heritage-herringbone.webp": {
+      "sha256": "e3c12e5973d6170c2c6a1306d47625d9cd2f3ffc92cf17220431510cdab9c1f2",
+      "bytes": 248174
+    },
+    "assets/winter-gwo-010-hi-vis-gel.webp": {
+      "sha256": "02f642663661a8f8c858bdf91b2bf0675ee8157133a18a73114c3951016c5f96",
+      "bytes": 231372
+    },
+    "assets/winter-gwo-011-olive-matrix.webp": {
+      "sha256": "5b2d39fabad79a74019163c6b7cf2672f2f59695d123779a4e12d9abfdde374f",
+      "bytes": 185152
+    },
+    "assets/winter-gwo-013-blaze-alpine.webp": {
+      "sha256": "121611d5c7fb8672d7f8dfccf163cbd085b1af6eeac461ba622f162a0eecf3e0",
+      "bytes": 165490
+    },
+    "assets/winter-gwo-014-heritage-suede-mitt.webp": {
+      "sha256": "7ed2a729c0ac09249beeae96b133ef96190a593bf00aa7d25be219e8c03fe020",
+      "bytes": 108730
+    },
+    "assets/winter-gwo-015-player-thermal.webp": {
+      "sha256": "1834388ca8ac8471b8a59e4d6ef6f9eac5ee8ffa65c921eaea844b77a14b733c",
+      "bytes": 147062
+    },
+    "assets/winter-gwo-016-navy-alpine-mitt.webp": {
+      "sha256": "8651c29aaefa1832f7f1de9dc81b9e8fabee618f10f20c8f2db937d12cb78c8a",
+      "bytes": 185676
+    },
+    "assets/winter-gwo-017-stargrip-thermal.webp": {
+      "sha256": "c6b4797c2991faf9ff9c5aa2b4f53a90c3690c9ad2d49f44fdcd6fc459fa6157",
+      "bytes": 194238
+    },
+    "assets/winter-gwo-018-expedition-heat.webp": {
+      "sha256": "f6b8d54d12b2aaf1279dbe6492e39c91aa156350dd29f653dfbf5e57df27c244",
+      "bytes": 264542
+    },
+    "assets/winter-gwo-019-modular-summit.webp": {
+      "sha256": "d6979e80a9806f3140f7f4ed841518bcb27db4f5aee9107e1b06bb888501531c",
+      "bytes": 180672
+    },
+    "assets/winter-gwo-020-stealth-alpine.webp": {
+      "sha256": "bd9830eb70d4383a132313e849ebe8e32575362b598c3b2524ca71b4689d366e",
+      "bytes": 88690
+    },
+    "assets/winter-gwo-022-goldguard-workshield.webp": {
+      "sha256": "b69786587a935236cf11a44ee0ea3337bf0a02704dcba2c785018a6c9b0cd0c9",
+      "bytes": 127288
+    },
+    "assets/winter-m3-tan.png": {
+      "sha256": "c2288d0bf74fa0b582513bd026b90362a6c2ce0e6c83b4f98bbeda30b8a68b1c",
+      "bytes": 2692749
+    },
+    "assets/winter.webp": {
+      "sha256": "f6b8d54d12b2aaf1279dbe6492e39c91aa156350dd29f653dfbf5e57df27c244",
+      "bytes": 264542
+    },
+    "custom-glove-development.html": {
+      "sha256": "5e9c08c20be25073eb459a255412bd074d30dbb4d589c7e091f4614260cfe7a5",
+      "bytes": 11993
+    },
+    "development-policy.html": {
+      "sha256": "f364284cb6eb5b069b8f356cb71de99677711e4be882408e1b21c04feead49a7",
+      "bytes": 17389
+    },
+    "dummy-brand.css": {
+      "sha256": "54b0cd89f379b87f62e13006172249aa5daae912f9d0d2165a25dd781be341ce",
+      "bytes": 397
+    },
+    "dummy-category.html": {
+      "sha256": "462689ba3c032018a6d61abff59fa33ac3cdc0aeaf3a834438d5aad69e4abe68",
+      "bytes": 6020
+    },
+    "dummy-colors.css": {
+      "sha256": "c15bb8e9b3ff3218ec1f07539b3c398eac6df3d0aca962a50fcc65c32b4db79c",
+      "bytes": 1605
+    },
+    "dummy-inner.css": {
+      "sha256": "0193c837d70e0208beecb57c041c3f17bb4bccccedd74633cb70805a0ce2629a",
+      "bytes": 13418
+    },
+    "dummy-product.html": {
+      "sha256": "c2dc90a0e896a9cc42c5c2c13fdd635c4ccf73caa9ef3886845fc1594c1196fd",
+      "bytes": 5931
+    },
+    "dummy-site.js": {
+      "sha256": "c61e28e190183b184a3b4e18ddef0f434ad878b89ee16b2883d4ce423312c786",
+      "bytes": 38264
+    },
+    "dummy.css": {
+      "sha256": "2f232920c59f5a6445d95b1189f9b354ce3b3699a972bed4d0c72328ba70870e",
+      "bytes": 8026
+    },
+    "dummy.html": {
+      "sha256": "c845e4fcc9e59a40b2ea5e09d7856fccf563cfb7b02d92f1d39990d4dc6997aa",
+      "bytes": 12945
+    },
+    "factory/factory-cutting.webp": {
+      "sha256": "08f9189394b2032801882fbb5407e5130123eaeed06ac3140771a8d20e64a1d6",
+      "bytes": 230078
+    },
+    "factory/factory-entrance.webp": {
+      "sha256": "23f3c7e4e92aa22ed62c4204b436282670adb76c5faddba50f5ce420e6aaa947",
+      "bytes": 66492
+    },
+    "factory/factory-printing.webp": {
+      "sha256": "1aff61f30586b943c082dfcbf1a781956da14cab33e07df27264070a2a8353ea",
+      "bytes": 89906
+    },
+    "factory/factory-stitching.webp": {
+      "sha256": "b7bf19b7b819a4fc038793563ffa12f5e5f2f277aeae9ca7ac078b56487ee1c0",
+      "bytes": 77138
+    },
+    "fitness.html": {
+      "sha256": "0cdd582c46b01ab343bc6ba6eba5c88c066414d48b802f3f396f3a1eaa202598",
+      "bytes": 79162
+    },
+    "fitness/gft-001.html": {
+      "sha256": "cb754300d9c0259ad75ff2eee833936fb87946f86a807eacfd172dd79f8f8384",
+      "bytes": 71147
+    },
+    "fitness/gft-002.html": {
+      "sha256": "e178d6d0110537af4e955f1eeb6b373653872d076b7905eede4776d76cba89e8",
+      "bytes": 70997
+    },
+    "fitness/gft-003.html": {
+      "sha256": "6928f52df12ebe2078eeef93ddac812d27c04176d891ffa83fa8a9c0cac2b805",
+      "bytes": 70996
+    },
+    "fitness/gft-004.html": {
+      "sha256": "c82027db5e9ba538931646805b08b5f1ec16456ee816cc20ab1643112dba51d7",
+      "bytes": 71004
+    },
+    "fitness/gft-005.html": {
+      "sha256": "a3dffd0afe52673b6e7d43e8d208fc542bfcef2e548fa4897474572947ba7459",
+      "bytes": 71013
+    },
+    "fitness/gft-006.html": {
+      "sha256": "83d9aadd71318d453990c06e4bc4ab7112747b89aa05a39392e98266bbf9492a",
+      "bytes": 70958
+    },
+    "fitness/gft-007.html": {
+      "sha256": "ff6209febce7ddcc5bcd17239caceeaf14a1468157b09330f8d1c344bd200748",
+      "bytes": 70980
+    },
+    "fitness/gft-008.html": {
+      "sha256": "1d9afaf1dae9f430394baf73ce0d32ef65c7250d297895dd3f6f233b306aa419",
+      "bytes": 70926
+    },
+    "fitness/gft-009.html": {
+      "sha256": "1a528d6196d9e2af4014977423324fb41bfe18537f0e0ecb0b36e9b2bccbf6a4",
+      "bytes": 70924
+    },
+    "fitness/gft-010.html": {
+      "sha256": "23c1956fca04cc0f823d07586f4d4c0fa1bda1cb5339c55b40c76d5932e3fc19",
+      "bytes": 71141
+    },
+    "fitness/gft-012.html": {
+      "sha256": "f00efee495ff74435912401b8cb4db95931e18907f9677a23c3eadb379990748",
+      "bytes": 70922
+    },
+    "fitness/gft-013.html": {
+      "sha256": "f3186860b8aeb9ab0ac6ae5ba470b69b6aad475cfe1307eb44782e90e8785cae",
+      "bytes": 70972
+    },
+    "fullfinger.html": {
+      "sha256": "4a1d67057893bab05fb39cedfcd8327351d30c0b5f68752e649c9e110aeb1144",
+      "bytes": 84543
+    },
+    "golf.html": {
+      "sha256": "b6ca4fa1ef8df81974704e68c0da56de5529647b47bb361e28d9e163502536f5",
+      "bytes": 78607
+    },
+    "golf/ggf-001.html": {
+      "sha256": "6c01dc582f83690baf16d6e24f98bd71a900cbc2d1b9b74366245b804660fac9",
+      "bytes": 71303
+    },
+    "golf/ggf-002.html": {
+      "sha256": "26e536063ff35b0967d682771c9b454a19b0c8198fc984469296537f2cc2f0a1",
+      "bytes": 71320
+    },
+    "golf/ggf-003.html": {
+      "sha256": "85bcada6c68c51b75192aa5350bc9d840e0f11df56d162aa8a297d8bea70755c",
+      "bytes": 71295
+    },
+    "golf/ggf-004.html": {
+      "sha256": "504dbfd7f51d469b483252bb384e9e2959c3ccd3401dcfa469267fb57115f89d",
+      "bytes": 71312
+    },
+    "golf/ggf-005.html": {
+      "sha256": "729ac4c9531bb3e38d444c5d00fc79a3d770aa6e88dd0d6663e66e753f4afbad",
+      "bytes": 71284
+    },
+    "golf/ggf-006.html": {
+      "sha256": "5cafb1ff9a9a35515d677fa7c57a2a12748851ae04c9c4443922c41110f2f1d8",
+      "bytes": 71455
+    },
+    "golf/ggf-007.html": {
+      "sha256": "366a761a46b758787912f65daad51b277ed35643d3d2b8cd7cc97b826bc233ab",
+      "bytes": 71282
+    },
+    "golf/ggf-008.html": {
+      "sha256": "ab3b564ec01ab4b552acd96b826523b4069ed42300d16e1c4e7b553797865e8e",
+      "bytes": 71305
+    },
+    "golf/ggf-009.html": {
+      "sha256": "c9c6ee493825f6154f01f78df7d937c5d326f40526dc0a6e96f6a5602bdeb3ca",
+      "bytes": 71329
+    },
+    "golf/ggf-010.html": {
+      "sha256": "105e03b786d1d16f57d2e0a9070ea03fbc4dc20bda1559430556f56df4521d3b",
+      "bytes": 71397
+    },
+    "golf/ggf-011.html": {
+      "sha256": "a52b92515c7e06f91d25f36ebea2ad4a80f61718746682a9e63be98cadeaa992",
+      "bytes": 71309
+    },
+    "gripora-original-photo-fix.css": {
+      "sha256": "950579f71a0999b1c8f34497a3aee3c760ffaaf4bc1b4391a10732cd70249342",
+      "bytes": 703
+    },
+    "index.html": {
+      "sha256": "b6f1c7c18a5d31a0786fd3b3f59b13dc704bb6e3bae594f36c8b37767b4bd300",
+      "bytes": 81038
+    },
+    "mtb/development-policy.html": {
+      "sha256": "626704937652fb7c4b04504bbeb1f62c100d27a08966aa4ccc3000948fe5a20e",
+      "bytes": 376
+    },
+    "mtb/gmt-001.html": {
+      "sha256": "a74d3e68ab58044c29fa9254d13842a1a38908754c364dd604682669f4d79853",
+      "bytes": 63230
+    },
+    "mtb/gmt-002.html": {
+      "sha256": "4c60d62c5de1f46d6c8b2a1b330eb96cae76b4a3969dd2a67b246bfbf2c3d51b",
+      "bytes": 63248
+    },
+    "mtb/gmt-003.html": {
+      "sha256": "e3f4270ef716b9aa32078d9c1e278abde4a77336c05320f9815dca5136eddaf2",
+      "bytes": 63319
+    },
+    "mtb/gmt-004.html": {
+      "sha256": "d28fd65b777e5e28b9fb6ae05a91b9d7613ec079cb51295292cd48fde9bcb4a1",
+      "bytes": 63235
+    },
+    "mtb/gmt-005.html": {
+      "sha256": "a4815da8dfaa7cf5edceac2c127b96c544fe68484d8faa3718c5de9dc1480330",
+      "bytes": 63286
+    },
+    "mtb/gmt-006.html": {
+      "sha256": "dfdd753c068bbca978cb99ad3ac65e0c5dd6490e06ca68f9e354782cfd797b09",
+      "bytes": 63333
+    },
+    "mtb/gmt-007.html": {
+      "sha256": "f0da8255ba67b19402139ad171311620eddf75cc8752baf7f2280b50a4c3d619",
+      "bytes": 63301
+    },
+    "mtb/gmt-008.html": {
+      "sha256": "22c616828dc70afccc5cb495c236bb6f7120756fa8f7520515df6353abffb1e7",
+      "bytes": 63221
+    },
+    "mtb/gmt-009.html": {
+      "sha256": "4a58b659e196f90d3f7818b3c47f070046026224d4bb8208774e919673cda63b",
+      "bytes": 63309
+    },
+    "mtb/gmt-010.html": {
+      "sha256": "a02a3e7dc12438293853b7f28372bd373f809887213e3b20ed7328adf4420d4e",
+      "bytes": 63262
+    },
+    "mtb/gmt-011.html": {
+      "sha256": "cf9e99708ce4b192eb96b8a4cd16ffc5aef3752dfc1a254a2d3c0f546f8ec596",
+      "bytes": 63219
+    },
+    "mtb/gmt-012.html": {
+      "sha256": "ce2634067e6e10aff939c688471d36d56c1d1b2922e8c966f5619c7c5335e653",
+      "bytes": 63221
+    },
+    "mtb/gmt-013.html": {
+      "sha256": "100cb5c407db0253d0c94fff3227ba108af132f020343e9a2138e894ccfc2ed2",
+      "bytes": 63217
+    },
+    "mtb/gmt-014.html": {
+      "sha256": "13381dd0cbe7b0ddd9d0ee4073d66168d4434b1ff08e295f950f504bcd112cf2",
+      "bytes": 63780
+    },
+    "mtb/gmt-015.html": {
+      "sha256": "83a997f7823c54a591473aac56f66c534c0ec29eaa7cbed937d79695701c953a",
+      "bytes": 63772
+    },
+    "mtb/gmt-016.html": {
+      "sha256": "4f4b52d566f593f0938aca34c1d4fbd62c95be8072e53a264068ae04efbbf358",
+      "bytes": 63763
+    },
+    "mtb/gmt-017.html": {
+      "sha256": "4ba14fd36807a293fce331aa4422721c6ab687bdbeb0321f3684a066ffe8b213",
+      "bytes": 63780
+    },
+    "private-label-oem.html": {
+      "sha256": "1be4bf812f84048970da86b1592d9ddcd5a3b0904b82fb297d34b238740af356",
+      "bytes": 11969
+    },
+    "product.html": {
+      "sha256": "c13d4952793509ce82c27a3c642140ac31a081a0527d2b0ed283c8e0d31f2ceb",
+      "bytes": 6091
+    },
+    "production-links.js": {
+      "sha256": "31a09b648b6afae5e1c0d56f8ecc1aae7dab9f6e51353bf2f25279bbb5ace5cb",
+      "bytes": 7528
+    },
+    "v86-category-parity.css": {
+      "sha256": "47dcbdded2f7343a76a80067a59e85d9ca2ceee9ad97055d9c84b0f14e8c82c8",
+      "bytes": 1733
+    },
+    "v86-natural-image-restore.css": {
+      "sha256": "b353bbd63c1a9189dd16bd8c0904399ea242e1acb699e7bd25a4373175a1bc5e",
+      "bytes": 654
+    },
+    "winter.html": {
+      "sha256": "908cc283faf38e60ce265ca9648f92bb01885b8ea07b9debcfed296eca6a8c5e",
+      "bytes": 86632
+    },
+    "winter/gwo-001.html": {
+      "sha256": "b3e661a0a26b90673ccb8bf990541e7d7a83c3cfaeef07b69644c35624566b12",
+      "bytes": 72092
+    },
+    "winter/gwo-002.html": {
+      "sha256": "e56a7d254e699c5bb264e9b7f8f5c80fae97012b9c63d9c11809f0cc62ba23ac",
+      "bytes": 72064
+    },
+    "winter/gwo-003.html": {
+      "sha256": "999afa21c7b9f7e14cfd88d65ff58e0fe283642b54bb516fb7b4ad1ed147b1fc",
+      "bytes": 72069
+    },
+    "winter/gwo-004.html": {
+      "sha256": "c215568b02213264063d43563116218311a9b9bcf530fda85c4aca3cbbe593d1",
+      "bytes": 72072
+    },
+    "winter/gwo-005.html": {
+      "sha256": "d3cd81bb205a1dafb40e9622dfaf5d1974d7a0c8031eb0e081aefdb4c47ef8dd",
+      "bytes": 71554
+    },
+    "winter/gwo-006.html": {
+      "sha256": "7d155c186e7b702dbe7392cf2c57ba6c22e4961f39c6e9e7095b582af4761c2b",
+      "bytes": 71531
+    },
+    "winter/gwo-007.html": {
+      "sha256": "18fb0c46863088c594b5c5e7f1311724e9a0f9d7a93bfd7afac34646f9197061",
+      "bytes": 71526
+    },
+    "winter/gwo-008.html": {
+      "sha256": "252b918b7926f63965f5883985856ef2a365fbf9c6847301fe108ceb3a47447b",
+      "bytes": 71507
+    },
+    "winter/gwo-009.html": {
+      "sha256": "5007c73c9b77823a16c1948cccf90ad29ef47b27e0878ab0fcf6820d92c6c43b",
+      "bytes": 71564
+    },
+    "winter/gwo-010.html": {
+      "sha256": "1e0a2bf467f02ccabb87d9bf1ada0298cf8927c6d0502e0abc52959ceca6ba9e",
+      "bytes": 71509
+    },
+    "winter/gwo-011.html": {
+      "sha256": "6b93aab516e2cfce85db0fb379f749224f9c904e58a6a86cb2b146d9888a9af1",
+      "bytes": 71496
+    },
+    "winter/gwo-012.html": {
+      "sha256": "87cf1fa535cc84ae225dc3e0b7bbf5a41b93de92b6495e126bb56e5c94b22486",
+      "bytes": 71701
+    },
+    "winter/gwo-013.html": {
+      "sha256": "2df08d7e76c331777c46bc664b4d061ff569e3ac191a4c783773d7b924a3d351",
+      "bytes": 71507
+    },
+    "winter/gwo-014.html": {
+      "sha256": "afb13e4b699bb5a19e578e385addc14e4548b7b7dc86916b19f539fab81b86c0",
+      "bytes": 71536
+    },
+    "winter/gwo-015.html": {
+      "sha256": "d1d7cb52475aa2a7e923211015b726384856659346fc69c304063aef5703d60d",
+      "bytes": 71474
+    },
+    "winter/gwo-016.html": {
+      "sha256": "0db088bed0b6178998c236c4ceabe0216369a271de7d5535e3ab47207b7652c5",
+      "bytes": 71526
+    },
+    "winter/gwo-017.html": {
+      "sha256": "1118103ea8a242bc9884cb26bf19517c849c8466ab10dd3ad27f973774c9d2db",
+      "bytes": 71493
+    },
+    "winter/gwo-018.html": {
+      "sha256": "59974d3305cac9268751969905f4545f2ed6f8e4ffcad54f6365a75120e4766d",
+      "bytes": 71546
+    },
+    "winter/gwo-019.html": {
+      "sha256": "427218ce1786fae734c47c3ddb0821e003c474f46a617c50d01e8bfb2c2072fb",
+      "bytes": 71534
+    },
+    "winter/gwo-020.html": {
+      "sha256": "50dad6d61e5b254e8269761e46c29d624171ff51120e6339f62b41560a51e9db",
+      "bytes": 71454
+    },
+    "winter/gwo-021.html": {
+      "sha256": "0857018a43bb3bf91886920576311e11cbba576eaacf4b0573bec7c3b18fa034",
+      "bytes": 71731
+    },
+    "winter/gwo-022.html": {
+      "sha256": "05d33c1d8d8fcb62e7c5ccd34c9151bdd25b5cec564074a3d3143cc4caf7b7a6",
+      "bytes": 71531
+    }
+  },
+  "note": "Separate no-Git archive project, frozen by unique deployment URL and downloadable ZIP. Not access-control protection.",
+  "revision": "V8.6.7 NAVIGATION HOTFIX",
+  "navigationAudit": {
+    "version": "8.6.7",
+    "revision": "Navigation fix / Final review",
+    "checkedFrom": "https://gripora-v867-locked.vercel.app",
+    "sourceZipSHA256": "0ebb1f52745448091d33538f38320982f946ba137933273ad4f4155a530e2c99",
+    "patches": {
+      "winter.html": 4,
+      "golf.html": 4,
+      "index.html": 6,
+      "fitness.html": 4,
+      "fullfinger.html": 4,
+      "dummy.html": 1,
+      "fitness/gft-007.html": 4,
+      "fitness/gft-004.html": 4,
+      "fitness/gft-008.html": 4,
+      "fitness/gft-002.html": 4,
+      "fitness/gft-009.html": 4,
+      "fitness/gft-006.html": 4,
+      "fitness/gft-005.html": 4,
+      "fitness/gft-003.html": 4,
+      "fitness/gft-001.html": 4,
+      "winter/gwo-005.html": 4,
+      "fitness/gft-013.html": 4,
+      "winter/gwo-006.html": 4,
+      "winter/gwo-007.html": 4,
+      "winter/gwo-002.html": 4,
+      "winter/gwo-003.html": 4,
+      "winter/gwo-001.html": 4,
+      "fitness/gft-012.html": 4,
+      "fitness/gft-010.html": 4,
+      "winter/gwo-004.html": 4,
+      "winter/gwo-016.html": 4,
+      "winter/gwo-013.html": 4,
+      "winter/gwo-009.html": 4,
+      "winter/gwo-010.html": 4,
+      "winter/gwo-011.html": 4,
+      "winter/gwo-017.html": 4,
+      "winter/gwo-008.html": 4,
+      "winter/gwo-014.html": 4,
+      "winter/gwo-015.html": 4,
+      "winter/gwo-012.html": 4,
+      "winter/gwo-019.html": 4,
+      "golf/ggf-005.html": 4,
+      "golf/ggf-003.html": 4,
+      "winter/gwo-018.html": 4,
+      "golf/ggf-002.html": 4,
+      "winter/gwo-020.html": 4,
+      "golf/ggf-004.html": 4,
+      "winter/gwo-021.html": 4,
+      "golf/ggf-001.html": 4,
+      "winter/gwo-022.html": 4,
+      "golf/ggf-010.html": 4,
+      "mtb/gmt-004.html": 4,
+      "mtb/gmt-001.html": 4,
+      "mtb/gmt-003.html": 4,
+      "golf/ggf-009.html": 4,
+      "golf/ggf-006.html": 4,
+      "golf/ggf-008.html": 4,
+      "golf/ggf-007.html": 4,
+      "golf/ggf-011.html": 4,
+      "mtb/gmt-002.html": 4,
+      "mtb/gmt-006.html": 4,
+      "mtb/gmt-007.html": 4,
+      "mtb/gmt-008.html": 4,
+      "mtb/gmt-009.html": 4,
+      "mtb/gmt-012.html": 4,
+      "mtb/gmt-014.html": 4,
+      "mtb/gmt-011.html": 4,
+      "mtb/gmt-005.html": 4,
+      "mtb/gmt-013.html": 4,
+      "mtb/gmt-010.html": 4,
+      "mtb/gmt-017.html": 4,
+      "mtb/gmt-015.html": 4,
+      "mtb/gmt-016.html": 4
+    },
+    "oldSiteLinksFound": 271,
+    "linksCorrected": 271,
+    "homepageCategoryLinks": [
+      "/fullfinger.html",
+      "/golf.html",
+      "/fitness.html",
+      "/winter.html"
+    ],
+    "brokenInternalLinks": [],
+    "existingLiveWebsiteLinksRemaining": 0,
+    "internalNavigationLinksValidated": 1906,
+    "htmlPages": 75,
+    "preservedBinaryAssets": 143,
+    "productCounts": {
+      "MTB": 17,
+      "Fitness": 12,
+      "Winter": 22,
+      "Golf": 11
+    },
+    "externalLinkHosts": {
+      "www.instagram.com": 2
+    },
+    "originalImagesUnchanged": true
+  },
+  "lockedSourceDeployment": "dpl_HcPax6MaTYXc6Yf5c7opgHjmCZNX"
+}

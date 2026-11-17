@@ -1,0 +1,56 @@
+
+/* V8.6.8 GRIPORA PRODUCT DETAILS — scoped to 62 selected product pages */
+.mtb-new .detail{padding:0 0 80px!important;background:linear-gradient(#111714 0 173px,#fff 173px)!important}
+.mtb-new .detail>.w,.mtb-new .specs>.w{width:min(1240px,calc(100% - 60px));max-width:1240px;margin:auto}
+.mtb-new .detail .breadcrumb{padding:30px 0 40px!important;margin:0!important;display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:11px!important;font-size:10px!important;letter-spacing:.12em!important;font-weight:800!important;color:#bfc7c1!important}
+.mtb-new .detail .breadcrumb a{color:#fff!important;text-decoration:none!important}.mtb-new .detail .breadcrumb span,.mtb-new .detail .breadcrumb a:hover{color:var(--acid,#d8ff48)!important}
+.mtb-new .detail-grid{display:grid!important;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;gap:clamp(27px,4vw,63px)!important;align-items:center!important;padding:clamp(19px,3.2vw,43px)!important;border:1px solid #e6ece5!important;border-radius:20px!important;background:#fff!important;box-shadow:0 24px 70px #00000016!important;overflow:hidden!important}
+.mtb-new .detail-photo{position:relative!important;width:100%!important;max-height:none!important;min-height:0!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:1/1!important;padding:clamp(14px,2vw,28px)!important;border-radius:15px!important;border:1px solid #e7ece6!important;background:#fff!important;overflow:hidden!important}
+.mtb-new .detail-photo:before{content:"GRIPORA / OEM";position:absolute;top:18px;left:20px;z-index:2;color:#435347;font-size:9px;font-weight:850;letter-spacing:.15em;pointer-events:none}
+.mtb-new .detail-photo img,.mtb-new .detail-photo #main-model{display:block!important;position:relative!important;margin:auto!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;filter:none!important;opacity:1!important;transform:none!important;mix-blend-mode:normal!important}
+.mtb-new .detail-grid>div:last-child{min-width:0!important;padding:13px 5px!important}
+.mtb-new .detail-grid .tag{display:inline-block!important;color:var(--acid,#d8ff48)!important;background:#151b16!important;font-size:10px!important;font-weight:900!important;letter-spacing:.11em!important;margin:0 0 18px!important;padding:9px 12px!important;border-radius:5px!important}
+.mtb-new .detail-grid h1{font-family:Anton,"Arial Narrow",Impact,sans-serif!important;text-transform:uppercase!important;font-size:clamp(43px,4.9vw,77px)!important;line-height:1.04!important;font-weight:400!important;letter-spacing:.005em!important;color:#111814!important;margin:0 0 20px!important;overflow-wrap:anywhere!important}
+.mtb-new .detail-grid>div:last-child>p{max-width:510px!important;margin:0 0 23px!important;color:#576158!important;font-size:15px!important;line-height:1.75!important}
+.mtb-new .details-features{display:grid!important;list-style:none!important;gap:10px!important;margin:0 0 25px!important;padding:0 0 23px!important;border-bottom:1px solid #e7ede7!important}
+.mtb-new .details-features li{position:relative!important;list-style:none!important;margin:0!important;padding:0 0 0 21px!important;color:#303b34!important;font-size:13px!important;line-height:1.6!important}
+.mtb-new .details-features li:before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:1px;background:var(--acid,#d8ff48);outline:2px solid #152019}
+.mtb-new .detail-grid strong{display:block!important;margin:5px 0 11px!important;color:#253129!important;letter-spacing:.12em!important;font-size:10px!important;font-weight:900!important}
+.mtb-new .colors{display:flex!important;flex-wrap:wrap!important;gap:9px!important;align-items:center!important;margin:0 0 28px!important}
+.mtb-new .colors .color{display:inline-flex!important;gap:9px!important;align-items:center!important;min-height:40px!important;padding:9px 12px!important;border:1px solid #d5dfd6!important;border-radius:7px!important;color:#27352b!important;background:#fff!important;font-size:11px!important;font-weight:800!important;cursor:pointer!important}
+.mtb-new .colors .color[aria-pressed="true"]{border-color:#152119!important;box-shadow:0 0 0 2px var(--acid,#d8ff48)!important;background:#faffef!important}
+.mtb-new .colors .color .dot{display:inline-block!important;width:16px!important;height:16px!important;flex:none!important;border-radius:50%!important;border:1px solid #0002!important}
+.mtb-new .detail-grid .btn{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:22px!important;max-width:100%!important;min-height:53px!important;padding:15px 19px!important;background:var(--acid,#d8ff48)!important;color:#151815!important;border:0!important;border-radius:8px!important;text-decoration:none!important;font-size:11px!important;font-weight:900!important;letter-spacing:.075em!important}
+.mtb-new .detail-grid .btn:hover{transform:translateY(-2px)!important;box-shadow:0 10px 26px #0002!important}
+.mtb-new .specs{background:#111915!important;color:#fff!important;padding:80px 0 87px!important}
+.mtb-new .specs .tag{color:var(--acid,#d8ff48)!important;font-size:11px!important;font-weight:850!important;letter-spacing:.13em!important;margin:0 0 14px!important}
+.mtb-new .specs h2{font-family:Anton,"Arial Narrow",Impact,sans-serif!important;font-weight:400!important;text-transform:uppercase!important;line-height:1.04!important;font-size:clamp(43px,5vw,73px)!important;color:#fff!important;margin:0 0 32px!important}
+.mtb-new .spec-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:15px!important}
+.mtb-new .spec-grid article{min-width:0!important;padding:25px 23px!important;background:#1c2620!important;border:1px solid #34463a!important;border-radius:13px!important;box-shadow:none!important}
+.mtb-new .spec-grid article:before{content:"";display:block;width:28px;height:3px;background:var(--acid,#d8ff48);margin-bottom:21px}
+.mtb-new .spec-grid article strong{display:block!important;margin:0 0 13px!important;color:#fff!important;text-transform:uppercase!important;font-size:13px!important;line-height:1.4!important;font-weight:850!important}
+.mtb-new .spec-grid article p{margin:0!important;color:#c3cec5!important;font-size:12px!important;line-height:1.75!important}
+.mtb-new .v868-product-cta{background:#f5f6f3;padding:69px 0 81px}
+.mtb-new .v868-product-cta .v868-inner{width:min(1240px,calc(100% - 60px));margin:auto;padding:clamp(27px,4vw,50px);background:#e7ede5;border-radius:18px;display:flex;gap:38px;align-items:center;justify-content:space-between}
+.mtb-new .v868-product-cta .v868-kicker{display:block;color:#344a39;font-size:10px;font-weight:900;letter-spacing:.14em;margin-bottom:12px}
+.mtb-new .v868-product-cta h2{font-family:Anton,"Arial Narrow",Impact,sans-serif;text-transform:uppercase;color:#141c16;font-size:clamp(36px,4vw,61px);line-height:1.05;font-weight:400;margin:0 0 12px}
+.mtb-new .v868-product-cta p{font-size:13px;line-height:1.74;color:#4b5a4d;max-width:565px;margin:0}
+.mtb-new .v868-product-cta .v868-actions{min-width:232px;flex:none;display:flex;flex-direction:column;gap:12px}
+.mtb-new .v868-product-cta .v868-contact{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 18px;background:#142018;color:var(--acid,#d8ff48);border-radius:7px;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:.07em}
+.mtb-new .v868-product-cta .v868-back{display:block;color:#25362a;text-decoration:none;padding:8px 4px;font-size:10px;font-weight:900;letter-spacing:.07em}
+.mtb-new .v868-product-cta a:hover{opacity:.82}.mtb-new .detail a:focus-visible,.mtb-new .colors button:focus-visible,.mtb-new .v868-product-cta a:focus-visible{outline:3px solid #327cff!important;outline-offset:3px!important}
+@media(max-width:1050px){.mtb-new .spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.mtb-new .detail-grid{gap:23px!important}.mtb-new .detail-grid h1{font-size:clamp(40px,5.2vw,62px)!important}}
+@media(max-width:720px){.mtb-new .detail{background:linear-gradient(#111714 0 110px,#fff 110px)!important;padding-bottom:43px!important}.mtb-new .detail>.w,.mtb-new .specs>.w{width:calc(100% - 28px)}.mtb-new .detail .breadcrumb{padding:20px 0 24px!important;gap:7px!important;font-size:9px!important}.mtb-new .detail-grid{grid-template-columns:1fr!important;padding:12px!important;gap:17px!important;border-radius:14px!important}.mtb-new .detail-photo{border-radius:10px!important;padding:14px!important}.mtb-new .detail-grid>div:last-child{padding:9px 8px 17px!important}.mtb-new .detail-grid h1{font-size:clamp(37px,10vw,56px)!important}.mtb-new .detail-grid .btn{width:100%!important}.mtb-new .specs{padding:50px 0 57px!important}.mtb-new .specs h2{font-size:45px!important}.mtb-new .spec-grid{grid-template-columns:1fr!important;gap:12px!important}.mtb-new .spec-grid article{padding:22px!important}.mtb-new .v868-product-cta{padding:36px 0 45px}.mtb-new .v868-product-cta .v868-inner{width:calc(100% - 28px);display:block;padding:26px 23px;border-radius:14px}.mtb-new .v868-product-cta .v868-actions{min-width:0;margin-top:23px}}
+
+/* V8.6.8 product-image sizing fixes only */
+.mtb-new .detail-photo #main-model[src^="/assets/v868-clean/mtb-gmt-003-trailguard-pro-source-square.png"]{transform:scale(0.8883)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/mtb-gmt-006-nightwave-reflect.webp"]{transform:scale(0.8883)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/v868-clean/mtb-gmt-010-aero-crest.webp"]{transform:scale(0.9278)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/normalized/golf-ggf-001-rose-aero.webp"]{transform:scale(1.1929)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/normalized/golf-ggf-008-argyle-tour.webp"]{transform:scale(1.2000)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/v868-clean/fitness-gft-001-gelguard-pro.webp"]{transform:scale(0.8434)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/restored-original/fitness-gft-010-microgrip-pro.webp"]{transform:scale(0.8350)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/v868-clean/golf-ggf-006-lime-stroke.webp"]{transform:scale(0.8978)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/v868-clean/golf-ggf-010-contrast-grip.webp"]{transform:scale(1.1219)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/restored-original/winter-gwo-012-ridgeguard-olive.webp"]{transform:scale(0.8883)!important;transform-origin:center center!important;}
+.mtb-new .detail-photo #main-model[src^="/assets/v868-clean/winter-gwo-021-blaze-workshield.webp"]{transform:scale(0.9176)!important;transform-origin:center center!important;}

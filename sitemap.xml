@@ -1,45 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://griporagloves.com/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://griporagloves.com/fullfinger.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://griporagloves.com/golf.html</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://griporagloves.com/fitness.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://griporagloves.com/winter.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://griporagloves.com/private-label-oem.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://griporagloves.com/custom-glove-development.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url><loc>https://griporagloves.com/custom-glove-development.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/development-policy.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-001.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-002.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-003.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-004.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-005.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-006.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-007.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-008.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-009.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-010.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-012.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fitness/gft-013.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/fullfinger.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-001.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-002.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-003.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-004.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-005.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-006.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-007.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-008.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-009.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-010.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/golf/ggf-011.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-001.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-002.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-003.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-004.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-005.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-006.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-007.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-008.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-009.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-010.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-011.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-012.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-013.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-014.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-015.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-016.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/mtb/gmt-017.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/private-label-oem.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-001.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-002.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-003.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-004.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-005.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-006.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-007.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-008.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-009.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-010.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-011.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-012.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-013.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-014.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-015.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-016.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-017.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-018.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-019.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-020.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-021.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://griporagloves.com/winter/gwo-022.html</loc><lastmod>2026-11-17</lastmod></url>
 </urlset>

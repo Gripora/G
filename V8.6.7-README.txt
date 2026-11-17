@@ -1,0 +1,3 @@
+GRIPORA V8.6.7: complete frozen site, homepage and all 4 categories / 62 model detail pages.
+Navigation hotfix: Training, Winter and other first-party links now use same preview site, not griporagloves.com.
+Images, CSS, product content preserved byte-for-byte.

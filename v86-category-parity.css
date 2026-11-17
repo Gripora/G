@@ -1,0 +1,10 @@
+/* Original images and GRIPORA design are preserved; catalog card parity. */
+.category-fitness .model-grid,.category-winter .model-grid,.category-cycling .model-grid,.category-fullfinger .model-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.category-fitness .model-media,.category-winter .model-media,.category-cycling .model-media,.category-fullfinger .model-media,.mtb-new .model-media{height:auto!important;aspect-ratio:1/1!important;background-color:#fff!important;overflow:hidden}
+.category-fitness .model-media img,.category-winter .model-media img,.category-cycling .model-media img,.category-fullfinger .model-media img,.mtb-new .model-media img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
+.category-fitness .model-copy,.category-winter .model-copy,.category-cycling .model-copy,.category-fullfinger .model-copy{padding:23px 22px 26px}
+.category-fitness .model-copy h3,.category-winter .model-copy h3,.category-cycling .model-copy h3,.category-fullfinger .model-copy h3{font-size:26px}
+.detail-image,.color-thumbs button,.color-thumbs img{background-color:#fff!important}
+.detail-image img{object-fit:contain!important;filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
+@media(max-width:900px){.category-fitness .model-grid,.category-winter .model-grid,.category-cycling .model-grid,.category-fullfinger .model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.category-fitness .model-grid,.category-winter .model-grid,.category-cycling .model-grid,.category-fullfinger .model-grid{grid-template-columns:1fr}}

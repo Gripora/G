@@ -1,0 +1,4 @@
+/* Original GRIPORA product photo files used directly; no image processing. */
+.model-media img[src*="/assets/restored-original/"],.detail-image img[src*="/assets/restored-original/"],.model-gallery img[src*="/assets/restored-original/"],img[src*="/assets/restored-original/"]{filter:none!important;opacity:1!important;mix-blend-mode:normal!important;image-rendering:auto!important;object-fit:contain!important;object-position:center!important}
+.model-media:has(>img[src*="/assets/restored-original/"]){background-image:none!important}
+.model-media:has(>img[src*="/assets/restored-original/golf-ggf-010-contrast-grip.webp"]){background:#e9e8eb!important}

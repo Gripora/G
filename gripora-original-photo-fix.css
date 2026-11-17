@@ -1,0 +1,5 @@
+/* GRIPORA V8.6. Original photos: no brightness, masks, fake shadows or gradients. */
+.model-card .model-media,.model-media{aspect-ratio:1 / 1!important;height:auto!important;min-height:0!important;background:#fff!important;background-image:none!important;overflow:hidden!important}
+.model-card .model-media img,.model-media img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;filter:none!important;opacity:1!important;mix-blend-mode:normal!important;image-rendering:auto!important}
+.detail-image{background:#fff!important;background-image:none!important}
+.detail-image img{filter:none!important;opacity:1!important;mix-blend-mode:normal!important}

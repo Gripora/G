@@ -172,23 +172,3 @@ body.inner-page{background:var(--paper);color:var(--ink)}
   .dummy-contact{padding-top:68px;padding-bottom:68px}
   .dummy-contact a{width:100%;white-space:normal;text-align:center}
 }
-
-
-/* GRIPORA natural product-image rendering — 2026-11-16 */
-/* Keep source pixels, branding and fabric texture untouched. Match the product
-   media stage to the white background already present in the original images. */
-.model-card .model-media,
-.category-fitness .model-media,
-.category-fullfinger .model-media,
-.category-golf .model-media,
-.category-winter .model-media,
-.detail-image {
-  background-color: #fff !important;
-}
-.model-media img,
-.detail-image img {
-  filter: none !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  image-rendering: auto;
-}
