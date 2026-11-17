@@ -1,4 +1,4 @@
-name: Deploy GRIPORA to GitHub Pages
+name: Deploy GRIPORA V8.6.8 to GitHub Pages
 
 on:
   push:
@@ -20,18 +20,58 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Configure Pages
+      - name: Download and verify approved GRIPORA V8.6.8 release
+        env:
+          RELEASE_URL: "https://gripora-v868-product-preview-he1suomvo-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_READY_ORIGINAL_CERTIFICATES.zip"
+          RELEASE_SHA256: "3fd223de08ea566c21e38c2c84e688d313a72122fdb70ac1069dacdfc7df8bb2"
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          curl --fail --location --silent --show-error --retry 3 --max-time 120 "$RELEASE_URL" --output "$RUNNER_TEMP/gripora-v868.zip"
+          printf '%s  %s\n' "$RELEASE_SHA256" "$RUNNER_TEMP/gripora-v868.zip" | sha256sum --check --status
+          unzip -q "$RUNNER_TEMP/gripora-v868.zip" -d _site
+          printf 'griporagloves.com\n' > _site/CNAME
+          touch _site/.nojekyll
+          python3 - <<'PY'
+          from pathlib import Path
+          root = Path("_site")
+          html = (root / "index.html").read_text(encoding="utf-8")
+          assert "gripora-original-certificates" in html
+          assert "gripora-certificates-flat" not in html
+          assert 'content="index,follow' in html
+          assert "nLEffyviFC8eNj0WMoeCLdxxrmx74BugdaILad2U398" in html
+          categories = ["fullfinger.html", "fitness.html", "winter.html", "golf.html"]
+          for name in categories:
+              page = (root / name).read_text(encoding="utf-8")
+              assert "\\n" not in page, f"Literal slash-n remains in {name}"
+          assert (root / "assets/v868-product-theme.css").is_file()
+          assert (root / "robots.txt").is_file()
+          assert (root / "sitemap.xml").is_file()
+          assert (root / "CNAME").read_text().strip() == "griporagloves.com"
+          models = (
+              list((root / "mtb").glob("gmt-???.html"))
+              + list((root / "fitness").glob("gft-???.html"))
+              + list((root / "winter").glob("gwo-???.html"))
+              + list((root / "golf").glob("ggf-???.html"))
+          )
+          assert len(models) == 62, f"Expected 62 model pages, found {len(models)}"
+          assert (root / "sitemap.xml").read_text().count("<loc>") == 70
+          print("V8.6.8 verified: 62 product pages, 70 sitemap URLs, original certificates, 4 clean category pages")
+          PY
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload site
+      - name: Upload approved V8.6.8 website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '.'
+          path: '_site'
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy GRIPORA to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
