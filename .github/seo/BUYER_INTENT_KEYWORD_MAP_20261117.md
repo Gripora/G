@@ -45,6 +45,31 @@ The build-time script `.github/scripts/seo-buyer-intent.py` now includes verifie
 - Australia: golf glove private label, custom fitness gloves supplier, OEM sports gloves.
 - Canada: private-label golf gloves supplier, wholesale MTB gloves, custom winter glove manufacturer.
 
+## Point 3 — Expanded competitor SEO audit shortlist (17 Nov 2026)
+
+Selection method: surfaced in public web searches for category-specific B2B terms such as `custom golf gloves manufacturer`, `private label cycling gloves`, `OEM gym gloves`, and `OEM winter gloves`. Search position is sensitive to geography, personalization and date: **do not present this as a fixed top-15 Google ranking or as traffic data**. Audit on-page SEO, search intent, technical structure, buyer journey, and truthful manufacturing proof. This is a shortlist, not yet a completed comparative audit.
+
+| Brand/site | Focus | Relevant source |
+|---|---|---|
+| QST Gloves | OEM sports gloves, golf, cycling | https://qstgloves.com/sports-gloves/ |
+| Bays Sports | Custom golf, gym OEM | https://www.bayssports.com/golf-gloves |
+| Nexora Gear | Cycling / MTB private label | https://nexoragear.com/cycling-gloves/ |
+| The Gloves Factory | Golf OEM, country landing pages | https://us.theglovesfactory.com/ |
+| Texpak | Golf private label and buyer inquiry funnel | https://ecotexpak.com/oem/ |
+| Maxido Golf | Golf gloves, material details | https://www.maxidogolf.com/index.html |
+| DEL | Golf wholesale/OEM | https://del.com.pk/golf-gloves.html |
+| Caprio Sports | Fitness and gym OEM | https://www.capriosports.com/lifting-gear/gym-gloves-and-grips |
+| ZipaSports | Gym and cycling, brand enquiry | https://zipasports.com/fitnesswear/gym-accessories/gloves/ |
+| Solehre Brothers | Cycling OEM | https://solehre.com/cycling-gloves-manufacturer/ |
+| Beera Sports | Custom cycling gloves | https://www.beera-ent.com/gloves/cycling-gloves/ |
+| Uswa Sports | Cycling and sports glove sourcing | https://www.uswasports.com/products/sports-fitness-gloves/cycling-gloves |
+| VORLAN | Winter gloves/private label | https://vorlan-gloves.com/products/winter-gloves |
+| Mi-Gloves | Custom winter and MTB | https://mi-gloves.com/custom-winter-gloves/ |
+| Blend Sports | Winter and MTB OEM | https://blendsports.com/ |
+| Fabletic Sports | Winter glove manufacturing | https://fableticsport.com/winter-gloves/ |
+
+Audit guardrails: do not copy competitors' prose/images/layout; do not infer unverified ranking positions or estimated organic traffic. Align recommendations with the GRIPORA buyer-focused keyword map and preserve approved website design, factory gallery and product pages unless an independently established issue justifies a minimal change.
+
 ## Competitor/SERP language cross-check
 
 - Custom cycling/private label: https://www.uswasports.com/products/sports-fitness-gloves/cycling-gloves
