@@ -4,6 +4,18 @@
 **Website:** https://griporagloves.com/ | **Buyer contact:** ibtesam@griporagloves.com  
 **Status:** Public candidate screening complete; existing backlink inventory **not yet available**; no directories registered or outreach sent.
 
+## Search Console user-confirmed snapshot — 17 November 2026
+
+The user supplied screenshots of the GRIPORA Search Console **Links** report showing:
+
+- **External links — Total 0** (as currently reported by GSC).
+- **Top linking sites — No data**; **Top linked pages under External links — No data**.
+- **Internal links — Total 36** shown in the report. Six internal links were shown for each of: homepage `/`, `/cycling.html`, `/fitness.html`, `/fullfinger.html`, `/private-label-oem.html`, and `/winter.html`.
+- GSC reports only its own observed/sampled links. The reported 0 does not establish a comprehensive internet-wide backlink absence and should not be labelled a confirmed zero across every index.
+- **No export file is necessary now** because the relevant GSC linking-domain report is empty. Recheck after third-party listings are live and recrawled.
+
+**Legacy URL note:** The current GitHub file `cycling.html` is a `noindex,follow` redirect to `golf.html`; it is excluded from the 70-URL sitemap. Its appearance in Search Console's internal-link statistics reflects the report's crawl/history view, not necessarily the current navigation. Verify current outbound internal links separately before changing redirects or the locked layout.
+
 ## A. Honest baseline and limitations
 
 - The GRIPORA Google Search Console **Search Analytics** data accessed through the available connected Windsor.ai source offers search queries, clicks and impressions, **not the Links report**. Its field schema has no backlink, referring-domain or linking-page fields. Therefore this audit does **not** assert the number of existing inbound links, referring domains, Domain Authority (DA), Domain Rating (DR), spam score, link velocity, or country-specific link counts.
@@ -80,6 +92,6 @@ Google's link spam policy: https://developers.google.com/search/docs/essentials/
 
 **Success metric:** verified *relevant referring domains* and real overseas qualified manufacturer inquiries, not backlink count alone. No registrations, password creation, fees or external outreach were executed in this research pass.
 
-## G. Current blocker and user action required for genuine existing-backlink baseline
+## G. Next actions after user-confirmed baseline
 
-Google Search Console > choose `griporagloves.com` property > **Links** (bottom of left menu) > under **External links**, open **Top linking sites** > export CSV; then **Export external links** > **Latest links** CSV. This is the minimum data to run a genuine backlink audit, deduplicate referring hosts, flag unexpected links and compare to candidate directories. Source: https://support.google.com/webmasters/answer/9049606 .
+Proceed with one genuine B2B supplier profile at a time, starting with a directory that accepts Pakistan-based manufacturers. Before registration, check for an existing GRIPORA profile, business eligibility, account/verification requirements and whether an actual public company listing is offered. **No listing has yet been submitted or approved.** Confirm a published GRIPORA profile and outbound URL before counting a verified backlink. Recheck GSC later; do not claim immediate Google discovery. Official GSC Links help: https://support.google.com/webmasters/answer/9049606 .
