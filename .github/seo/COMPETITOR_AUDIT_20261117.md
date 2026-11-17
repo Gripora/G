@@ -38,7 +38,7 @@
 
 | Priority | Finding | Decision | Current status |
 |---|---|---|---|
-| P1 | Specific buyer-intent search terms in titles/descriptions/intros | Keep B2B language from user's 2025–2026 Keyword Planner exports; avoid retail stuffing | Implemented in `.github/scripts/seo-buyer-intent.py`; live deployment must be verified |
+| P1 | Specific buyer-intent search terms in titles/descriptions/intros | Keep B2B language from user's 2025–2026 Keyword Planner exports; update golf and winter SEO titles to `Custom Golf Gloves Manufacturer | Private Label | GRIPORA` and `Custom Winter Gloves Manufacturer | Private Label | GRIPORA` | Implemented in `.github/scripts/seo-buyer-intent.py`; live deployment must be verified |
 | P1 | Generic collection H2 headings | Replace **only four category collection H2s** with `CUSTOM GOLF GLOVES.`, `CUSTOM WINTER GLOVES.`, `CUSTOM GYM GLOVES.`, `CUSTOM MTB & CYCLING GLOVES.`; do not alter hero styling | Build script updated; live deployment must be verified |
 | P1 | Missing category breadcrumb structured data | Add factual `BreadcrumbList` JSON-LD using existing canonical and visible Home/category navigation | Build script updated; live deployment must be verified |
 | P2 | Buyer-specific product specifications and material education | Existing model pages provide important details; evaluate gaps page-by-page with genuine specs | Defer to Point 4 content optimization |
