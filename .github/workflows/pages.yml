@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -63,6 +63,22 @@ jobs:
           assert (root / "sitemap.xml").read_text().count("<loc>") == 70
           print("V8.6.8 verified: 62 product pages, 70 sitemap URLs, original certificates, 4 clean category pages")
           PY
+
+      - name: Sync approved V8.6.8 files into GitHub main
+        shell: bash
+        run: |
+          set -euo pipefail
+          rsync -a _site/ ./
+          rm -f dummy.html dummy-category.html dummy-product.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- . ':!_site'
+          if git diff --cached --quiet; then
+            echo "Approved V8.6.8 files already in main"
+          else
+            git commit -m "Publish GRIPORA V8.6.8 approved site files"
+            git push origin HEAD:main
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
