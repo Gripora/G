@@ -102,6 +102,10 @@ jobs:
               page = (root/name).read_text(encoding="utf8")
               assert "<h2>"+heading+"</h2>" in page, "Category B2B heading missing: "+name
               assert page.count('id="gripora-category-breadcrumb-20261117"') == 1, "Missing or duplicate breadcrumb schema: "+name
+              assert page.count('id="gripora-category-faq"') == 1, "Missing or duplicate buyer FAQ: "+name
+              assert page.count('id="gripora-category-faq-style"') == 1, "Missing or duplicate FAQ style: "+name
+              assert page.count('<details>') == 3, "Expected three buyer questions: "+name
+              assert 'href="/development-policy.html"' in page, "Missing development policy link: "+name
           assert all('id="gripora-seo-20261117"' in p.read_text(encoding="utf8") for p in models)
           from html.parser import HTMLParser
           import re
