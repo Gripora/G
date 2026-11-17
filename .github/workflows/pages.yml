@@ -27,8 +27,8 @@ jobs:
 
       - name: Download and verify approved GRIPORA V8.6.8 release
         env:
-          RELEASE_URL: "https://gripora-v868-product-preview-5lqr70mj3-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_NO_VERCEL_TOOLBAR.zip"
-          RELEASE_SHA256: "91eed456b14359a9f3bf31ab9dd90d18a14f0a9b477ad9b95c905baafbde668a"
+          RELEASE_URL: "https://gripora-v868-product-preview-j3ho0k0hl-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_FACEBOOK_INSTAGRAM_FOOTER.zip"
+          RELEASE_SHA256: "aab9d8ff590818f2f13a26078fcb61dd83834134ef7fa228f1ae8f4136af3795"
         run: |
           set -euo pipefail
           mkdir -p _site
@@ -65,6 +65,9 @@ jobs:
               markup = page.read_text(encoding="utf-8")
               assert 'target="_blank"' not in markup, f"New-tab link found in {page}"
               assert "https://vercel.live/_next-live/feedback/feedback.js" not in markup, f"Vercel Toolbar script remains in {page}"
+              if "<footer" in markup:
+                  assert "https://www.facebook.com/profile.php?id=61593804143170" in markup, f"Facebook footer link missing in {page}"
+                  assert "https://www.instagram.com/gripora.gloves/" in markup, f"Instagram footer link missing in {page}"
           print("V8.6.8 verified: 62 product pages, 70 sitemap URLs, original certificates, 4 clean category pages")
           PY
 
