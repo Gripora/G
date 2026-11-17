@@ -91,7 +91,14 @@ with sync_playwright() as p:
             for y in range(0, max(page_height, height), 650):
                 page.evaluate("(y) => window.scrollTo(0, y)", y)
                 page.wait_for_timeout(65)
-            page.wait_for_timeout(650)
+            try:
+                page.wait_for_function(
+                    "Array.from(document.images).filter(img => img.hasAttribute('src')).every(img => img.complete)",
+                    timeout=15000,
+                )
+            except Exception:
+                pass
+            page.wait_for_timeout(250)
             page.evaluate("window.scrollTo(0, 0)")
 
             layout = page.evaluate("""() => ({
