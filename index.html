@@ -756,7 +756,26 @@ footer .gripora-social-links a{display:inline-flex!important;align-items:center!
 footer .gripora-social-links a:hover,footer .gripora-social-links a:focus-visible{color:#b7ff2a!important;border-color:#b7ff2a!important}
 footer .gripora-social-links svg{display:block!important;width:18px!important;height:18px!important;flex:0 0 18px!important}
 </style>
-<link rel="preload" as="image" href="/assets/mtb.webp" fetchpriority="high"></head><body>
+<link rel="preload" as="image" href="/assets/mtb.webp" fetchpriority="high"><style id="gripora-factory-compact-carousel-20261117">
+/* Compact, draggable factory showcase; preserves all original photos. */
+.factory-v84{padding-top:54px!important;padding-bottom:52px!important}
+.factory-v84 h2{font-size:clamp(32px,4.2vw,54px)!important;margin-bottom:9px!important}
+.factory-v84 .factory-carousel-actions{display:flex;justify-content:flex-end;align-items:center;gap:11px;margin:0 0 12px}
+.factory-v84 .factory-carousel-count{font-size:11px;letter-spacing:.13em;color:#bec9b9;font-weight:700;min-width:55px;text-align:right;font-variant-numeric:tabular-nums}
+.factory-v84 .factory-carousel-button{width:34px;height:34px;display:grid;place-items:center;border:1px solid #4b5b4c;background:#1a241b;color:#e9f3e9;border-radius:50%;font-size:19px;line-height:1;cursor:pointer;transition:border-color .18s,background .18s,color .18s}
+.factory-v84 .factory-carousel-button:hover:not(:disabled),.factory-v84 .factory-carousel-button:focus-visible{border-color:#B7FF2A;color:#B7FF2A;outline-offset:3px}
+.factory-v84 .factory-carousel-button:disabled{opacity:.35;cursor:default}
+.factory-v84 .photos{display:flex!important;grid-template-columns:none!important;gap:12px!important;overflow-x:auto!important;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain;padding:2px 1px 7px;cursor:grab}
+.factory-v84 .photos::-webkit-scrollbar{display:none}
+.factory-v84 .photos.is-dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto;user-select:none}
+.factory-v84 .photos figure{flex:0 0 calc((100% - 48px)/5)!important;min-width:0;box-sizing:border-box;scroll-snap-align:start}
+.factory-v84 .photos figure img{display:block!important;width:100%!important;height:145px!important;object-fit:cover!important;object-position:center!important;-webkit-user-drag:none}
+.factory-v84 .photos figcaption{padding:9px 10px!important;font-size:11px!important;line-height:1.35;min-height:34px}
+@media(max-width:1050px){.factory-v84 .photos figure{flex-basis:calc((100% - 36px)/4)!important}}
+@media(max-width:720px){.factory-v84 .photos figure{flex-basis:42%!important}.factory-v84 .photos figure img{height:137px!important}}
+@media(max-width:440px){.factory-v84 .photos figure{flex-basis:66%!important}.factory-v84 .photos figure img{height:128px!important}.factory-v84 .factory-carousel-actions{gap:9px}}
+@media(prefers-reduced-motion:reduce){.factory-v84 .photos{scroll-behavior:auto!important}.factory-v84 .factory-carousel-button{transition:none}}
+</style></head><body>
 <a href="#main" class="skip">Skip to content</a>
 
 <div class="announcement"><span>OEM MANUFACTURING</span><i></i><span>PRIVATE LABEL GLOVES</span><i></i><span>SIALKOT, PAKISTAN</span></div>
@@ -819,7 +838,12 @@ footer .gripora-social-links svg{display:block!important;width:18px!important;he
    <p class="eyebrow">INSIDE SIALKOT GLOVE MAKING</p>
    <h2>CRAFTED BY SKILLED HANDS.</h2>
    
-   <div class="photos">
+   <div class="factory-carousel-actions" aria-label="Factory photo navigation">
+  <span class="factory-carousel-count" id="factory-carousel-count" aria-live="off">01 / 12</span>
+  <button type="button" class="factory-carousel-button" id="factory-carousel-prev" aria-controls="factory-carousel-reel" aria-label="Previous factory photo">&#8592;</button>
+  <button type="button" class="factory-carousel-button" id="factory-carousel-next" aria-controls="factory-carousel-reel" aria-label="Next factory photo">&#8594;</button>
+ </div>
+ <div class="photos" id="factory-carousel-reel" role="region" aria-roledescription="carousel" aria-label="Factory production photographs" tabindex="0">
 <figure>
        <img loading="lazy" decoding="async" src="/factory/factory-stitching.webp" alt="Glove stitching production line" width="640" height="960" fetchpriority="low">
        <figcaption>Glove stitching</figcaption>
@@ -904,4 +928,44 @@ if(prefersReduced&&optInButton){
   optInButton.hidden=true;
  });
 }
-</script><script id="gripora-home-hero-lazy">(()=>{const slides=[...document.querySelectorAll(".hero-slide[data-src]")];if(!slides.length)return;const load=img=>{if(!img.hasAttribute("src")&&img.dataset.src){img.src=img.dataset.src;img.removeAttribute("data-src");img.loading="eager";img.fetchPriority="low";img.decoding="async";}};const reduced=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(reduced){document.getElementById("motion-enable")?.addEventListener("click",()=>slides.forEach(load),{once:true});}else{[4000,14000,24000].forEach((delay,i)=>setTimeout(()=>load(slides[i]),delay));}})();</script></body></html>
+</script><script id="gripora-home-hero-lazy">(()=>{const slides=[...document.querySelectorAll(".hero-slide[data-src]")];if(!slides.length)return;const load=img=>{if(!img.hasAttribute("src")&&img.dataset.src){img.src=img.dataset.src;img.removeAttribute("data-src");img.loading="eager";img.fetchPriority="low";img.decoding="async";}};const reduced=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(reduced){document.getElementById("motion-enable")?.addEventListener("click",()=>slides.forEach(load),{once:true});}else{[4000,14000,24000].forEach((delay,i)=>setTimeout(()=>load(slides[i]),delay));}})();</script><script id="gripora-factory-carousel-20261117">
+(()=>{
+ const track=document.getElementById("factory-carousel-reel");
+ const prev=document.getElementById("factory-carousel-prev");
+ const next=document.getElementById("factory-carousel-next");
+ const count=document.getElementById("factory-carousel-count");
+ if(!track||!prev||!next||!count)return;
+ const items=[...track.querySelectorAll("figure")];
+ if(!items.length)return;
+ const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ let dragging=false,startX=0,startLeft=0,lastAction=0,autoDirection=1,frame=0;
+ items.forEach(el=>el.querySelectorAll("img").forEach(img=>img.draggable=false));
+ const gap=()=>parseFloat(getComputedStyle(track).columnGap)||12;
+ const stride=()=>items[0].getBoundingClientRect().width+gap();
+ const maxScroll=()=>Math.max(0,track.scrollWidth-track.clientWidth);
+ const mark=()=>{const at=Math.min(items.length,Math.max(1,Math.round(track.scrollLeft/stride())+1));count.textContent=String(at).padStart(2,"0")+" / "+String(items.length).padStart(2,"0");prev.disabled=track.scrollLeft<=2;next.disabled=track.scrollLeft>=maxScroll()-2;};
+ const scrollToNext=(direction)=>{lastAction=Date.now();track.scrollBy({left:stride()*direction,behavior:reduce?"auto":"smooth"});};
+ prev.addEventListener("click",()=>scrollToNext(-1));
+ next.addEventListener("click",()=>scrollToNext(1));
+ track.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();scrollToNext(e.key==="ArrowRight"?1:-1);}});
+ track.addEventListener("scroll",()=>{if(frame)return;frame=requestAnimationFrame(()=>{frame=0;mark();});},{passive:true});
+ track.addEventListener("pointerdown",e=>{if(e.pointerType!=="mouse"||e.button!==0)return;dragging=true;startX=e.clientX;startLeft=track.scrollLeft;lastAction=Date.now();track.classList.add("is-dragging");track.setPointerCapture(e.pointerId);});
+ track.addEventListener("pointermove",e=>{if(!dragging)return;track.scrollLeft=startLeft-(e.clientX-startX);lastAction=Date.now();});
+ const finish=()=>{if(!dragging)return;dragging=false;track.classList.remove("is-dragging");lastAction=Date.now();mark();};
+ track.addEventListener("pointerup",finish);
+ track.addEventListener("pointercancel",finish);
+ track.addEventListener("lostpointercapture",finish);
+ track.addEventListener("touchstart",()=>{lastAction=Date.now();},{passive:true});
+ track.addEventListener("touchend",()=>{lastAction=Date.now();},{passive:true});
+ window.addEventListener("resize",mark,{passive:true});
+ mark();
+ if(!reduce&&items.length>2){
+  setInterval(()=>{
+   if(document.hidden||dragging||track.matches(":hover")||track.contains(document.activeElement)||Date.now()-lastAction<6500)return;
+   if(track.scrollLeft>=maxScroll()-3)autoDirection=-1;
+   else if(track.scrollLeft<=3)autoDirection=1;
+   track.scrollBy({left:autoDirection*stride(),behavior:"smooth"});
+  },4000);
+ }
+})();
+</script></body></html>
