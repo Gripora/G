@@ -23,6 +23,78 @@ category_headings={
     "winter.html": ("<h2>WINTER GLOVE RANGE.</h2>", "<h2>CUSTOM WINTER GLOVES.</h2>", "Winter & Outdoor Gloves"),
     "golf.html": ("<h2>GOLF GLOVE RANGE.</h2>", "<h2>CUSTOM GOLF GLOVES.</h2>", "Golf Gloves"),
 }
+# Point 4: compact, visible buyer FAQs grounded in GRIPORA's published development policy.
+# No artificial FAQ rich-result markup; Google does not generally show FAQ rich
+# results for ordinary commercial websites.
+faq_data={
+    "golf.html": [
+        ("Can you manufacture custom golf gloves with our branding?",
+         "Yes. Golf brands, clubs and pro shops can discuss custom artwork, wrist branding, palm options, sizing and retail packaging. Materials and construction are confirmed during development."),
+        ("Can we arrange bulk golf gloves after approving a sample?",
+         "Bulk production can be planned after sample and specification approval. Final minimum order quantity depends on the selected materials and customization."),
+        ("What should we send for a golf glove quotation?",
+         "Share the reference design, target quantity, size range, preferred palm material, logo artwork, packaging requirements and destination market.")
+    ],
+    "winter.html": [
+        ("Can GRIPORA develop custom winter gloves and mittens?",
+         "Yes. We can discuss insulated glove and mitten designs, technical shell fabrics, linings, palm reinforcement, cuffs and private-label branding, subject to material feasibility."),
+        ("Are bulk winter glove minimum order quantities fixed?",
+         "No. Final quantities depend on materials, construction and customization. The development scope and order terms are confirmed for each project."),
+        ("What details help with a winter glove sample?",
+         "Share your intended use and climate, reference design, preferred lining or insulation, grip requirements, size range, branding and target order quantity.")
+    ],
+    "fullfinger.html": [
+        ("Can GRIPORA develop full-finger MTB and short-finger cycling gloves?",
+         "Yes. The collection includes both full-finger MTB and short-finger cycling starting points. Glove construction can be reviewed against your brand's fit and intended use."),
+        ("Which cycling glove details can be customized?",
+         "Discuss backhand fabric, palm material, grip reinforcement, finger panels, cuff fit, custom prints, logos and packaging according to your technical brief."),
+        ("How do we start a private-label cycling glove project?",
+         "Send reference images or a tech pack, target quantities, sizes, artwork and intended market. We review specifications before sampling and production approval.")
+    ],
+    "fitness.html": [
+        ("Can gym gloves be developed with different palm and wrist options?",
+         "Yes. Discuss synthetic palm materials, reinforcement or padding, breathable backhand fabrics, neoprene details and wrist-support options for your target activity."),
+        ("Do you offer private-label gym gloves for brands and distributors?",
+         "Yes. GRIPORA develops custom gym and weightlifting glove programmes with brand artwork, sizing and packaging options. Final minimum quantities depend on materials and customization."),
+        ("What is needed to request a fitness glove sample?",
+         "Share a glove reference or tech pack, palm and cuff requirements, size range, target quantity, branding artwork and intended use so development can be reviewed.")
+    ],
+}
+faq_css='''<style id="gripora-category-faq-style">
+.gripora-category-faq{background:#fff;color:#161616;border-top:1px solid #e8e8e8;padding:clamp(38px,6vw,72px) 0}
+.gripora-category-faq .w{max-width:1180px;margin:0 auto;padding:0 24px}
+.gripora-category-faq .faq-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#626262;margin:0 0 12px}
+.gripora-category-faq h2{font-size:clamp(23px,3vw,33px);line-height:1.2;font-weight:700;letter-spacing:-.025em;margin:0 0 22px}
+.gripora-category-faq details{border-top:1px solid #dfdfdf}
+.gripora-category-faq details:last-of-type{border-bottom:1px solid #dfdfdf}
+.gripora-category-faq summary{cursor:pointer;list-style:none;position:relative;padding:19px 34px 19px 0;font-size:16px;font-weight:600;line-height:1.45}
+.gripora-category-faq summary::-webkit-details-marker{display:none}
+.gripora-category-faq summary::after{content:"+";position:absolute;right:4px;top:16px;font-size:23px;font-weight:400}
+.gripora-category-faq details[open] summary::after{content:"−"}
+.gripora-category-faq details p{margin:0 0 18px;font-size:15px;line-height:1.7;max-width:830px;color:#444}
+.gripora-category-faq .faq-more{margin:22px 0 0;font-size:14px;line-height:1.6}
+.gripora-category-faq a{color:inherit;text-underline-offset:3px}
+@media(max-width:600px){.gripora-category-faq .w{padding:0 20px}.gripora-category-faq summary{font-size:15px;padding-top:16px;padding-bottom:16px}}
+</style>'''
+def add_buyer_faq(markup,path):
+    if path not in faq_data:return markup
+    section_marker='id="gripora-category-faq"'
+    if section_marker not in markup:
+        assert markup.count('<section class="end">')==1,"Expected one end section: "+path
+        rows=[]
+        for question,answer in faq_data[path]:
+            rows.append('<details><summary>'+html.escape(question)+'</summary><p>'+html.escape(answer)+'</p></details>')
+        section='<section class="gripora-category-faq" '+section_marker+' aria-label="Frequently asked buyer questions"><div class="w"><p class="faq-eyebrow">PRIVATE LABEL / OEM SUPPORT</p><h2>BUYER QUESTIONS.</h2>'+''.join(rows)+'<p class="faq-more">See our <a href="/development-policy.html">development policy</a> for sample, minimum order quantity and production guidance.</p></div></section>'
+        markup=markup.replace('<section class="end">',section+'<section class="end">',1)
+    assert markup.count(section_marker)==1,"Duplicate buyer FAQ: "+path
+    assert markup.count('class="gripora-category-faq"')==1
+    if 'id="gripora-category-faq-style"' not in markup:
+        assert markup.count('</head>')==1,"Missing unique head: "+path
+        markup=markup.replace('</head>',faq_css+'</head>',1)
+    assert markup.count('id="gripora-category-faq-style"')==1
+    assert markup.count('<details>')==3,"Expected three buyer FAQs: "+path
+    return markup
+
 for path,title,description,old_intro,new_intro,old_more,new_more in specs:
     f=root/path
     assert f.is_file(), "Missing "+path
@@ -60,6 +132,7 @@ for path,title,description,old_intro,new_intro,old_more,new_more in specs:
             script='<script '+marker+' type="application/ld+json">'+json.dumps(schema,separators=(",",":"))+'</script>'
             markup=markup.replace("</head>",script+"</head>",1)
         assert markup.count(marker)==1, "Duplicated breadcrumb schema: "+path
+    markup=add_buyer_faq(markup,path)
     assert source.count("<h1")==markup.count("<h1"), "Heading count changed: "+path
     assert source.count("<img")==markup.count("<img"), "Image markup changed: "+path
     assert source.count("rel=\"canonical\"")==markup.count("rel=\"canonical\"")
