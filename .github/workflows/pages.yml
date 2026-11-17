@@ -85,8 +85,8 @@ jobs:
           for landing, phrase in {
               "fullfinger.html": "Private Label MTB",
               "fitness.html": "Custom Gym",
-              "winter.html": "OEM Winter",
-              "golf.html": "Private Label Golf",
+              "winter.html": "Custom Winter Gloves Manufacturer",
+              "golf.html": "Custom Golf Gloves Manufacturer",
               "private-label-oem.html": "OEM &amp; Private Label",
               "custom-glove-development.html": "Custom Glove Sampling",
           }.items():
