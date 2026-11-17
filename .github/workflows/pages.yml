@@ -27,8 +27,8 @@ jobs:
 
       - name: Download and verify approved GRIPORA V8.6.8 release
         env:
-          RELEASE_URL: "https://gripora-v868-product-preview-he1suomvo-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_READY_ORIGINAL_CERTIFICATES.zip"
-          RELEASE_SHA256: "3fd223de08ea566c21e38c2c84e688d313a72122fdb70ac1069dacdfc7df8bb2"
+          RELEASE_URL: "https://gripora-v868-product-preview-z7hr2cpi1-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_PRODUCTION_READY_SAME_TAB_NAVIGATION.zip"
+          RELEASE_SHA256: "2390d5a9d105d22e0650827d3ef712ae9180ed68014aa82faa0e86324f90a6e6"
         run: |
           set -euo pipefail
           mkdir -p _site
@@ -61,6 +61,9 @@ jobs:
           )
           assert len(models) == 62, f"Expected 62 model pages, found {len(models)}"
           assert (root / "sitemap.xml").read_text().count("<loc>") == 70
+          for page in root.rglob("*.html"):
+              markup = page.read_text(encoding="utf-8")
+              assert 'target="_blank"' not in markup, f"New-tab link found in {page}"
           print("V8.6.8 verified: 62 product pages, 70 sitemap URLs, original certificates, 4 clean category pages")
           PY
 
