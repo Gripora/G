@@ -23,6 +23,28 @@ The user supplied screenshots of the GRIPORA Search Console **Links** report sho
 - Public web searching for `\"griporagloves.com\" -site:griporagloves.com` did not establish a verified, comprehensive backlink inventory. Brand mentions in search results do **not** alone prove an inbound HTML link.
 - On-page SEO changes from Points 2–4 have been auto-synchronized into GitHub `main` by the approved release workflow, including 4 × 3 buyer FAQs, 4 category H2 updates, 4 BreadcrumbList JSON-LD blocks, keyword-aligned Golf/Winter titles, 62 model pages and the original factory gallery. Repository verified; direct independent HTTP verification of the live public site was unavailable in this session. Distinguish published GitHub files from successful external live deployment.
 
+## Follow-up verification — 18 November 2026
+
+**Find Golf Suppliers**: official pricing and editorial pages confirm free account and **one free listing**, a supplier business URL on both free and paid profiles, and human review against the supplier's own website. Category fit: **Pro shop and golf retail supply → Accessories (gloves, tees, towels, umbrellas)**. The website is relatively new (independent safety scan dated 2 Nov 2026 indicates registration on 24 Oct 2026, no verified historical traffic/authority), so free profile only; do **not** buy Premium or characterize as a powerful established SEO domain. Official pages: https://findgolfsuppliers.com/pricing/ , https://findgolfsuppliers.com/about/ , https://findgolfsuppliers.com/contact/ . Independent domain-age crosscheck: https://tools.malwaretips.com/url-scan/findgolfsuppliers.com . A web-index query did not find an existing GRIPORA profile, but that is not an exhaustive account check. Submission requires creating an account and editorial review; **not submitted**.
+
+**Kompass**: international Kompass free registration flow shows **four steps** (personal information, company, business activity, product) with professional email, phone, password, captcha and terms acceptance. Official form observed at https://xk.solutions.kompass.com/registerNewCompany/identity/ and free-listing overview at https://www.solutions.kompass.com/our-products-services/digital-marketing/business-listing-on-kompass/ . However, a **Kompass US page** at https://us.kompass.com/register/company/ also advertises **paid** company profiles ($40/12 months), so do **not** assume every country flow is free or enter payment details. Use a country-appropriate free registration and review costs before proceeding. Pakistan-specific online eligibility for the pictured Kosovo flow is not confirmed; choose correct country if offered. **Not registered**.
+
+**Source fidelity**: A fresh indexed public search of GRIPORA category pages confirms the user-facing golf product page identifies Sialkot, Pakistan and custom private-label golf glove manufacturing; https://griporagloves.com/golf.html . Links from directories count as *potential referral pathways*, not earned SEO authority until listings exist. Google explicitly identifies spammy or low-quality directories as a link-spam tactic: https://developers.google.com/search/docs/essentials/spam-policies .
+
+**Suggested honest Find Golf Suppliers profile (more than 80 words):**
+
+> **GRIPORA — Custom Golf Gloves Manufacturer**
+>
+> GRIPORA is a sports glove manufacturer and private-label development partner based in Sialkot, Pakistan. We work with golf brands, clubs, pro shops, and trade buyers seeking custom golf gloves with their own branding. Our golf glove development options include custom logos and artwork, fit and size specifications, palm material choices, ventilated constructions, wrist closure designs, and retail packaging. We also develop MTB and cycling, fitness, and winter gloves for overseas brands. Buyers can share reference samples, artwork, expected quantities, and target markets for a quotation and sample-development discussion. Production quantities, specifications, and lead times are confirmed for each project.
+
+Website: https://griporagloves.com/golf.html  
+Email: ibtesam@griporagloves.com  
+Location: Sialkot, Pakistan  
+Category: Pro shop and golf retail supply > Golf accessories (gloves).  
+Never choose a false country, claim certificates, or imply confirmed sales abroad.
+
+**Status 18 Nov:** Registration forms and eligibility examined via public sources; no user login, form submission, email send, fees, or actual backlink created. Next step: user-authenticated free account/form in site UI; verify resulting public URL after editorial approval. Cloud-browser interaction in ChatGPT Work mode can be used for forms when available; normal public-source research cannot create authenticated directory accounts.
+
 ## B. Legitimate candidate opportunities — screened against public listing terms
 
 | Rank | Platform | Exact entry | B2B / country fit | Price/eligibility grounded in public page | Proposed GRIPORA destination | Action/status |
