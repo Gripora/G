@@ -4,6 +4,19 @@
 **Website:** https://griporagloves.com/ | **Buyer contact:** ibtesam@griporagloves.com  
 **Status:** Public candidate screening complete; existing backlink inventory **not yet available**; no directories registered or outreach sent.
 
+## Operational follow-up — 18 November 2026
+
+**Confirmed Work-mode actions from GitHub PR #2:** Find Golf Suppliers free supplier profile submitted 18 Nov, submission **#12, Awaiting review**; public directory URL/backlink not yet verified. Kompass still blocked by paid US route and Kosovo +383-only free registration; no false-country registration. See [tracking PR #2](https://github.com/Gripora/G/pull/2) and `SEO_BACKLINK_TRACKER.md` on branch `seo/backlink-tracker-20261118`.
+
+**Enquiries actually sent via connected GRIPORA Gmail account `gripora8@gmail.com`** on 18 November:
+
+1. **TDAP Pakistan Exporters Directory:** To `helpdesk.tdap@tdap.gov.pk`, subject `GRIPORA – Enquiry About Pakistan Exporters Directory Listing`, Gmail message ID `1a1edb3945a16ac5`. Asked whether a Pakistan NTN sole proprietorship without stated historical export volumes may enroll, documents, costs and submission procedure. Official directory: https://pakistanexportersdirectory.gov.pk/ . **Status: Enquiry sent, listing not applied for, awaiting reply.**
+2. **go4WorldBusiness:** To `help@go4worldbusiness.com`, subject `Free Supplier Account Eligibility – GRIPORA, Pakistan Glove Manufacturer`, Gmail message ID `1a1edb39f2c723be`. Asked about lifelong free profile, sole-proprietor verification without SECP incorporation and assisted signup (the online form requires password, real contact details and CAPTCHA). Official: https://www.go4worldbusiness.com/member/new . **Status: Enquiry sent, account not created, awaiting reply.**
+
+Both enquiries accurately identified `ibtesam@griporagloves.com` as GRIPORA's official contact. No private documents, paid upgrades, passwords or funds were sent. No replies have yet been confirmed. Search of connected Gmail showed no acceptance/approval mail from Find Golf Suppliers or Kompass. Public website listing still not independently verified, so **verified live external links remain zero**.
+
+**Safety note:** `kompass.com.pk` is an unrelated Pakistani packaging manufacturer, **not** the global Kompass directory. Do not use it for a free directory registration.
+
 ## Search Console user-confirmed snapshot — 17 November 2026
 
 The user supplied screenshots of the GRIPORA Search Console **Links** report showing:
