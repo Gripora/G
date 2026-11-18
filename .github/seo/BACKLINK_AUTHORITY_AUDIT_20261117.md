@@ -4,6 +4,12 @@
 **Website:** https://griporagloves.com/ | **Buyer contact:** ibtesam@griporagloves.com  
 **Status:** Public candidate screening complete; existing backlink inventory **not yet available**; no directories registered or outreach sent.
 
+## Go4WorldBusiness final exclusion — support response 18 November 2026
+
+The user supplied a screenshot of a reply signed **Yogesh Kumar, Wyzen Systems Private Limited / go4WorldBusiness**. The provider states it has **stopped services to individuals and businesses operating in Pakistan**, citing regulatory and compliance constraints, cannot activate the applicant account, and treats the decision as final and not appealable. **GRIPORA is ineligible under the stated geographic restriction; mark REJECTED / DO NOT RETRY.** Do not attempt sign-up via a different country, VPN or another entity. The prior enquiry is closed. No directory account or backlink was created.
+
+Current operational position: **Find Golf Suppliers submission #12 pending editor review; Kompass suitable free Pakistan route unconfirmed; TDAP official eligibility enquiry sent and awaiting reply; go4WorldBusiness excluded.** Zero publicly verified directory backlinks. Source for the go4 refusal: user-provided email screenshot in the 18 Nov conversation (not an independently verified public directory policy).
+
 ## Operational follow-up — 18 November 2026
 
 **Confirmed Work-mode actions from GitHub PR #2:** Find Golf Suppliers free supplier profile submitted 18 Nov, submission **#12, Awaiting review**; public directory URL/backlink not yet verified. Kompass still blocked by paid US route and Kosovo +383-only free registration; no false-country registration. See [tracking PR #2](https://github.com/Gripora/G/pull/2) and `SEO_BACKLINK_TRACKER.md` on branch `seo/backlink-tracker-20261118`.
@@ -129,4 +135,4 @@ Google's link spam policy: https://developers.google.com/search/docs/essentials/
 
 ## G. Next actions after user-confirmed baseline
 
-Proceed with one genuine B2B supplier profile at a time, starting with a directory that accepts Pakistan-based manufacturers. Before registration, check for an existing GRIPORA profile, business eligibility, account/verification requirements and whether an actual public company listing is offered. **No listing has yet been submitted or approved.** Confirm a published GRIPORA profile and outbound URL before counting a verified backlink. Recheck GSC later; do not claim immediate Google discovery. Official GSC Links help: https://support.google.com/webmasters/answer/9049606 .
+Proceed with one genuine B2B supplier profile at a time, starting with a directory that accepts Pakistan-based manufacturers. Before registration, check for an existing GRIPORA profile, business eligibility, account/verification requirements and whether an actual public company listing is offered. **Find Golf Suppliers listing #12 was submitted and is awaiting review; no public listing/backlink is verified.** Confirm a published GRIPORA profile and outbound URL before counting a verified backlink. Recheck GSC later; do not claim immediate Google discovery. Official GSC Links help: https://support.google.com/webmasters/answer/9049606 .
