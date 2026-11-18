@@ -1,6 +1,6 @@
 # GRIPORA SEO backlink tracker
 
-Last checked: 2026-11-18 (Pakistan time). User provided definitive go4WorldBusiness support refusal; Find Golf Suppliers approval not yet confirmed.
+Last checked: 2026-11-18 (Pakistan time). User provided definitive go4WorldBusiness support refusal; Find Golf Suppliers approval not yet confirmed. SialkotMade official pricing and PSGMEA membership directories crosschecked.
 Scope: Free, relevant B2B directory listings. No paid plans or backlinks. This tracker branch does not change website files or the live site.
 
 | Directory | Status | Check and next action | Public listing / backlink |
@@ -10,6 +10,9 @@ Scope: Free, relevant B2B directory listings. No paid plans or backlinks. This t
 
 | go4WorldBusiness | **REJECTED — PAKISTAN RESTRICTED / DO NOT RETRY** | Official support reply shown by user on 2026-11-18 (Yogesh Kumar, Wyzen Systems Private Limited): services to individuals and businesses operating in Pakistan have been stopped due to regulatory/compliance constraints. Pakistan accounts cannot be activated; decision is final and not appealable. **Do not register using another country, VPN, intermediary or false entity**. Prior eligibility enquiry was sent on 2026-11-18. | None; no account or backlink |
 | TDAP Pakistan Exporters Directory | ELIGIBILITY ENQUIRY SENT | Official directory: https://pakistanexportersdirectory.gov.pk/ . **Sent enquiry on 2026-11-18 to helpdesk.tdap@tdap.gov.pk from connected GRIPORA Gmail (message ID 1a1edb3945a16ac5)** seeking procedure/eligibility for a new sole proprietorship with NTN, costs and export-record requirements. Directory may draw from Pakistan Customs records. Await official advice; no profile created. | None; registration not submitted |
+
+| SialkotMade | SKIP — PAID NEW SUPPLIER LISTING | Official pricing page shows Starter **USD 19.99 first year**, renewal USD 99.99/year; verified plans cost more. Free **claim** controls on already-existing business profiles do not establish eligibility for a new free supplier listing. Supplier verification requires business documentation and possibly chamber/export credentials; GRIPORA has no confirmed chamber membership. Do not buy a listing or invent credentials. Source: https://sialkotmade.com/plans and https://sialkotmade.com/page/about-us . | None; not registered |
+| PSGMEA member directory | HOLD — MEMBERSHIP REQUIRED | Association directory at https://psgmea.org.pk/members-directory/ shows approved members. GRIPORA does not have confirmed active PSGMEA membership. No false entry or fee; eligible only after genuine association membership if user independently pursues it. | None; not listed |
 
 Status meanings: SUBMITTED = site confirms receipt; PENDING APPROVAL = review is explicitly shown; LIVE = public listing URL and backlink verified; BLOCKED = required account step, regional limitation, or free route unavailable. ENQUIRY SENT means a documented support email was transmitted, **not** a company listing submission.
 
