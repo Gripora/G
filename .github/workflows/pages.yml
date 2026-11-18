@@ -42,6 +42,7 @@ jobs:
           cp index.html _site/index.html
           python3 .github/scripts/seo-enhance.py _site
           python3 .github/scripts/seo-buyer-intent.py _site
+          python3 .github/scripts/seo-technical-hygiene.py _site
           printf 'griporagloves.com\n' > _site/CNAME
           touch _site/.nojekyll
           python3 - <<'PY'
