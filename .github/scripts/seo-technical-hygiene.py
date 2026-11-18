@@ -133,6 +133,7 @@ assert not duplicates, f"Duplicate SEO titles: {duplicates}"
 assert not broken_html_links, "Broken internal HTML links: "+repr(sorted(broken_html_links)[:15])
 home=(root/"index.html").read_text(encoding="utf8")
 assert 'id="factory-carousel-reel"' in home and home.count("<figure>")>=12, "Factory gallery changed"
+assert home.count('href="/custom-glove-development.html"')>=1, "Homepage must link directly to sample development page"
 for category in ("fullfinger.html","fitness.html","winter.html","golf.html"):
     page=(root/category).read_text(encoding="utf8")
     assert page.count('id="gripora-category-faq"')==1
