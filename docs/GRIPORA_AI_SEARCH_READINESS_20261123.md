@@ -45,3 +45,22 @@
 ## Change management
 - Current branch `ai-discovery-readiness-20261123` is preview-only. It makes a **one-field, nonvisual** schema change on `index.html` so both publicly linked social identities are represented. Never deploy by merging without checking site release consistency: existing GitHub `main` Pages workflow may resync the full V8.6.8 site upon push.
 - Preserve the user's locked `GRIPORA-GOLD-MASTER-V8.6.7-LOCKED-20261116` and approved public design.
+
+## Category OEM service schema — staged, nonvisual
+Draft-only additions to `fullfinger.html`, `fitness.html`, `winter.html`, and `golf.html` define one schema.org `Service` record each. Each is linked to the existing homepage `Organization` identifier (`https://griporagloves.com/#organization`), matches the canonical category URL, and describes the OEM service shown on that page. No prices, universal MOQs, unavailable stock, certifications, factory dimensions, or guarantee of search ranking are asserted. Existing HTML, styling, imagery, and navigation are identical to `main` after stripping the exact new `<script>` block.
+
+Independent audit on 2026-11-23 compared every HTML file in the draft branch to `main`:
+- Homepage: **one exact Organization.sameAs string substitution**; valid JSON-LD.
+- All four category pages: **one new exact JSON-LD block per page**; valid JSON; provider and canonical URLs matched, and no other content differences.
+- Production/locked website remains unmodified.
+
+## Public supplier-discovery spot-check (2026-11-23)
+Non-personalized public keyword searches showed:
+- GRIPORA Golf category in a custom-golf-gloves private-label manufacturer result set: https://griporagloves.com/golf.html
+- GRIPORA MTB category in a private-label MTB glove search result set: https://griporagloves.com/fullfinger.html
+- Other relevant manufacturer results included QST Gloves (https://qstgloves.com/sports-gloves/), Texpak (https://ecotexpak.com/), and Caprio Sports (https://www.capriosports.com/lifting-gear/gym-gloves-and-grips).
+This is evidence of **some public search discoverability only**, not Google ranking permanence, ChatGPT recommendation position, a ChatGPT citation, or buyer inquiries. Search engines vary across users, geographies, and dates.
+
+## Follow-up governance
+- Do not merge PR #4 while `main` Pages workflow still downloads, syncs and deploys a full pinned release on every push. This would cause unrelated full website changes even for a schema-only PR.
+- Owner-only Business Hub claim remains unverified. A logged-in user must check whether GRIPORA can be found or added, then complete verification using supported offered methods. No identity documents/passwords should be sent to the assistant.
