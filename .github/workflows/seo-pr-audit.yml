@@ -1,0 +1,165 @@
+name: Audit GRIPORA SEO release without deploying
+
+on:
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Reproduce approved release extraction and validate technical SEO
+        env:
+          RELEASE_URL: "https://gripora-v868-product-preview-5ck593cn4-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_FACTORY_12_IMAGES_PRODUCTION.zip"
+          RELEASE_SHA256: "d21bc89ebf5d1e32e32616ab189c32185dc795dc3903f9bc52311534cf29207a"
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          curl --fail --location --silent --show-error --retry 2 --max-time 120 "$RELEASE_URL" --output "$RUNNER_TEMP/release.zip"
+          echo "$RELEASE_SHA256  $RUNNER_TEMP/release.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/release.zip" -d _site
+          echo "Release ZIP extracted. Checking expected files before repair:"
+          test ! -f _site/cycling.html
+          test -f cycling.html
+          grep -q 'noindex,follow' cycling.html
+          grep -q 'fullfinger.html#shortfinger' cycling.html
+          cp index.html _site/index.html
+          cp cycling.html _site/cycling.html
+          python3 .github/scripts/seo-enhance.py _site
+          python3 .github/scripts/seo-buyer-intent.py _site
+          python3 .github/scripts/seo-technical-hygiene.py _site
+          test "$(grep -c '<loc>' _site/sitemap.xml)" = 70
+          for category in fullfinger.html fitness.html winter.html golf.html; do
+            test -s "_site/$category"
+          done
+          test -f _site/assets/v868-product-theme.css
+          test -f _site/factory/new-2026-11-17/dispatch-staging-07.webp
+          echo "SEO pre-deployment checks passed."
+      - name: Mirror all production release safety assertions
+        run: |
+          set -euo pipefail
+          echo griporagloves.com > _site/CNAME
+          touch _site/.nojekyll
+          python3 - <<'PY'
+          from pathlib import Path
+          root = Path("_site")
+          html = (root / "index.html").read_text(encoding="utf-8")
+          assert "gripora-original-certificates" in html
+          assert "gripora-certificates-flat" not in html
+          assert 'content="index,follow' in html
+          assert "nLEffyviFC8eNj0WMoeCLdxxrmx74BugdaILad2U398" in html
+          categories = ["fullfinger.html", "fitness.html", "winter.html", "golf.html"]
+          for name in categories:
+              page = (root / name).read_text(encoding="utf-8")
+              assert "\\n" not in page, f"Literal slash-n remains in {name}"
+          assert (root / "assets/v868-product-theme.css").is_file()
+          assert (root / "robots.txt").is_file()
+          assert (root / "sitemap.xml").is_file()
+          assert (root / "CNAME").read_text().strip() == "griporagloves.com"
+          models = (
+              list((root / "mtb").glob("gmt-???.html"))
+              + list((root / "fitness").glob("gft-???.html"))
+              + list((root / "winter").glob("gwo-???.html"))
+              + list((root / "golf").glob("ggf-???.html"))
+          )
+          assert len(models) == 62, f"Expected 62 model pages, found {len(models)}"
+          assert (root / "sitemap.xml").read_text().count("<loc>") == 70
+          oem_html = (root / "private-label-oem.html").read_text(encoding="utf-8")
+          assert 'id="gripora-oem-v868-approved-theme"' in oem_html
+          assert 'id="mobile-menu"' in oem_html
+          assert "dummy.css" not in oem_html and "dummy-brand.css" not in oem_html
+          assert 'class="gripora-social-links"' in oem_html
+          assert 'href="https://griporagloves.com/private-label-oem.html"' in oem_html
+          assert "Choose full-finger MTB, golf, full-finger MTB" not in oem_html
+          assert "Choose full-finger MTB, golf, fitness or winter gloves" in oem_html
+          index_html = (root / "index.html").read_text(encoding="utf-8")
+          assert "gripora-v86-badges-preview" not in index_html
+          assert 'id="factory-carousel-reel"' in index_html
+          assert 'id="gripora-factory-carousel-20261117"' in index_html
+          assert 'gripora-factory-compact-carousel-20261117' in index_html
+          assert '<title>Private Label Sports Gloves Manufacturer | GRIPORA</title>' in index_html
+          for landing, phrase in {
+              "fullfinger.html": "Private Label MTB",
+              "fitness.html": "Custom Gym",
+              "winter.html": "Custom Winter Gloves Manufacturer",
+              "golf.html": "Custom Golf Gloves Manufacturer",
+              "private-label-oem.html": "OEM &amp; Private Label",
+              "custom-glove-development.html": "Custom Glove Sampling",
+          }.items():
+              assert phrase in (root/landing).read_text(encoding="utf8"), f"B2B SEO missing: {landing}"
+          # Guard the four category SEO improvements while preserving the approved hero design.
+          seo_headings = {
+              "fullfinger.html": "CUSTOM MTB &amp; CYCLING GLOVES.",
+              "fitness.html": "CUSTOM GYM GLOVES.",
+              "winter.html": "CUSTOM WINTER GLOVES.",
+              "golf.html": "CUSTOM GOLF GLOVES.",
+          }
+          for name, heading in seo_headings.items():
+              page = (root/name).read_text(encoding="utf8")
+              assert "<h2>"+heading+"</h2>" in page, "Category B2B heading missing: "+name
+              assert page.count('id="gripora-category-breadcrumb-20261117"') == 1, "Missing or duplicate breadcrumb schema: "+name
+              assert page.count('id="gripora-category-faq"') == 1, "Missing or duplicate buyer FAQ: "+name
+              assert page.count('id="gripora-category-faq-style"') == 1, "Missing or duplicate FAQ style: "+name
+              assert page.count('<details>') == 3, "Expected three buyer questions: "+name
+              assert 'href="/development-policy.html"' in page, "Missing development policy link: "+name
+          assert all('id="gripora-seo-20261117"' in p.read_text(encoding="utf8") for p in models)
+          from html.parser import HTMLParser
+          import re
+          section_start = index_html.index('<section class="factory-v84"')
+          section_end = index_html.index('</section>', section_start)
+          gallery = index_html[section_start:section_end]
+          photo_html = re.search(r'<div class="photos"[^>]*>([\s\S]*?)</div>', gallery)
+          assert photo_html is not None
+          photo_markup = photo_html.group(1)
+          assert photo_markup.count('<figure>') == 12, "Expected 4 original + 8 new factory cards"
+          old_photos = ['factory-stitching.webp','factory-entrance.webp','factory-printing.webp','factory-cutting.webp']
+          for name in old_photos:
+              assert '/factory/'+name in photo_markup
+              assert (root/'factory'/name).is_file()
+          added = ['material-inspection-01.webp','material-storage-02.webp','printed-panels-03.webp','quality-control-04.webp','bulk-packing-05.webp','individual-packing-06.webp','dispatch-staging-07.webp','carton-sealing-08.webp']
+          for name in added:
+              assert '/factory/new-2026-11-17/'+name in photo_markup
+              assert (root/'factory'/'new-2026-11-17'/name).is_file()
+          assert (root/'backups'/'GRIPORA_FACTORY_GALLERY_ORIGINAL_4_20261117.zip').is_file()
+          assert 'id="gripora-home-hero-lazy"' in index_html
+          for page in root.rglob("*.html"):
+              markup = page.read_text(encoding="utf-8")
+              assert 'target="_blank"' not in markup, f"New-tab link found in {page}"
+              assert "https://vercel.live/_next-live/feedback/feedback.js" not in markup, f"Vercel Toolbar script remains in {page}"
+              if "<footer" in markup:
+                  assert "https://www.facebook.com/profile.php?id=61593804143170" in markup, f"Facebook footer link missing in {page}"
+                  assert "https://www.instagram.com/gripora.gloves/" in markup, f"Instagram footer link missing in {page}"
+          print("V8.6.8 verified: 62 product pages, 70 sitemap URLs, original certificates, 4 clean category pages")
+          PY
+          grep -q 'noindex,follow' _site/cycling.html
+
+      - name: Install Chromium for full responsive smoke test
+        run: |
+          python3 -m pip install --quiet playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+
+      - name: Test mobile tablet and desktop with original production script
+        run: |
+          set -euo pipefail
+          python3 -m http.server 8765 --directory _site > "$RUNNER_TEMP/gripora-http.log" 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          python3 .github/scripts/mobile-responsive.py
+
+      - name: Ensure preview audit did not modify main repository
+        run: |
+          set -euo pipefail
+          # Ignore generated, untracked _site files; fail only for tracked source edits.
+          git diff --exit-code
+          test -z "$(git status --porcelain --untracked-files=no)"
+          echo "No tracked source files changed by QA."
