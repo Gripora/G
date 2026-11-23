@@ -73,6 +73,6 @@ jobs:
           assert len(models) == 62, "Expected 62 model pages"
           robots = (root/"robots.txt").read_text(encoding="utf-8")
           assert "Sitemap: https://griporagloves.com/sitemap.xml" in robots
-          assert "Disallow: /" not in robots.split("User-agent: *", 1)[1].split("Sitemap:", 1)[0], "Unexpected blanket crawler block"
+          assert not re.search(r"(?m)^Disallow:\s*/\s*$", robots), "Unexpected blanket crawler block"
           print("GRIPORA AI SEARCH READINESS PASS: verified organization + four category services; 62 product pages and 70 sitemap URLs")
           PY
