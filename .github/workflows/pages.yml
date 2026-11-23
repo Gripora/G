@@ -40,6 +40,9 @@ jobs:
           grep -q 'id="factory-carousel-reel"' index.html
           grep -q 'id="gripora-factory-carousel-20261117"' index.html
           cp index.html _site/index.html
+          # The pinned V8.6.8 release archive omits the existing legacy cycling alias.
+          # Preserve the repository-approved noindex/redirect page for SEO validation.
+          cp cycling.html _site/cycling.html
           python3 .github/scripts/seo-enhance.py _site
           python3 .github/scripts/seo-buyer-intent.py _site
           python3 .github/scripts/seo-technical-hygiene.py _site
