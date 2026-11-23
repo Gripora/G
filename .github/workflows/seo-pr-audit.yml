@@ -1,0 +1,49 @@
+name: Audit GRIPORA SEO release without deploying
+
+on:
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Reproduce approved release extraction and validate technical SEO
+        env:
+          RELEASE_URL: "https://gripora-v868-product-preview-5ck593cn4-shanii361-3901s-projects.vercel.app/GRIPORA_V8.6.8_FACTORY_12_IMAGES_PRODUCTION.zip"
+          RELEASE_SHA256: "d21bc89ebf5d1e32e32616ab189c32185dc795dc3903f9bc52311534cf29207a"
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          curl --fail --location --silent --show-error --retry 2 --max-time 120 "$RELEASE_URL" --output "$RUNNER_TEMP/release.zip"
+          echo "$RELEASE_SHA256  $RUNNER_TEMP/release.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/release.zip" -d _site
+          echo "Release ZIP extracted. Checking expected files before repair:"
+          test ! -f _site/cycling.html
+          test -f cycling.html
+          grep -q 'noindex,follow' cycling.html
+          grep -q 'fullfinger.html#shortfinger' cycling.html
+          cp index.html _site/index.html
+          cp cycling.html _site/cycling.html
+          python3 .github/scripts/seo-enhance.py _site
+          python3 .github/scripts/seo-buyer-intent.py _site
+          python3 .github/scripts/seo-technical-hygiene.py _site
+          test "$(grep -c '<loc>' _site/sitemap.xml)" = 70
+          for category in fullfinger.html fitness.html winter.html golf.html; do
+            test -s "_site/$category"
+          done
+          test -f _site/assets/v868-product-theme.css
+          test -f _site/factory/new-2026-11-17/dispatch-staging-07.webp
+          echo "SEO pre-deployment checks passed."
+      - name: Ensure preview audit did not modify main repository
+        run: |
+          set -euo pipefail
+          git status --short -- . ':!_site' | tee "$RUNNER_TEMP/tracked-status.txt"
+          test ! -s "$RUNNER_TEMP/tracked-status.txt"
+          echo "No tracked source files changed by QA."
