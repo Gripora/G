@@ -44,7 +44,7 @@ jobs:
       - name: Mirror all production release safety assertions
         run: |
           set -euo pipefail
-          printf 'griporagloves.com\\n' > _site/CNAME
+          echo griporagloves.com > _site/CNAME
           touch _site/.nojekyll
           python3 - <<'PY'
           from pathlib import Path
