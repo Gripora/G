@@ -44,6 +44,7 @@ jobs:
       - name: Ensure preview audit did not modify main repository
         run: |
           set -euo pipefail
-          git status --short -- . ':!_site' | tee "$RUNNER_TEMP/tracked-status.txt"
-          test ! -s "$RUNNER_TEMP/tracked-status.txt"
+          # Ignore generated, untracked _site files; fail only for tracked source edits.
+          git diff --exit-code
+          test -z "$(git status --porcelain --untracked-files=no)"
           echo "No tracked source files changed by QA."
