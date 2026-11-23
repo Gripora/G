@@ -1,0 +1,78 @@
+name: GRIPORA AI discovery schema audit (no deployment)
+
+on:
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check GRIPORA identity and four category OEM services
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from html import unescape
+          import json
+          import re
+
+          root = Path(".")
+          pages = ["fullfinger.html", "fitness.html", "winter.html", "golf.html"]
+          provider = "https://griporagloves.com/#organization"
+
+          homepage = (root/"index.html").read_text(encoding="utf-8")
+          homepage_scripts = re.findall(r'<script type="application/ld\+json">([\s\S]*?)</script>', homepage)
+          assert homepage_scripts, "Homepage Organization schema missing"
+          graphs = [json.loads(unescape(data)).get("@graph", []) for data in homepage_scripts]
+          orgs = [node for graph in graphs for node in graph if node.get("@type") == "Organization"]
+          assert len(orgs) == 1, "Expected one homepage Organization"
+          org = orgs[0]
+          assert org.get("@id") == provider
+          assert org.get("name") == "GRIPORA"
+          assert org.get("url") == "https://griporagloves.com/"
+          assert org.get("email") == "ibtesam@griporagloves.com"
+          assert set(org.get("sameAs", [])) == {
+            "https://www.instagram.com/gripora.gloves/",
+            "https://www.facebook.com/profile.php?id=61593804143170",
+          }
+
+          for name in pages:
+              html = (root/name).read_text(encoding="utf-8")
+              matches = re.findall(
+                  r'<script id="gripora-ai-oem-service-20261123" type="application/ld\+json">([\s\S]*?)</script>',
+                  html,
+              )
+              assert len(matches) == 1, f"Expected exactly one OEM Service JSON-LD block: {name}"
+              item = json.loads(unescape(matches[0]))
+              expected_url = "https://griporagloves.com/" + name
+              assert item["@context"] == "https://schema.org"
+              assert item["@type"] == "Service"
+              assert item["url"] == expected_url
+              assert item["provider"]["@id"] == provider
+              assert item["areaServed"] == "Worldwide"
+              assert item["name"].strip()
+              assert item["serviceType"].strip()
+              assert item["description"].strip()
+              assert f'<link rel="canonical" href="{expected_url}">' in html
+              assert 'gripora-category-breadcrumb-20261117' in html
+              assert 'gripora-category-faq' in html
+
+          sitemap = (root/"sitemap.xml").read_text(encoding="utf-8")
+          assert sitemap.count("<loc>") == 70, "Expected 70 canonical sitemap URLs"
+          models = (
+              list((root/"mtb").glob("gmt-???.html"))
+              + list((root/"fitness").glob("gft-???.html"))
+              + list((root/"winter").glob("gwo-???.html"))
+              + list((root/"golf").glob("ggf-???.html"))
+          )
+          assert len(models) == 62, "Expected 62 model pages"
+          robots = (root/"robots.txt").read_text(encoding="utf-8")
+          assert "Sitemap: https://griporagloves.com/sitemap.xml" in robots
+          assert not re.search(r"(?m)^Disallow:\s*/\s*$", robots), "Unexpected blanket crawler block"
+          print("GRIPORA AI SEARCH READINESS PASS: verified organization + four category services; 62 product pages and 70 sitemap URLs")
+          PY
