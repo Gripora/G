@@ -40,9 +40,16 @@ jobs:
           grep -q 'id="factory-carousel-reel"' index.html
           grep -q 'id="gripora-factory-carousel-20261117"' index.html
           cp index.html _site/index.html
+          cp cycling.html _site/cycling.html
           python3 .github/scripts/seo-enhance.py _site
           python3 .github/scripts/seo-buyer-intent.py _site
+          # Overlay this single approved product addition after baseline SEO processing.
+          cp fullfinger.html _site/fullfinger.html
+          cp sitemap.xml _site/sitemap.xml
+          cp mtb/gmt-018.html _site/mtb/gmt-018.html
+          cp assets/mtb-gmt-018-thermalgrip.webp _site/assets/mtb-gmt-018-thermalgrip.webp
           python3 .github/scripts/seo-technical-hygiene.py _site
+          python3 .github/scripts/validate-thermalgrip.py _site
           printf 'griporagloves.com\n' > _site/CNAME
           touch _site/.nojekyll
           python3 - <<'PY'
@@ -67,8 +74,8 @@ jobs:
               + list((root / "winter").glob("gwo-???.html"))
               + list((root / "golf").glob("ggf-???.html"))
           )
-          assert len(models) == 62, f"Expected 62 model pages, found {len(models)}"
-          assert (root / "sitemap.xml").read_text().count("<loc>") == 70
+          assert len(models) == 63, f"Expected 63 model pages, found {len(models)}"
+          assert (root / "sitemap.xml").read_text().count("<loc>") == 71
           oem_html = (root / "private-label-oem.html").read_text(encoding="utf-8")
           assert 'id="gripora-oem-v868-approved-theme"' in oem_html
           assert 'id="mobile-menu"' in oem_html
@@ -134,7 +141,7 @@ jobs:
               if "<footer" in markup:
                   assert "https://www.facebook.com/profile.php?id=61593804143170" in markup, f"Facebook footer link missing in {page}"
                   assert "https://www.instagram.com/gripora.gloves/" in markup, f"Instagram footer link missing in {page}"
-          print("V8.6.8 verified: 62 product pages, 70 sitemap URLs, original certificates, 4 clean category pages")
+          print("V8.6.8 verified: 63 product pages, 71 sitemap URLs, original certificates, 4 clean category pages")
           PY
 
       - name: Install Chromium for responsive mobile QA

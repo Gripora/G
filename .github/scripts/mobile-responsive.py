@@ -11,6 +11,7 @@ PAGES = [
     "/golf.html",
     "/private-label-oem.html",
     "/mtb/gmt-003.html",
+    "/mtb/gmt-018.html",
     "/winter/gwo-021.html",
 ]
 VIEWPORTS = [

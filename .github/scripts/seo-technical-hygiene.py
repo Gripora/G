@@ -21,7 +21,7 @@ assert root.is_dir(), "Missing website output"
 # 1. MTB product pages previously linked a robots-blocked legacy policy alias.
 fixed=0
 models=sorted((root/"mtb").glob("gmt-???.html"))
-assert len(models)==17, f"Expected 17 MTB/cycling styles, found {len(models)}"
+assert len(models)==18, f"Expected 18 MTB/cycling styles, found {len(models)}"
 for page in models:
     src=page.read_text(encoding="utf8")
     before=src.count('href="development-policy.html"')
@@ -64,7 +64,7 @@ xml=sitemap.read_text(encoding="utf8")
 for name in ("fullfinger.html","fitness.html","winter.html","golf.html"):
     pattern=re.compile(r'(<loc>'+re.escape(site+"/"+name)+r'</loc>\s*<lastmod>)[^<]+(</lastmod>)')
     assert len(pattern.findall(xml))==1, f"Sitemap category not found: {name}"
-    xml=pattern.sub(lambda m:m.group(1)+"2026-11-18"+m.group(2),xml)
+    xml=pattern.sub(lambda m:m.group(1)+("2026-11-25" if name=="fullfinger.html" else "2026-11-18")+m.group(2),xml)
 sitemap.write_text(xml,encoding="utf8")
 
 class Tags(HTMLParser):
@@ -89,7 +89,7 @@ class Tags(HTMLParser):
 parsed=ET.fromstring(xml)
 ns="{http://www.sitemaps.org/schemas/sitemap/0.9}"
 urls=[x.text for x in parsed.findall(".//"+ns+"loc")]
-assert len(urls)==70 and len(set(urls))==70, "Sitemap must include 70 unique URLs"
+assert len(urls)==71 and len(set(urls))==71, "Sitemap must include 71 unique URLs"
 product_count=0
 titles={}
 broken_html_links=set()
@@ -127,7 +127,7 @@ for url in urls:
         product_count+=1
         assert 'id="gripora-seo-20261117"' in markup, "Missing product schema: "+rel
 
-assert product_count==62, f"Expected 62 product pages, found {product_count}"
+assert product_count==63, f"Expected 63 product pages, found {product_count}"
 duplicates={t:p for t,p in titles.items() if len(p)>1}
 assert not duplicates, f"Duplicate SEO titles: {duplicates}"
 assert not broken_html_links, "Broken internal HTML links: "+repr(sorted(broken_html_links)[:15])
@@ -139,6 +139,6 @@ for category in ("fullfinger.html","fitness.html","winter.html","golf.html"):
     assert page.count('id="gripora-category-faq"')==1
     assert page.count("<details>")==3
     assert page.count('id="gripora-category-breadcrumb-20261117"')==1
-print(f"SEO_HYGIENE_PASS: 70 canonical sitemap pages, 62 product schemas, "
+print(f"SEO_HYGIENE_PASS: 71 canonical sitemap pages, 63 product schemas, "
       f"12 category FAQs, 12+ gallery photos; {fixed} MTB policy links fixed; "
       "cycling alias routes to short-finger category")

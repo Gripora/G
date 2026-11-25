@@ -4,6 +4,7 @@ from pathlib import Path
 import re, html, json, sys
 
 root=Path(sys.argv[1] if len(sys.argv)>1 else "_site")
+thermalgrip_present=(root/"mtb/gmt-018.html").is_file()
 site="https://griporagloves.com"
 categories={
     "mtb":("Custom MTB Gloves","MTB & Cycling Gloves","fullfinger.html","gmt-???.html"),
@@ -75,7 +76,8 @@ for dirname,(prefix,category,parent,pattern) in categories.items():
             h=h.replace("</head>",'<script id="gripora-seo-20261117" type="application/ld+json">'+payload+'</script></head>',1)
         save(file,h)
         count+=1
-assert count==62, f"Expected 62 product pages, got {count}"
+expected_models=63 if thermalgrip_present else 62
+assert count==expected_models, f"Expected {expected_models} product pages, got {count}"
 assert 'id="factory-carousel-reel"' in home.read_text(encoding="utf8")
-assert (root/"sitemap.xml").read_text(encoding="utf8").count("<loc>")==70
-print("GRIPORA SEO PASS: 1 homepage, 1 category, 62 product pages; original gallery/layout preserved")
+assert (root/"sitemap.xml").read_text(encoding="utf8").count("<loc>")==(71 if thermalgrip_present else 70)
+print("GRIPORA SEO PASS: 1 homepage, 1 category, baseline/product-extended pages; original gallery/layout preserved")
